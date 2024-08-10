@@ -1,0 +1,9 @@
+
+$if method-has-return-type$$method-return-type$ $endif$$\$
+$class-name$::$method-name$($method-param-list$)$if method-is-const$ const$endif$
+{
+$if method-needs-stub-return$$\$
+	$method-stub-return-type$ x$method-stub-return-initializer$;
+	return x;
+$else$$endif$$\$
+}

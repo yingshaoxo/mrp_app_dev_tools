@@ -1,0 +1,41 @@
+<html>
+
+<head>
+创建一个文本框，并返回文本框句柄。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+&nbsp&nbsp int32 mrc_textCreate(<br>
+&nbsp&nbsp const char * title, <br>
+&nbsp&nbsp const char * text, <br>
+&nbsp&nbsp int32 type<br>
+);
+
+<h1>Parameters</h1>
+<b>title</b><br>
+&nbsp&nbsp [IN]文本框的标题，unicode编码，网络字节序<br>
+<b>text</b><br>
+&nbsp&nbsp [IN]文本框内容，unicode编码，网络字节序<br>
+<b>type</b><br>
+&nbsp&nbsp [IN]文本框按键类型,见定义<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_OK</a>&nbsp<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_OK_CANCEL</a>&nbsp<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_CANCEL</a>
+
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp            		正整数   文本框句柄<br>
+&nbsp&nbsp		      	MR_FAILED   失败
+
+<h1>Remarks</h1>
+&nbsp&nbsp 文本框用来显示只读的文字信息。文本框和对话框并没有本质的区别，仅仅是显示方式上的不同，在使用上它们的主要区别是：对话框的内容一般较短，文本框的
+内容一般较长，对话框一般实现为弹出式的窗口，文本框一般实现为全屏式的窗口。也可能在手机上对话框和文本框使用了相同的方式实现。
+文本框和对话框的消息参数是一样的。当文本框显示时，如果用户选择了文本框上的某个键，系统将构造Mythroad应用消息，通过mrc_event函数传送给Mythroad
+平台，消息类型为MR_DIALOG_EVENT，参数为该按键的ID。"确定"键ID为：MR_DIALOG_KEY_OK；"取消"键ID为：MR_DIALOG_KEY_CANCEL。
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

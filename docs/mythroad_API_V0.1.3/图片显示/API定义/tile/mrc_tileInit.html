@@ -1,0 +1,53 @@
+<html>
+
+<head>
+设置地砖。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_tileInit(<br>
+&nbsp&nbsp   uint16 i,<br>
+&nbsp&nbsp   int16 x,<br>
+&nbsp&nbsp   int16 y,<br>
+&nbsp&nbsp   uint16 w,<br>
+&nbsp&nbsp   uint16 h,<br>
+&nbsp&nbsp   uint16 tileh<br>
+   );
+
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN]目标图片缓冲序号(地砖号)<br>
+
+<b>x</b><br>
+&nbsp&nbsp [IN]屏幕位置X<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]屏幕位置Y<br>
+
+<b>w</b><br>
+&nbsp&nbsp [IN]地砖列数<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]地砖行数<br>
+
+<b>tileh</b><br>
+&nbsp&nbsp [IN]地砖图片高<br>
+
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS     成功<br>
+&nbsp&nbsp      MR_FAILED      失败
+
+<h1>Remarks</h1>
+
+&nbsp&nbsp 地砖简介:地砖，背景和关卡设计的基石。图片序号与mrc_bitmapLoad中的图片序号对应，同时可以有3个地砖，图片序号0～2。
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

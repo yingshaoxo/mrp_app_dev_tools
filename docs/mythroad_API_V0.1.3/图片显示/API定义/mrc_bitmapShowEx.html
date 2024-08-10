@@ -1,0 +1,57 @@
+<html>
+
+<head>
+功能同<a href = "mrc_bitmapShow.html">mrc_bitmapShow</a>，唯一不同点是:源图片不是位于图片缓冲区内，而是由参数给出。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int mrc_bitmapShowEx(
+   uint16* p,
+   int16 x,
+   int16 y,
+   int16 mw,
+   int16 w,
+   int16 h,
+   uint16 rop,
+   int16 sx,
+   int16 sy
+);
+<h1>Parameters</h1>
+<b>p</b><br>
+&nbsp&nbsp [IN]源图片指针<br>
+
+<b>x</b><br>
+&nbsp&nbsp [IN]源图片的起始位置X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]源图片的起始位置Y坐标<br>
+
+<b>mw</b><br>
+&nbsp&nbsp [IN]<br>
+
+<b>w</b><br>
+&nbsp&nbsp [IN]欲加载图片的宽<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]欲加载图片的高<br>
+
+<b>rop</b><br>
+&nbsp&nbsp [IN]取值为<a href="BM_ENUM.html">BM_OR</a>、<a href="BM_ENUM.html">BM_XOR</a>、<a href="BM_ENUM.html">BM_COPY</a>、<a href="BM_ENUM.html">BM_NOT</a>、<a href="BM_ENUM.html">BM_MERGENOT</a>、<a href="BM_ENUM.html">BM_ANDNOT</a>、<a href="BM_ENUM.html">BM_TRANSPARENT</a>、<a href="BM_ENUM.html">BM_AND</a>、<a href="BM_ENUM.html">BM_GRAY</a>、<a href="BM_ENUM.html">BM_REVERSE</a><br><br>
+
+<b>sx</b><br>
+&nbsp&nbsp [IN]源图片的起始位置X<br>
+<b>sy</b><br>
+&nbsp&nbsp [IN]源图片的起始位置Y<br>
+
+
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp             MR_SUCCESS     成功<br>
+&nbsp&nbsp             MR_FAILED         失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

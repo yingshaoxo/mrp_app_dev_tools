@@ -1,0 +1,36 @@
+<html>
+<head>BM图片处理模式</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef <b>enum</b> {<br>
+&nbsp&nbsp   BM_OR, <br>        
+&nbsp&nbsp   BM_XOR, <br>       
+&nbsp&nbsp   BM_COPY,<br>       
+&nbsp&nbsp   BM_NOT, <br>       
+&nbsp&nbsp   BM_MERGENOT, <br>  
+&nbsp&nbsp   BM_ANDNOT, <br>    
+&nbsp&nbsp   BM_TRANSPARENT,<br> 
+&nbsp&nbsp   BM_AND,<br>
+&nbsp&nbsp   BM_GRAY,<br>
+&nbsp&nbsp   BM_REVERSE<br>
+};
+
+<h1>Members</h1>
+
+<b>BM_OR,</b>&nbsp&nbsp   	SRC .OR. DST*   半透明效果<br>
+<b>BM_XOR</b>&nbsp&nbsp   	SRC .XOR. DST*<br>
+<b>BM_COPY,</b>&nbsp&nbsp   	DST = SRC*      覆盖<br>
+<b>BM_NOT</b>&nbsp&nbsp   	DST = (!SRC)*<br>
+<b>BM_MERGENOT,</b>&nbsp&nbsp   DST .OR. (!SRC)<br>
+<b>BM_ANDNOT</b>&nbsp&nbsp   	DST .AND. (!SRC)<br>
+<b>BM_TRANSPARENT,</b>&nbsp&nbsp透明色不显示，图片的第一个象素（左上角的象素）是透明色<br>
+<b>BM_GRAY</b>&nbsp&nbsp   	灰化显示<br>
+<b>BM_REVERSE</b>&nbsp&nbsp   	保留
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

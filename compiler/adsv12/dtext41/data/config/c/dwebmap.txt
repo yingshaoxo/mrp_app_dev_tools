@@ -1,0 +1,137 @@
+;--------------------------------------------------------------------------------;
+; Filename: dwebmap.txt
+;--------------------------------------------------------------------------------
+;              ****** File Format is as follows ******
+;--------------------------------------------------------------------------------
+; Note that every company will have to modify this file for their own
+; use.  After being modified, copy it to the data\config\locale directory
+;--------------------------------------------------------------------------------
+; Semicolon is treated as a comment, so this line is ignored
+;
+; 1st column is the "StyleName", like "CHAPTER" or "TABLE" or ....
+;    Note that "*" indicates all Styles.
+;
+; 2nd column is the "Command", Valid Commands are: 
+;
+;    SET_GROUP
+;       For a given "StyleName", set it to the Group in PARAM1.
+;       If there is <text-before> property on this style, then
+;       PrePend PARAM2 to whatever is in the <text-before> property.
+;       If there is <text-after> property on this style, then
+;       Append PARAM3 to whatever is in the <text-before> property.
+;
+;    FIX_PVF
+;       For a given "StyleName" like "XREF", "EXREF", "EXTREF" or "*",
+;       Fix all properties that have a given PARAM1 (e.g. idmatch)
+;       with PARAM2 (e.g. xidmatch)
+;       
+;    INLINE
+;       For a given "StyleName" like "GRAPHIC", set the <inline>
+;       property to PARAM1
+;
+;    TEXT_BEFORE 
+;       For a given "StyleName" like "list.item", set the <text-before>
+;       property to PARAM1
+;
+;    TEXT_AFTER
+;       For a given "StyleName" like "list.item", set the <text-after>
+;       property to PARAM1
+;
+;    FONT_FAMILY
+;    FONT_WEIGHT
+;    FONT_SLANT
+;    CHAR_SET
+;    BREAK_BEFORE
+;    BREAK_AFTER,
+;    SPACE_BEFORE,
+;    SPACE_AFTER
+; 
+;
+; 3nd column is PARAM1
+;
+; 4ht column is PARAM2
+;
+; 5th column is PARAM3
+;
+;--------------------------------------------------------------------------------
+; StyleName           Command     PARAM1      PARAM2                      PARAM3
+;--------------------------------------------------------------------------------
+  CHAPTER             SET_GROUP   h3          <H2>                        endtag(H2)
+  FRONT,TITLE         SET_GROUP   h1          <H1>                        endtag(H1)
+  CHAP.TITLE          SET_GROUP   h1
+  CHAPTER.TITLE       SET_GROUP   h2
+  SECTION.TITLE       SET_GROUP   h3
+  ORDEREDLIST         SET_GROUP   ol
+  ORDEREDLIST,ITEM    SET_GROUP   li
+  UNORDEREDLIST       SET_GROUP   ul
+  UNORDEREDLIST,ITEM  SET_GROUP   li
+  TABLE               SET_GROUP   cals_table
+  ROW                 SET_GROUP   cals_row
+  ENTRY               SET_GROUP   cals_entry
+
+  DEFLIST,ITEM,P      SET_GROUP   dd
+  DEFLIST             SET_GROUP   dl
+  GLOSSENTRY          SET_GROUP   dl
+  TABLE.HIDDEN        SET_GROUP   dl
+  EXTREF,I            SET_GROUP   em
+  I                   SET_GROUP   em
+  FILE                SET_GROUP   emphs
+  FUNC                SET_GROUP   emphs
+  INLINE              SET_GROUP   emphs
+  PROP                SET_GROUP   emphs
+  RESV                SET_GROUP   emphs
+  SCRIPT              SET_GROUP   emphs
+  F                   SET_GROUP   equations
+  TITLEPG,TITLE       SET_GROUP   h1
+  CHAPTER,TITLE       SET_GROUP   h2
+  REFMAP,TITLE        SET_GROUP   h2
+  SUBTITLE            SET_GROUP   h2
+  AUTHOR              SET_GROUP   h3
+  LABEL               SET_GROUP   h4
+  PROCEDURE,LABEL     SET_GROUP   h4
+  ART                 SET_GROUP   hr
+  LIST.ITEM           SET_GROUP   li
+  EBTDOC,COMMENT,P    SET_GROUP   p
+  SEGLISTITEM,P       SET_GROUP   p
+  SUBBLOCK,P          SET_GROUP   p
+  VERBATIM            SET_GROUP   pre
+  B                   SET_GROUP   strong
+  BI                  SET_GROUP   strong
+  DEFLIST,ITEM,P      SET_GROUP   dd
+  DEFLIST             SET_GROUP   dl
+  GLOSSENTRY          SET_GROUP   dl
+  TABLE.HIDDEN        SET_GROUP   dl
+  EXTREF,I            SET_GROUP   em
+  GENREFITEM,PROCEDURE,NUMLIST,ITEM,ARTPLACE,ARTCAP SET_GROUP em
+  
+  ITEM,P              SET_GROUP   genlist
+
+  *                   FIX_PVF     =idmatch    =xidmatch
+  *                   FIX_PVF     =query      =xquery
+  *                   FIX_PVF     .tif        .gif
+  
+  *                   FIX_PVF     stylesheet=arbor.rev    stylesheet=dynaweb.wv
+  *                   FIX_PVF     stylesheet="fulltext.v" stylesheet="dynaweb.wv"
+
+  
+  GRAPHIC             INLINE      raster filename=join(word(attr(filename),1'.'),.gif)
+  
+  list.item           TEXT_BEFORE if(isfirst(),<ul><li>,<li>)
+  list.item           TEXT_AFTER  if(islast(),join('<','/ul'),)
+  ORDEREDLIST,ITEM    TEXT_BEFORE 
+  UNORDEREDLIST,ITEM  TEXT_BEFORE
+  
+  #SDATA              TEXT_BEFORE gamut(attr(name),'bull trade mdash','* (TM) --',join('&',attr(name),';'))</>
+  #SDATA              FONT_FAMILY
+  #SDATA              FONT_WEIGHT
+  #SDATA              FONT_SLANT
+  #SDATA              CHAR_SET
+  #SDATA              BREAK_BEFORE
+  
+  FILE                BREAK_BEFORE
+  ITEM,P              SET_GROUP   genlist
+  LIST                SET_GROUP   genlist
+  LIST                TEXT_BEFORE if(eq(attr(type),'num'),<OL>,<UL>)
+  LIST                TEXT_AFTER  if(eq(attr(type),"num"),join(<,/OL>),join(<,/UL>))
+
+;--------------------------------------------------------------------------------

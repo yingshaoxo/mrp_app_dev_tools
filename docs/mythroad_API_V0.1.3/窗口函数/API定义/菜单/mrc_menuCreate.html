@@ -1,0 +1,34 @@
+<html>
+
+<head>
+创建一个菜单，并返回菜单句柄，title是菜单的标题。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_menuCreate(<br>
+&nbsp&nbsp const char* title,<br>
+&nbsp&nbsp int16 num<br>
+);
+
+
+<h1>Parameters</h1>
+<b>title</b><br>
+&nbsp&nbsp [IN]菜单的标题，unicode编码，网络字节序。<br>
+<b>num</b><br>
+&nbsp&nbsp [IN]菜单项的数目<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp        正整数   菜单句柄<br>
+&nbsp&nbsp        MR_FAILED   失败
+
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

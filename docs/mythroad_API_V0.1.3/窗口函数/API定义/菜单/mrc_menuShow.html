@@ -1,0 +1,30 @@
+<html>
+
+<head>
+显示菜单。当菜单显示时，如果用户选择了菜单上的某一项，系统将构造Mythroad应用消息，通过mrc_event函数传送给Mythroad应用，消息类型为MR_MENU_SELECT，参数为该菜单项的index。如果用户选择
+了退出该菜单，系统将构造Mythroad应用消息，通过mrc_event函数传送给Mythroad应用，消息类型为MR_MENU_RETURN。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_menuShow(<br>
+&nbsp&nbsp int32 menu<br>
+);
+
+<h1>Parameters</h1>
+<b>menu</b><br>
+&nbsp&nbsp [IN]菜单的句柄，由<a href = "mrc_menuCreate.html">mrc_menuCreate</a>创建<br>。
+
+<h1>Return Value</h1>
+&nbsp&nbsp        MR_SUCCESS  成功<br>
+&nbsp&nbsp        MR_FAILED   失败
+
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

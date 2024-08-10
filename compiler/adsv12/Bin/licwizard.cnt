@@ -1,0 +1,7 @@
+:Base licwizard.hlp
+1 Installing a license=HIDD_INSTALL_TEMP_OR_FULL
+1 Merging license files=HIDD_MERGEFILES
+1 Product Information=HIDD_PRODUCT_INFO
+1 Requesting a License=HIDD_ADDRESS_PAGE_1
+1 Local Node Hostid=HIDD_NODE_HOSTIDS
+1 License server Hostids=HIDD_SERVER_HOSTIDS

@@ -1,0 +1,30 @@
+<html>
+
+<head>
+创建一个socket。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_socket(<br>
+&nbsp&nbsp int32 type, <br>
+&nbsp&nbsp int32 protocol<br>
+);
+
+<h1>Parameters</h1>
+<b>type</b><br>
+&nbsp&nbsp  Socket类型<a href="SOCKET_TYPE.html"> MR_SOCK_STREAM</a> &nbsp <a href="SOCKET_TYPE.html">MR_SOCK_DGRAM</a><br>
+<b>protocol</b><br>
+&nbsp&nbsp  协议类型<a href="IPPROTO_TCPUDP.html">MR_IPPROTO_TCP</a> &nbsp <a href="IPPROTO_TCPUDP.html">MR_IPPROTO_UDP</a>
+
+<h1>Return Value</h1>
+&nbsp&nbsp      >=0              返回的Socket句柄 <br>
+&nbsp&nbsp      MR_FAILED    	 失败
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

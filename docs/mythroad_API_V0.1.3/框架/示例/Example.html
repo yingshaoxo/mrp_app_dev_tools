@@ -1,0 +1,68 @@
+<html>
+<title>Mythroad 入口API示例</title>
+<head></head><br>
+<body>
+&nbsp&nbsp 代码取自“泡泡龙”游戏入口部分
+<br><br>
+&nbsp&nbsp <b>1、mrc_init</b><br>
+&nbsp&nbsp &nbsp&nbsp int32 mrc_init(void){<br>
+&nbsp&nbsp &nbsp&nbsp VariablesInit();//变量初始化<br>
+&nbsp&nbsp &nbsp&nbsp mrc_initChargeOverSea();//付费模块初始化<br>
+&nbsp&nbsp &nbsp&nbsp chargeLanguageInit();//付费字符串资源装载<br>
+&nbsp&nbsp &nbsp&nbsp Mggq_a_Enter_Game();//进入游戏<br>
+&nbsp&nbsp &nbsp&nbsp }//进入游戏<br><br>
+
+
+&nbsp&nbsp <b>2、mrc_pause</b><br>
+&nbsp&nbsp &nbsp&nbsp int32 mrc_pause(void)<void><br>
+&nbsp&nbsp &nbsp&nbsp 		{<br>
+&nbsp&nbsp &nbsp&nbsp 			Mggq_a_Suspend_Game();<br>
+&nbsp&nbsp &nbsp&nbsp			return MR_SUCCESS;<br>
+&nbsp&nbsp &nbsp&nbsp 		}<br><br>
+
+&nbsp&nbsp <b>3、mrc_resume</b><br>
+&nbsp&nbsp &nbsp&nbsp int32	mrc_resume(void)<br>
+&nbsp&nbsp &nbsp&nbsp	{<br>
+&nbsp&nbsp &nbsp&nbsp	Mggq_a_Resume_Game();<br>
+&nbsp&nbsp &nbsp&nbsp	return MR_SUCCESS;<br>
+&nbsp&nbsp &nbsp&nbsp	}<br><br>
+
+
+
+&nbsp&nbsp <b>4、mrc_exitApp</b><br>
+&nbsp&nbsp &nbsp&nbsp int32 mrc_exitApp(void)<br>
+&nbsp&nbsp &nbsp&nbsp{<br>
+&nbsp&nbsp &nbsp&nbspMggq_a_ReleaseAllResource();<br>
+&nbsp&nbsp &nbsp&nbspreturn MR_SUCCESS;<br>
+&nbsp&nbsp &nbsp&nbsp}<br><br>
+
+
+&nbsp&nbsp <b>5、mrc_appEventp</b><br>
+&nbsp&nbsp &nbsp&nbsp int32 mrc_appEvent(int32 code, int32 param0, int32 param1)<br>
+&nbsp&nbsp &nbsp&nbsp{<br>
+&nbsp&nbsp &nbsp&nbsp	switch(code)<br>
+&nbsp&nbsp &nbsp&nbsp	{<br>
+
+&nbsp&nbsp &nbsp&nbsp	case MR_MOUSE_DOWN:<br>
+&nbsp&nbsp &nbsp&nbsp		Mggq_a_PointerPressed(param0, param1);<br>
+&nbsp&nbsp &nbsp&nbsp		break;<br>
+
+&nbsp&nbsp &nbsp&nbsp	case MR_MOUSE_UP:<br>
+&nbsp&nbsp &nbsp&nbsp		Mggq_a_PointerReleased(param0, param1);<br>
+&nbsp&nbsp &nbsp&nbsp		break;<br>
+
+&nbsp&nbsp &nbsp&nbsp	case MR_KEY_PRESS:<br>
+&nbsp&nbsp &nbsp&nbsp		Mggq_a_Keypressed(param0);<br>
+&nbsp&nbsp &nbsp&nbsp		break;<br>
+
+&nbsp&nbsp &nbsp&nbsp	case MR_KEY_RELEASE:<br>
+&nbsp&nbsp &nbsp&nbsp		Mggq_a_KeyRelease(param0);<br>
+&nbsp&nbsp &nbsp&nbsp		break;<br>
+
+&nbsp&nbsp &nbsp&nbsp	default:<br>
+&nbsp&nbsp &nbsp&nbsp		break;<br>
+&nbsp&nbsp &nbsp&nbsp	}<br>
+&nbsp&nbsp &nbsp&nbsp}<br><br>
+
+</body>
+<html>

@@ -1,0 +1,21 @@
+<html>
+<title>Mythroad图片处理示例</title>
+<head>Mythroad图片处理处理示例的一般流程如下：</head>
+<body>
+<br><br>
+&nbsp&nbsp <b>1、创建序号为i的bmp缓存</b><br>
+&nbsp&nbsp&nbsp&nbsp ret = <b>mrc_bitmapNew</b>(1,bk1->width, bk1->height);<br><br>
+
+
+&nbsp&nbsp <b>2、装载图片</b><br>
+&nbsp&nbsp&nbsp&nbsp ret = <b>mrc_bitmapLoad</b>(1, name, 0, 0, logo->width, logo->height, logo->width);<br><br>
+
+
+&nbsp&nbsp <b>3、绘制图片</b><br>
+&nbsp&nbsp&nbsp&nbsp mrc_bitmapShow( 1,0,0+g_delta_y,BM_COPY,0,0,bk1->width,bk1->height);<br><br>
+
+
+&nbsp&nbsp <b>3、释放图片</b><br>
+&nbsp&nbsp&nbsp&nbsp ret = mrc_bitmapLoad(1, "*", 0, 0, bk1->width,bk1->height,bk1->width);<br><br>
+</body>
+<html>

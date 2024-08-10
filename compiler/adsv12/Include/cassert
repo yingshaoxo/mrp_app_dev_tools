@@ -1,0 +1,13 @@
+/*
+ * C++ header for C header assert.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3 $
+ * Checkin $Date: 2001/01/05 14:52:12 $
+ * Revising $Author: vkorstan $
+ */
+
+
+#include <assert.h>

@@ -1,0 +1,36 @@
+<html>
+
+<head>
+网络初始化，如果没有拨号，进行拨号操作。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_initNetwork(<br>
+&nbsp&nbsp MR_INIT_NETWORK_CB cb,<br>
+&nbsp&nbsp const char *mode<br>
+);
+
+<h1>Parameters</h1>
+<b>cb</b><br>
+&nbsp&nbsp [IN] 当网络初始化使用异步模式时，使用该回调函数通知应用初始化结果,见<a href= "MR_INIT_NETWORK_CB.html">MR_INIT_NETWORK_CB</a>定义<br>
+<b>mode</b><br>
+&nbsp&nbsp [IN] 网络初始化拨号方式，有<b>CMNET</b>或<b>CMWAP</b>两种拨号方式。
+
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS  同步模式，初始化成功，不再调用cb<br>
+&nbsp&nbsp      MR_FAILED   （立即感知的）失败，不再调用cb<br>
+&nbsp&nbsp      MR_WAITING  使用回调函数通知引擎初始化结果
+
+<h1>Remarks</h1>
+&nbsp&nbsp本文档描述的所有网络接口函数在实现时建议优先考虑采用非阻塞方式。若网络初始化使用异步模式，使用回调函数通知引擎初始化结果。
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

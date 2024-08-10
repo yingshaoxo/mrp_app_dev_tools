@@ -1,0 +1,10 @@
+#ifndef $fileroot$_H
+#define $fileroot$_H
+
+$if has-header-includes$$\$
+$include HeaderIncludeList.mtl$
+$endif$$\$
+$if has-header-namespace-uses$
+
+$include HeaderNamespaceList.mtl$
+$endif$$\$

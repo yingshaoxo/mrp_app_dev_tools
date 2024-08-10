@@ -1,0 +1,157 @@
+<!-- $Id: ISO3AMSB.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOAMSB  PUBLIC
+       "ISO 9573-13:1991//ENTITIES Added Math Symbols: Binary Operators //EN">
+     %ISOAMSB;
+-->
+
+<!ENTITY amalg    SDATA "font=cmsy10 charset=fontspecific code=113  TeX='\???? ' descr='[amalg]'" --/amalg B: amalgamation or coproduct-->
+<!ENTITY coprod   SDATA "font=cmsy10 charset=fontspecific code=113  TeX='\???? ' descr='[coprod]'" --/coprod L: coproduct operator-->
+<!ENTITY dagger   SDATA "font=cmsy10 charset=fontspecific code=121  TeX='\???? ' descr='[dagger]'" --/dagger B: dagger relation-->
+<!ENTITY Dagger   SDATA "font=cmsy10 charset=fontspecific code=122  TeX='\???? ' descr='[Dagger]'" --/ddagger B: double dagger relation-->
+<!ENTITY diam     SDATA "font=cmsy10 charset=fontspecific code=166  TeX='\???? ' descr='[diam]'" --/diamond B: open diamond-->
+<!ENTITY lceil    SDATA "font=cmsy10 charset=fontspecific code=100  TeX='\???? ' descr='[lceil]'" --/lceil O: left ceiling-->
+<!ENTITY lfloor   SDATA "font=cmsy10 charset=fontspecific code=98   TeX='\???? ' descr='[lfloor]'" --/lfloor O: left floor-->
+<!ENTITY midast   SDATA "font=symbol charset=fontspecific code=042">
+<!ENTITY oplus    SDATA "font=symbol charset=fontspecific code=197">
+<!ENTITY odot     SDATA "font=cmsy10 charset=fontspecific code=175  TeX='\???? ' descr='[odot]'" --/odot B: middle dot in circle-->
+<!ENTITY ominus   SDATA "font=cmsy10 charset=fontspecific code=170  TeX='\???? ' descr='[ominus]'" --/ominus B: minus sign in circle-->
+<!ENTITY osol     SDATA "font=cmsy10 charset=fontspecific code=174  TeX='\???? ' descr='[osol]'" --/oslash B: solidus in circle-->
+<!ENTITY otimes   SDATA "font=symbol charset=fontspecific code=196">
+<!ENTITY prod     SDATA "font=symbol charset=fontspecific code=213">
+<!ENTITY rceil    SDATA "font=cmsy10 charset=fontspecific code=101  TeX='\???? ' descr='[rceil]'" --/rceil C: right ceiling-->
+<!ENTITY rfloor   SDATA "font=cmsy10 charset=fontspecific code=99   TeX='\???? ' descr='[rfloor]'" --/rfloor C: right floor-->
+<!ENTITY sdot     SDATA "font=cmsy10 charset=fontspecific code=162  TeX='\???? ' descr='[sdot]'" --/cdot B: small middle dot-->
+<!ENTITY sstarf   SDATA "font=cmmi10 charset=fontspecific code=63   TeX='\???? ' descr='[sstarf]'" --/star B: small star, filled-->
+<!ENTITY sqcap    SDATA "font=cmsy10 charset=fontspecific code=117  TeX='\???? ' descr='[sqcap]'" --/sqcap B: square intersection-->
+<!ENTITY sqcup    SDATA "font=cmsy10 charset=fontspecific code=116  TeX='\???? ' descr='[sqcup]'" --/sqcup B: square union-->
+<!ENTITY sum      SDATA "font=symbol charset=fontspecific code=229">
+<!ENTITY uplus    SDATA "font=cmsy10 charset=fontspecific code=93   TeX='\???? ' descr='[uplus]'" --/uplus B: plus sign in union-->
+<!ENTITY wreath   SDATA "font=cmsy10 charset=fontspecific code=111  TeX='\???? ' descr='[wreath]'" --/wr B: wreath product-->
+<!ENTITY xcirc    SDATA "font=cmsy10 charset=fontspecific code=176  TeX='\???? ' descr='[xcirc]'" --/bigcirc B: large circle-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY ac       CDATA "[ac      ]" --most positive-->
+<!ENTITY acE      CDATA "[acE     ]" --most positive, two lines below-->
+<!ENTITY barvee   CDATA "[barvee  ]" --bar, vee-->
+<!ENTITY barwed   CDATA "[barwed  ]" --/barwedge B: logical and, bar above-->
+<!ENTITY Barwed   CDATA "[Barwed  ]" --/doublebarwedge B: log and, dbl bar above-->
+<!ENTITY bsolb    CDATA "[bsolb   ]" --reverse solidus in square-->
+<!ENTITY Cap      CDATA "[Cap     ]" --/Cap /doublecap B: dbl intersection-->
+<!ENTITY capand   CDATA "[capand  ]" --intersection, and-->
+<!ENTITY capbrcup CDATA "[capbrcup]" --intersection, bar, union-->
+<!ENTITY capcap   CDATA "[capcap  ]" --intersection, intersection, joined-->
+<!ENTITY capcup   CDATA "[capcup  ]" --intersection above union-->
+<!ENTITY capdot   CDATA "[capdot  ]" --intersection, with dot-->
+<!ENTITY caps     CDATA "[caps    ]" --intersection, serifs-->
+<!ENTITY ccaps    CDATA "[ccaps   ]" --closed intersection, serifs-->
+<!ENTITY ccups    CDATA "[ccups   ]" --closed union, serifs-->
+<!ENTITY ccupssm  CDATA "[ccupssm ]" --closed union, serifs, smash product-->
+<!ENTITY Cup      CDATA "[Cup     ]" --/Cup /doublecup B: dbl union-->
+<!ENTITY cupbrcap CDATA "[cupbrcap]" --union, bar, intersection-->
+<!ENTITY cupcap   CDATA "[cupcap  ]" --union above intersection-->
+<!ENTITY cupcup   CDATA "[cupcup  ]" --union, union, joined-->
+<!ENTITY cupdot   CDATA "[cupdot  ]" --union, with dot-->
+<!ENTITY cupor    CDATA "[cupor   ]" --union, or-->
+<!ENTITY cups     CDATA "[cups    ]" --union, serifs-->
+<!ENTITY cuvee    CDATA "[cuvee   ]" --/curlyvee B: curly logical or-->
+<!ENTITY cuwed    CDATA "[cuwed   ]" --/curlywedge B: curly logical and-->
+<!ENTITY divonx   CDATA "[divonx  ]" --/divideontimes B: division on times-->
+<!ENTITY eplus    CDATA "[eplus   ]" --equal, plus-->
+<!ENTITY hercon   CDATA "[hercon  ]" --hermitian conjugate matrix-->
+<!ENTITY intcal   CDATA "[intcal  ]" --/intercal B: intercal-->
+<!ENTITY iprod    CDATA "[iprod   ]" --/intprod-->
+<!ENTITY loplus   CDATA "[loplus  ]" --plus sign in left half circle-->
+<!ENTITY lotimes  CDATA "[lotimes ]" --multiply sign in left half circle-->
+<!ENTITY lthree   CDATA "[lthree  ]" --/leftthreetimes B:-->
+<!ENTITY ltimes   CDATA "[ltimes  ]" --/ltimes B: times sign, left closed-->
+<!ENTITY minusb   CDATA "[minusb  ]" --/boxminus B: minus sign in box-->
+<!ENTITY minusd   CDATA "[minusd  ]" --/dotminus B: minus sign, dot above-->
+<!ENTITY minusdu  CDATA "[minusdu ]" --minus sign, dot below-->
+<!ENTITY ncap     CDATA "[ncap    ]" --bar, intersection-->
+<!ENTITY ncup     CDATA "[ncup    ]" --bar, union-->
+<!ENTITY oast     CDATA "[oast    ]" --/circledast B: asterisk in circle-->
+<!ENTITY ocir     CDATA "[ocir    ]" --/circledcirc B: small circle in circle-->
+<!ENTITY odash    CDATA "[odash   ]" --/circleddash B: hyphen in circle-->
+<!ENTITY odiv     CDATA "[odiv    ]" --divide in circle-->
+<!ENTITY odsold   CDATA "[odsold  ]" --dot, solidus, dot in circle-->
+<!ENTITY ofcir    CDATA "[ofcir   ]" --filled circle in circle-->
+<!ENTITY ogt      CDATA "[ogt     ]" --greater-than in circle-->
+<!ENTITY ohbar    CDATA "[ohbar   ]" --circle with horizontal bar-->
+<!ENTITY olcir    CDATA "[olcir   ]" --large circle in circle-->
+<!ENTITY olt      CDATA "[olt     ]" --less-than in circle-->
+<!ENTITY omid     CDATA "[omid    ]" --vertical bar in circle-->
+<!ENTITY opar     CDATA "[opar    ]" --parallel in circle-->
+<!ENTITY operp    CDATA "[operp   ]" --perpendicular in circle-->
+<!ENTITY Otimes   CDATA "[Otimes  ]" --multiply sign in double circle-->
+<!ENTITY otimesas CDATA "[otimesas]" --multiply sign in circle, circumflex accent-->
+<!ENTITY ovbar    CDATA "[ovbar   ]" --circle with vertical bar-->
+<!ENTITY plusacir CDATA "[plusacir]" --plus, circumflex accent above-->
+<!ENTITY plusb    CDATA "[plusb   ]" --/boxplus B: plus sign in box-->
+<!ENTITY pluscir  CDATA "[pluscir ]" --plus, small circle above-->
+<!ENTITY plusdo   CDATA "[plusdo  ]" --/dotplus B: plus sign, dot above-->
+<!ENTITY plusdu   CDATA "[plusdu  ]" --plus sign, dot below-->
+<!ENTITY pluse    CDATA "[pluse   ]" --plus, equals-->
+<!ENTITY plussim  CDATA "[plussim ]" --plus, similar below-->
+<!ENTITY plustwo  CDATA "[plustwo ]" --plus, two; Nim-addition-->
+<!ENTITY race     CDATA "[race    ]" --reverse most positive, line below-->
+<!ENTITY roplus   CDATA "[roplus  ]" --plus sign in right half circle-->
+<!ENTITY rotimes  CDATA "[rotimes ]" --multiply sign in right half circle-->
+<!ENTITY rthree   CDATA "[rthree  ]" --/rightthreetimes B:-->
+<!ENTITY rtimes   CDATA "[rtimes  ]" --/rtimes B: times sign, right closed-->
+<!ENTITY sdotb    CDATA "[sdotb   ]" --/dotsquare /boxdot B: small dot in box-->
+<!ENTITY setmn    CDATA "[setmn   ]" --/setminus B: reverse solidus-->
+<!ENTITY simplus  CDATA "[simplus ]" --plus, similar above-->
+<!ENTITY smashp   CDATA "[smashp  ]" --smash product-->
+<!ENTITY solb     CDATA "[solb    ]" --solidus in square-->
+<!ENTITY sqcaps   CDATA "[sqcaps  ]" --square intersection, serifs-->
+<!ENTITY sqcups   CDATA "[sqcups  ]" --square union, serifs-->
+<!ENTITY ssetmn   CDATA "[ssetmn  ]" --/smallsetminus B: sm reverse solidus-->
+<!ENTITY subdot   CDATA "[subdot  ]" --subset, with dot-->
+<!ENTITY supdot   CDATA "[supdot  ]" --superset, with dot-->
+<!ENTITY timesb   CDATA "[timesb  ]" --/boxtimes B: multiply sign in box-->
+<!ENTITY timesbar CDATA "[timesbar]" --multiply sign, bar below-->
+<!ENTITY timesd   CDATA "[timesd  ]">
+<!ENTITY tridot   CDATA "[tridot  ]" --dot in triangle-->
+<!ENTITY triminus CDATA "[triminus]" --minus in triangle-->
+<!ENTITY triplus  CDATA "[triplus ]" --plus in triangle-->
+<!ENTITY trisb    CDATA "[trisb   ]" --triangle, serifs at bottom-->
+<!ENTITY tritime  CDATA "[tritime ]" --multiply in triangle-->
+<!ENTITY veebar   CDATA "[veebar  ]" --/veebar B: logical or, bar below-->
+<!ENTITY wedbar   CDATA "[wedbar  ]" --wedge, bar below-->
+<!ENTITY xcap     CDATA "[xcap    ]" --/bigcap L: intersection operator-->
+<!ENTITY xcup     CDATA "[xcup    ]" --/bigcup L: union operator-->
+<!ENTITY xdtri    CDATA "[xdtri   ]" --/bigtriangledown B: big dn tri, open-->
+<!ENTITY xodot    CDATA "[xodot   ]" --/bigodot L: circle dot operator-->
+<!ENTITY xoplus   CDATA "[xoplus  ]" --/bigoplus L: circle plus operator-->
+<!ENTITY xotime   CDATA "[xotime  ]" --/bigotimes L: circle times operator-->
+<!ENTITY xsqcup   CDATA "[xsqcup  ]" --/bigsqcup L: square union operator-->
+<!ENTITY xuplus   CDATA "[xuplus  ]" --/biguplus L:-->
+<!ENTITY xutri    CDATA "[xutri   ]" --/bigtriangleup B: big up tri, open-->
+<!ENTITY xvee     CDATA "[xvee    ]" --/bigvee L: logical and operator-->
+<!ENTITY xwedge   CDATA "[xwedge  ]" --/bigwedge L: logical or operator-->
+]]>
+

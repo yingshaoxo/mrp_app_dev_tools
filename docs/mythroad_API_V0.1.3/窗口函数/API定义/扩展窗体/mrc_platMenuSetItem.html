@@ -1,0 +1,37 @@
+<html>
+<head>在菜单里设置一个菜单项，参数index是该菜单项的序号。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_platMenuSetItem(<br>
+int32 menu,<br>
+const char *text,<br>
+int32 index,<br>
+PtrHilight cb,<br>
+int32 data<br>
+);
+
+<h1>Parameters</h1>
+<b>menu</b><br>
+菜单句柄<br>
+<b>text</b><br>
+菜单项的名称<br>
+<b>index</b><br>
+菜单项的index号,index取值范围为[0，num](num是用mrc_platMenuNew创建菜单时指定的菜单条数目)。<br>
+当等于num时，是按“返回”键的回调函数。SDK在处理用户点击"返回"键时，默认不作任何操作，直接关闭窗口；<br>
+当用户自定义了回调函数时，需要用户在回调函数中负责关闭窗口。<br>
+<b>cb</b><br>
+菜单项的回调函数<a href="PtrHilight.html">PtrHilight</a><br>
+<b>data</b><br>
+菜单项数据
+
+<h1>Return Value</h1>
+其他              窗体句柄<br>
+MR_FAILED         失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_menu.h</i><br>
+</body>
+
+</html>

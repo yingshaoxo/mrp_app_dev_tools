@@ -1,0 +1,17 @@
+$if method-is-virtual$virtual $endif$$\$
+$if method-is-static$static $endif$$\$
+$if method-is-inline$inline $endif$$\$
+$if method-has-return-type$$method-return-type$ $endif$$\$
+$method-name$($method-param-list$)$\$
+$if method-is-const$ const$endif$$\$
+$if method-is-pure$ = 0;$\$
+$elseif method-is-inline$$if method-needs-stub-return$
+	{	// Fill in code here ...
+		$method-stub-return-type$ x$method-stub-return-initializer$;
+		return x;
+	}$\$
+$else$$\$
+	{ /* Fill in code here ... */ }$\$
+$endif$$\$
+$else$;$\$
+$endif$$\$

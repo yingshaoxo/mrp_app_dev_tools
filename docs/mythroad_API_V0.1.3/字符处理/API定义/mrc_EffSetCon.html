@@ -1,0 +1,43 @@
+<html>
+
+<head>
+将屏幕的左上角x,y，宽高为w,h的矩形区域内的r,g,b分别增强perr/256, perg/256, perb/256倍。若perr=256, perg=0, perb=0，将只保留矩形区域内的红色；若perr=perg= perb=128，将使矩形区域内产生一种半透明的效果。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+void mrc_EffSetCon(<br>
+&nbsp&nbsp int16 x, <br>
+&nbsp&nbsp int16 y, <br>
+&nbsp&nbsp int16 w, <br>
+&nbsp&nbsp int16 h, <br>
+&nbsp&nbsp int16 perr, <br>
+&nbsp&nbsp int16 perg, <br>
+&nbsp&nbsp int16 perb<br>
+);
+
+<h1>Parameters</h1>
+<b>x</b><br>
+&nbsp&nbsp [IN]指定区域X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]指定区域Y坐标<br>
+<b>w</b><br>
+&nbsp&nbsp [IN]指定区域宽度<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]指定区域高度<br>
+<b>r</b><br>
+&nbsp&nbsp [IN]RGB R值<br>
+<b>g</b><br>
+&nbsp&nbsp [IN]RGB G值<br>
+<b>b</b><br>
+&nbsp&nbsp [IN]RGB B值<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp       <b>void</b>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

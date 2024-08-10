@@ -1,0 +1,30 @@
+<html>
+<head>拍照</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_Camera_capture(<br>
+uint8 mode,<br>
+CAMERA_IMG_DATA_T* img_data<br>
+);
+
+<h1>Parameters</h1>
+<b>mode</b><br> 
+[IN]拍照模式，见枚举定义<a href="CAMERA_CAPTURE_MODE_T.html">CAMERA_CAPTURE_MODE_T</a><br>
+<b>img_data</b><br> 
+[OUT]img_data:用于输出拍照的jpge图片数据，包括数据指针和数据大小，结构定义见<a href="CAMERA_IMG_DATA_T.html">CAMERA_IMG_DATA_T</a><br>
+
+<h1>Return Value</h1>
+MR_SUCCESS  	成功<br>
+MR_FAILED   	失败<br>
+MR_IGNORE 	不支持该功能
+
+<h1>Remarks</h1>
+注意:函数返回以后用户需要自己创建内存空间，将图片进行拷贝
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_camera.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!-- $Id: ISO-GRK2.ENT 1.1 1995/12/18 02:36:35 glf Exp $-->
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOgrk2 PUBLIC
+       "ISO 8879-1986//ENTITIES Monotoniko Greek//EN">
+     %ISOgrk2;
+-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY aacgr  CDATA "[aacgr ]"--=small alpha, accent, Greek-->
+<!ENTITY Aacgr  CDATA "[Aacgr ]"--=capital Alpha, accent, Greek-->
+<!ENTITY eacgr  CDATA "[eacgr ]"--=small epsilon, accent, Greek-->
+<!ENTITY Eacgr  CDATA "[Eacgr ]"--=capital Epsilon, accent, Greek-->
+<!ENTITY eeacgr CDATA "[eeacgr]"--=small eta, accent, Greek-->
+<!ENTITY EEacgr CDATA "[EEacgr]"--=capital Eta, accent, Greek-->
+<!ENTITY idigr  CDATA "[idigr ]"--=small iota, dieresis, Greek-->
+<!ENTITY Idigr  CDATA "[Idigr ]"--=capital Iota, dieresis, Greek-->
+<!ENTITY iacgr  CDATA "[iacgr ]"--=small iota, accent, Greek-->
+<!ENTITY Iacgr  CDATA "[Iacgr ]"--=capital Iota, accent, Greek-->
+<!ENTITY idiagr CDATA "[idiagr]"--=small iota, dieresis, accent, Greek-->
+<!ENTITY oacgr  CDATA "[oacgr ]"--=small omicron, accent, Greek-->
+<!ENTITY Oacgr  CDATA "[Oacgr ]"--=capital Omicron, accent, Greek-->
+<!ENTITY udigr  CDATA "[udigr ]"--=small upsilon, dieresis, Greek-->
+<!ENTITY Udigr  CDATA "[Udigr ]"--=capital Upsilon, dieresis, Greek-->
+<!ENTITY uacgr  CDATA "[uacgr ]"--=small upsilon, accent, Greek-->
+<!ENTITY Uacgr  CDATA "[Uacgr ]"--=capital Upsilon, accent, Greek-->
+<!ENTITY udiagr CDATA "[udiagr]"--=small upsilon, dieresis, accent, Greek-->
+<!ENTITY ohacgr CDATA "[ohacgr]"--=small omega, accent, Greek-->
+<!ENTITY OHacgr CDATA "[OHacgr]"--=capital Omega, accent, Greek-->
+]]>
+

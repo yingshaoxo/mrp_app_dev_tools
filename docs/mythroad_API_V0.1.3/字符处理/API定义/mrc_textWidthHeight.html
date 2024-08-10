@@ -1,0 +1,37 @@
+<html>
+
+<head>获取字符串的显示宽度和高度。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int mrc_textWidthHeight(<br>
+&nbsp&nbsp char* pcText, <br>
+&nbsp&nbsp int is_unicode,<br>
+&nbsp&nbsp uint16 font, <br>
+&nbsp&nbsp int32* w, <br>
+&nbsp&nbsp int32* h<br>
+);
+
+<h1>Parameters</h1>
+<b>pcText</b><br>
+&nbsp&nbsp [IN]待显示的字符串<br>
+<b>unicode</b><br>
+&nbsp&nbsp [IN]是否是unicode，TRUE(1)表示使用unicode编码，FALSE(0)表示使用GB2312编码。<br>
+<b>font</b><br>
+&nbsp&nbsp [IN]字体大小，可能的值是<a href="MR_FONT_TYPE.html">MR_FONT_SMALL</a>  <a href="MR_FONT_TYPE.html">MR_FONT_MEDIUM</a>    <a href="MR_FONT_TYPE.html">MR_FONT_BIG</a><br>
+<b>w</b><br>
+&nbsp&nbsp [OUT]字符串的显示宽度<br>
+<b>h</b><br>
+&nbsp&nbsp [OUT]字符串的显示高度<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp           MR_SUCCESS  操作成功<br>
+&nbsp&nbsp 	     MR_FAILED   操作失败
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

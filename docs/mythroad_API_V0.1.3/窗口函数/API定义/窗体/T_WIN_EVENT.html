@@ -1,0 +1,42 @@
+<html>
+<head>T_WIN_EVENT的功能介绍</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef enum<br>
+{<br>
+	WIN_EVENT_SHOW,<br>                  
+	WIN_EVENT_PAUSE,<br>                 
+	WIN_EVENT_REFRESH,<br>             
+	WIN_EVENT_UPDATE,<br>               
+	WIN_EVENT_EXIT<br>                     
+}T_WIN_EVENT;
+<br>
+
+<h1>Members</h1>
+<b>WIN_EVENT_SHOW</b>
+<br>
+   窗口创建好之后就会收到这个事件，可以在这个事件中画窗口的界面
+<br>
+<b>WIN_EVENT_PAUSE</b>
+<br>
+   当创建一个新的窗口后，父窗口会收到这个事件
+<br>
+<b>WIN_EVENT_REFRESH</b>
+<br>
+   当子窗口销毁掉后，父窗口会收到这个事件
+<br>
+<b>WIN_EVENT_UPDATE</b>
+<br>
+   外部可以修改窗体中要显示的功能，然后向该窗体发送这个事件使窗体将更新的内容画到屏幕上
+<br>
+<b>WIN_EVENT_EXIT</b>
+<br>
+   调用winDelete后，系统会向将要销毁的窗口发送这个事件，已处理窗口特殊的退出处理
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_win.h</i><br>
+</body>
+
+</html>

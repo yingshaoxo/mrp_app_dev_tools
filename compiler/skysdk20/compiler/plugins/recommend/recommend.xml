@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>  
+<recommend> 
+<game>
+  <name>水煮江山</name>
+  <appid>000001</appid>
+  <version>-1</version>
+  <shortname>szjs.mrp</shortname>
+  <game_pic width="240" height="150">game.bmp</game_pic>
+   <introduce r="0xff" g="0xff" b="0xff"> 
+      <paragraph>史诗般的场面，前所未有的体验，小手机大制作</paragraph>
+      <paragraph>猛士们用利剑斩下侵略者的头颅，用身体挡住了射向战友的飞箭，
+                一切英雄气魄都在这款豪华游戏之中。</paragraph>
+      <paragraph>还等什么，赶快来体验一把吧！</paragraph>
+   </introduce>
+   <download type="free"/>
+</game>
+
+<game>
+  <name>激战三国</name>
+  <appid>000002</appid>
+  <version>-1</version>
+  <shortname>jzsg.mrp</shortname>
+  <game_pic width="200" height="151">game5.bmp</game_pic>
+   <introduce r="0x88" g="0x88" b="0x88">
+<paragraph>三国题材格斗游戏，扮演关羽，诸葛亮，赵云，小乔等角色，火拼战场，打败关二哥不再是梦想，超爽的必杀技令你机不离手一玩再玩，绝对是格斗游戏的划时代经典之作。使用三大绝杀#，0，*史上最爽的绝杀，还有武器升级系统，是今年格斗游戏的里程牌！
+</paragraph>
+</introduce>
+   <download type="free"/>
+</game>
+
+<game>
+  <name>更多精彩游戏</name>
+  <url>http://app.51mrp.com:2080/</url>
+  <game_pic width="180" height="180">game4.bmp</game_pic>
+  <introduce r="0xff" g="0xff" b="0xff"> 
+<paragraph>  
+点击浏览更多游戏
+</paragraph>
+</introduce>
+</game>
+</recommend> 

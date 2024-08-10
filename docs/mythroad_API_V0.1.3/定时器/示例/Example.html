@@ -1,0 +1,28 @@
+<html>
+<title>Timer示例</title>
+<body>
+&nbsp&nbsp 代码取自“泡泡龙”游戏中炮弹装载小龙的绘制部分
+<br><br>
+&nbsp&nbsp <b>1、创建Timer</b><br>
+&nbsp&nbsp &nbsp&nbsp UPDATE_LEFT_DRAGON_WORK_TIMER = mrc_timerCreate();<br><br>
+
+
+&nbsp&nbsp <b>2、Timer回调处理</b><br>
+&nbsp&nbsp &nbsp&nbsp void LeftDragonDoWork(void)<br>
+&nbsp&nbsp &nbsp&nbsp 		{<br>
+&nbsp&nbsp &nbsp&nbsp 			PaintLeftDragonStatus(LEFT_DRAGON_PUSH);<br>
+&nbsp&nbsp &nbsp&nbsp			mrc_timerStart(UPDATE_LEFT_DRAGON_WORK_TIMER,500,  0, LeftDragonRecover,0);<br>
+&nbsp&nbsp &nbsp&nbsp 		}<br><br>
+
+&nbsp&nbsp <b>3、启动Timer</b><br>
+&nbsp&nbsp &nbsp&nbsp 	mrc_timerStart(UPDATE_LEFT_DRAGON_WORK_TIMER,500,  0, LeftDragonRecover,0);<br><br>
+
+&nbsp&nbsp <b>4、停止Timer</b><br>
+&nbsp&nbsp &nbsp&nbsp mrc_timerStop(UPDATE_LEFT_DRAGON_WORK_TIMER);<br><br>
+
+
+&nbsp&nbsp <b>5、删除Timer</b><br>
+&nbsp&nbsp &nbsp&nbsp mrc_timerDelete(UPDATE_LEFT_DRAGON_WORK_TIMER);<br><br>
+
+</body>
+<html>

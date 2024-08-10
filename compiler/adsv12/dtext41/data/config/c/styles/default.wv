@@ -1,0 +1,333 @@
+<!-- Template for new Dynaweb (*.wv) Stylesheets
+-->
+
+<sheet >
+
+<?INSTED COMMENT: GROUP ADDRESS>
+
+<group name="ADDRESS">
+	<font-slant>	Italics	</>
+	<break-before>	Line	</>
+	<text-before><ADDRESS></>
+	<text-after>join('<','/ADDRESS>')</>
+</group>
+
+<?INSTED COMMENT: GROUP B>
+
+<group name="B">
+	<font-weight>	Bold	</>
+	<text-before><B></>
+	<text-after>join('<','/B>')</>
+</group>
+
+<?INSTED COMMENT: GROUP BLOCKQUOTE>
+
+<group name="BLOCKQUOTE">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><BLOCKQUOTE></>
+	<text-after>join('<','/BLOCKQUOTE>')</>
+</group>
+
+<?INSTED COMMENT: GROUP BR>
+
+<group name="BR">
+	<break-before>	Line	</>
+	<text-before><BR></>
+</group>
+
+<?INSTED COMMENT: GROUP CALS-ENTRY>
+
+<group name="CALS-ENTRY">
+   <text-before>if(attr(spanname),<TD colspan=incr(sub(cnum(attrchild(colname, attr(nameend, attrchild(spanname, attr(spanname),ancestor(tgroup))), ancestor(tgroup))), cnum(attrchild(colname,attr(namest, attrchild(spanname, attr(spanname), ancestor(tgroup))),ancestor(tgroup))))), <td )  rowspan=incr(attr(morerows))></>
+</group>
+
+</group>
+
+<style name="ENTRY" group="CALS-ENTRY">
+</style>
+
+<?INSTED COMMENT: GROUP CALS-ROW>
+
+<group name="CALS-ROW">
+	<break-before>	Line	</>
+	<text-before><TR></>
+</group>
+
+<?INSTED COMMENT: GROUP CALS-TABLE>
+
+<group name="CALS-TABLE">
+	<break-before>	Line	</>
+	<text-before><TABLE border=2></>
+	<text-after>join('<','/TABLE>')</>
+</group>
+
+<?INSTED COMMENT: GROUP CALS-TITLE>
+
+<group name="CALS-TITLE">
+	<break-before>	Line	</>
+	<text-before><CAPTION></>
+	<text-after>join('<','/CAPTION>')</>
+</group>
+
+<?INSTED COMMENT: GROUP CITE>
+
+<group name="CITE">
+	<font-slant>	Italics	</>
+	<text-before><CITE></>
+	<text-after>join('<','/CITE>')</>
+</group>
+
+<?INSTED COMMENT: GROUP CODE>
+
+<group name="CODE">
+	<font-family>	courier	</>
+	<text-before><CODE></>
+	<text-after>join('<','/CODE>')</>
+</group>
+
+<?INSTED COMMENT: GROUP DD>
+
+<group name="DD">
+	<left-indent>	+=55	</>
+	<text-before><DD></>
+</group>
+
+<?INSTED COMMENT: GROUP DIR>
+
+<group name="DIR">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><DIR></>
+	<text-after>join('<','/DIR>')</>
+</group>
+
+<?INSTED COMMENT: GROUP DL>
+
+<group name="DL">
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><DL></>
+	<text-after>join('<','/DL>')</>
+</group>
+
+<?INSTED COMMENT: GROUP DT>
+
+<group name="DT">
+	<width>	50	</>
+	<break-before>	Line	</>
+	<text-before><DT></>
+</group>
+
+<?INSTED COMMENT: GROUP EM>
+
+<group name="EM">
+	<font-slant>	Italics	</>
+	<text-before><EM></>
+	<text-after>join('<','/EM>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H1>
+
+<group name="H1">
+	<font-weight>	Bold	</>
+	<font-size>	24	</>
+	<break-before>	Line	</>
+	<line-spacing>	29	</>
+	<text-before><H1></>
+	<text-after>join('<','/H1>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H2>
+
+<group name="H2">
+	<font-weight>	Bold	</>
+	<font-size>	18	</>
+	<break-before>	Line	</>
+	<line-spacing>	22	</>
+	<text-before><H2></>
+	<text-after>join('<','/H2>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H3>
+
+<group name="H3">
+	<font-weight>	Bold	</>
+	<break-before>	Line	</>
+	<text-before><H3></>
+	<text-after>join('<','/H3>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H4>
+
+<group name="H4">
+	<font-weight>	Bold	</>
+	<font-size>	12	</>
+	<break-before>	Line	</>
+	<line-spacing>	14	</>
+	<text-before><H4></>
+	<text-after>join('<','/H4>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H5>
+
+<group name="H5">
+	<font-weight>	Bold	</>
+	<font-size>	10	</>
+	<break-before>	Line	</>
+	<line-spacing>	12	</>
+	<text-before><H5></>
+	<text-after>join('<','/H5>')</>
+</group>
+
+<?INSTED COMMENT: GROUP H6>
+
+<group name="H6">
+	<font-weight>	Bold	</>
+	<font-size>	8	</>
+	<break-before>	Line	</>
+	<line-spacing>	10	</>
+	<text-before><H6></>
+	<text-after>join('<','/H6>')</>
+</group>
+
+<?INSTED COMMENT: GROUP HR>
+
+<group name="HR">
+	<hrule>	Before	</>
+	<text-before><HR></>
+</group>
+
+<?INSTED COMMENT: GROUP I>
+
+<group name="I">
+	<font-slant>	Italics	</>
+	<text-before><I></>
+	<text-after>join('<','/I>')</>
+</group>
+
+<?INSTED COMMENT: GROUP KBD>
+
+<group name="KBD">
+	<font-family>	courier	</>
+	<text-before><KBD></>
+	<text-after>join('<','/KBD>')</>
+</group>
+
+<?INSTED COMMENT: GROUP LI>
+
+<group name="LI">
+	<left-indent>	+=10	</>
+	<first-indent>	-10	</>
+	<break-before>	Line	</>
+	<text-before><LI></>
+</group>
+
+<?INSTED COMMENT: GROUP MENU>
+
+<group name="MENU">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><MENU></>
+	<text-after>join('<','/MENU>')</>
+</group>
+
+<?INSTED COMMENT: GROUP OL>
+
+<group name="OL">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><OL></>
+	<text-after>join('<','/OL>')</>
+</group>
+
+<?INSTED COMMENT: GROUP P>
+
+<group name="P">
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><P></>
+</group>
+
+<?INSTED COMMENT: GROUP PRE>
+
+<group name="PRE">
+	<font-family>	courier	</>
+	<space-before>	14	</>
+	<justification>	Verbatim	</>
+	<break-before>	Line	</>
+	<text-before><PRE></>
+	<text-after>join('<','/PRE>')</>
+</group>
+
+<?INSTED COMMENT: GROUP SAMP>
+
+<group name="SAMP">
+	<font-family>	courier	</>
+	<text-before><SAMP></>
+	<text-after>join('<','/SAMP>')</>
+</group>
+
+<?INSTED COMMENT: GROUP STRONG>
+
+<group name="STRONG">
+	<font-weight>	Bold	</>
+	<text-before><STRONG></>
+	<text-after>join('<','/STRONG>')</>
+</group>
+
+<?INSTED COMMENT: GROUP TT>
+
+<group name="TT">
+	<font-family>	courier	</>
+	<text-before><TT></>
+	<text-after>join('<','/TT>')</>
+</group>
+
+<?INSTED COMMENT: GROUP UL>
+
+<group name="UL">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><UL></>
+	<text-after>join('<','/UL>')</>
+</group>
+
+<?INSTED COMMENT: GROUP VAR>
+
+<group name="VAR">
+	<font-slant>	Italics	</>
+	<text-before><VAR></>
+	<text-after>join('<','/VAR>')</>
+</group>
+
+<?INSTED COMMENT: UNGROUPED STYLES FOLLOW>
+
+<style name="#DEFAULT">
+	<break-before>	Line	</>
+	<font-family>	times	</>
+	<font-weight>	Medium	</>
+	<font-slant>	Roman	</>
+	<font-video>	Regular	</>
+	<font-size>	14	</>
+	<line-spacing>	17	</>
+</style>
+
+<style name ="#ROOT">
+	<break-before>  Line		</>
+</style>
+
+<style name="#SDATA">
+	<text-before>gamut(attr(name),'bull trade mdash','* (TM) --',join('&',attr(name),';'))</>
+</style>
+
+<style name="#TAGS">
+	<font-weight>	Bold	</>
+</style>
+
+</sheet>

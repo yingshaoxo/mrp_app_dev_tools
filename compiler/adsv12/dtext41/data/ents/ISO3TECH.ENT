@@ -1,0 +1,194 @@
+<!-- $Id: ISO3TECH.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOTECH  PUBLIC
+       "ISO 9573-13:1991//ENTITIES General Technical //EN">
+     %ISOTECH;
+-->
+<!ENTITY aleph      SDATA "font=symbol charset=fontspecific code=192    descr='[aleph]'" -- /aleph aleph, Hebrew -->
+<!ENTITY and        SDATA "font=symbol charset=fontspecific code=217    descr='[and]'" -- /wedge /land B: logical and -->
+<!ENTITY angst       "&#197;" -- Angstrom capital A, ring -->
+<!ENTITY ap         SDATA "font=symbol charset=fontspecific code=187   descr='[ap]'" -- /approx R: approximate -->
+<!ENTITY bottom     SDATA "font=symbol charset=fontspecific code=94    descr='[bottom]'" -- /bot bottom -->
+<!ENTITY cap        SDATA "font=symbol charset=fontspecific code=199    descr='[cap]'" -- /cap B: intersection -->
+<!ENTITY cong       SDATA "font=symbol charset=fontspecific code=64    descr='[cong]'" -- /cong R: congruent with -->
+<!ENTITY cup        SDATA "font=symbol charset=fontspecific code=200    descr='[cup]'" -- /cup B: union or logical sum -->
+<!ENTITY Dot         "&#168;" -- dieresis or umlaut mark -->
+<!ENTITY equiv      SDATA "font=symbol charset=fontspecific code=186    descr='[equiv]'" -- /equiv R: identical with -->
+<!ENTITY exist      SDATA "font=symbol charset=fontspecific code=36  TeX='\exists ' descr='[exist]'" -- /exists at least one exists -->
+<!ENTITY fnof       SDATA "font=symbol charset=fontspecific code=166    descr='[fnof]'" -- function of (italic small f) -->
+<!ENTITY forall     SDATA "font=symbol charset=fontspecific code=34  TeX='\forall ' descr='[forall]'" -- /forall for all -->
+<!ENTITY ge         SDATA "font=symbol charset=fontspecific code=179  TeX='\geq ' descr='[ge]'" -- /geq /ge R: greater-than-or-equal -->
+<!ENTITY iff        SDATA "font=symbol charset=fontspecific code=219 TeX='\Leftrightarrow ' descr='[iff]'" -- /iff if and only if -->
+<!ENTITY infin      SDATA "font=symbol charset=fontspecific code=165  TeX='\infty ' descr='[infin]'" -- /infty infinity -->
+<!ENTITY int        SDATA "font=symbol charset=fontspecific code=242    descr='[int]'" -- /int L: integral operator -->
+<!ENTITY isin       SDATA "font=symbol charset=fontspecific code=206    descr='[isin]'" -- /in R: set membership -->
+<!ENTITY isinv      SDATA "font=cmsy10 charset=fontspecific code=50   TeX='\???? ' descr='[isinv]'" --set membership, variant-->
+<!ENTITY lang       SDATA "font=symbol charset=fontspecific code=225    descr='[lang]'" -- /langle O: left angle bracket -->
+<!ENTITY lArr       SDATA "font=symbol charset=fontspecific code=220    descr='[lArr]'" -- /Leftarrow A: is implied by -->
+<!ENTITY le         SDATA "font=symbol charset=fontspecific code=163  TeX='\leq ' descr='[le]'" -- /leq /le R: less-than-or-equal -->
+<!ENTITY minus      SDATA "font=symbol charset=fontspecific code=45" -- B: minus sign -->
+<!ENTITY mnplus     SDATA "font=cmsy10 charset=fontspecific code=168  TeX='\???? ' descr='[mnplus]'" --/mp B: minus-or-plus sign-->
+<!ENTITY nabla      SDATA "font=symbol charset=fontspecific code=209  TeX='\nabla ' descr='[nabla]'" -- /nabla del, Hamilton operator -->
+<!ENTITY ne         SDATA "font=symbol charset=fontspecific code=185  TeX='\ne ' descr='[ne]'" -- /ne /neq R: not equal -->
+<!ENTITY niv        SDATA "font=cmsy10 charset=fontspecific code=51   TeX='\???? ' descr='[niv]'" --contains, variant-->
+<!ENTITY notin      SDATA "font=symbol charset=fontspecific code=207    descr='[notin]'" -- /notin N: negated set membership -->
+<!ENTITY or         SDATA "font=symbol charset=fontspecific code=218    descr='[or]'" -- /vee /lor B: logical or -->
+<!ENTITY par        SDATA "font=cmsy10 charset=fontspecific code=107 TeX='\| ' descr='[par]'" -- /parallel R: parallel -->
+<!ENTITY part       SDATA "font=symbol charset=fontspecific code=182    descr='[part]'" -- /partial partial differential -->
+<!ENTITY perp       SDATA "font=symbol charset=fontspecific code=94  TeX='\bot ' descr='[perp]'" -- /perp R: perpendicular -->
+<!ENTITY prime      SDATA "font=symbol charset=fontspecific code=162  TeX='\prime ' descr='[prime]'" -- /prime prime or minute -->
+<!ENTITY Prime      SDATA "font=symbol charset=fontspecific code=178    descr='[Prime]'" -- double prime or second -->
+<!ENTITY prop       SDATA "font=symbol charset=fontspecific code=181    descr='[prop]'" -- /propto R: is proportional to -->
+<!ENTITY radic      SDATA "font=symbol charset=fontspecific code=214    descr='[radic]'" -- /surd radical -->
+<!ENTITY rang       SDATA "font=symbol charset=fontspecific code=241    descr='[rang]'" -- /rangle C: right angle bracket -->
+<!ENTITY rArr       SDATA "font=symbol charset=fontspecific code=222    descr='[rArr]'" -- /Rightarrow A: implies -->
+<!ENTITY sim         "~" -- /sim R: similar -->
+<!ENTITY sime       SDATA "font=cmsy10 charset=fontspecific code=39   TeX='\???? ' descr='[sime]'" --/simeq R: similar, equals-->
+<!ENTITY sub        SDATA "font=symbol charset=fontspecific code=204    descr='[sub]'" -- /subset R: subset or is implied by -->
+<!ENTITY sube       SDATA "font=symbol charset=fontspecific code=205    descr='[sube]'" -- /subseteq R: subset, equals -->
+<!ENTITY sup        SDATA "font=symbol charset=fontspecific code=201    descr='[sup]'" -- /supset R: superset or implies -->
+<!ENTITY supe       SDATA "font=symbol charset=fontspecific code=202    descr='[supe]'" -- /supseteq R: superset, equals -->
+<!ENTITY there4     SDATA "font=symbol charset=fontspecific code=92    descr='[there4]'" -- /therefore R: therefore -->
+<!ENTITY top        SDATA "font=cmsy10 charset=fontspecific code=62   TeX='\???? ' descr='[top]'" --/top top-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY acd      CDATA "[acd     ]" --ac current-->
+<!ENTITY And      CDATA "[And     ]" --dbl logical and-->
+<!ENTITY andand   CDATA "[andand  ]" --two logical and-->
+<!ENTITY andd     CDATA "[andd    ]" --and, horizontal dash-->
+<!ENTITY andslope CDATA "[andslope]" --sloping large and-->
+<!ENTITY andv     CDATA "[andv    ]" --and with middle stem-->
+<!ENTITY angrt    CDATA "[angrt   ]" --right (90 degree) angle-->
+<!ENTITY angsph   CDATA "[angsph  ]" --/sphericalangle angle-spherical-->
+<!ENTITY apacir   CDATA "[apacir  ]" --approximate, circumflex accent-->
+<!ENTITY awconint CDATA "[awconint]" --contour integral, anti-clockwise-->
+<!ENTITY awint    CDATA "[awint   ]" --anti clock-wise integration-->
+<!ENTITY becaus   CDATA "[becaus  ]" --/because R: because-->
+<!ENTITY bernou   CDATA "[bernou  ]" --Bernoulli function (script capital B)-->
+<!ENTITY bne      CDATA "[bne     ]" --reverse not equal-->
+<!ENTITY bnequiv  CDATA "[bnequiv ]" --reverse not equivalent-->
+<!ENTITY bnot     CDATA "[bnot    ]" --reverse not-->
+<!ENTITY bNot     CDATA "[bNot    ]" --reverse not with two horizontal strokes-->
+<!ENTITY Cconint  CDATA "[Cconint ]" --triple contour integral operator-->
+<!ENTITY cirfnint CDATA "[cirfnint]" --circulation function-->
+<!ENTITY compfn   CDATA "[compfn  ]" --/circ B: composite function (small circle)-->
+<!ENTITY conint   CDATA "[conint  ]" --/oint L: contour integral operator-->
+<!ENTITY Conint   CDATA "[Conint  ]" --double contour integral operator-->
+<!ENTITY ctdot    CDATA "[ctdot   ]" --/cdots, three dots, centered-->
+<!ENTITY cwconint CDATA "[cwconint]" --contour integral, clockwise-->
+<!ENTITY cwint    CDATA "[cwint   ]" --clockwise integral-->
+<!ENTITY cylcty   CDATA "[cylcty  ]" --cylindricity-->
+<!ENTITY disin    CDATA "[disin   ]" --set membership, long horizontal stroke-->
+<!ENTITY DotDot   CDATA "[DotDot  ]" --four dots above-->
+<!ENTITY dsol     CDATA "[dsol    ]" --solidus, bar above-->
+<!ENTITY dtdot    CDATA "[dtdot   ]" --/ddots, three dots, descending-->
+<!ENTITY dwangle  CDATA "[dwangle ]" --large downward pointing angle-->
+<!ENTITY elinters CDATA "[elinters]" --electrical intersection-->
+<!ENTITY epar     CDATA "[epar    ]" --parallel, equal; equal or parallel-->
+<!ENTITY eparsl   CDATA "[eparsl  ]" --parallel, slanted, equal; homothetically congruent to-->
+<!ENTITY eqvparsl CDATA "[eqvparsl]" --equivalent, equal; congruent and parallel-->
+<!ENTITY fltns    CDATA "[fltns   ]" --flatness-->
+<!ENTITY fpartint CDATA "[fpartint]" --finite part integral-->
+<!ENTITY hamilt   CDATA "[hamilt  ]" --Hamiltonian (script capital H)-->
+<!ENTITY iinfin   CDATA "[iinfin  ]" --infinity sign, incomplete-->
+<!ENTITY imped    CDATA "[imped   ]" --impedance-->
+<!ENTITY infintie CDATA "[infintie]" --tie, infinity-->
+<!ENTITY Int      CDATA "[Int     ]" --double integral operator-->
+<!ENTITY intlarhk CDATA "[intlarhk]" --integral, left arrow with hook-->
+<!ENTITY isindot  CDATA "[isindot ]" --set membership, dot above-->
+<!ENTITY isinE    CDATA "[isinE   ]" --set membership, two horizontal strokes-->
+<!ENTITY isins    CDATA "[isins   ]" --set membership, vertical bar on horizontal stroke-->
+<!ENTITY isinsv   CDATA "[isinsv  ]" --large set membership, vertical bar on horizontal stroke-->
+<!ENTITY lagran   CDATA "[lagran  ]" --Lagrangian (script capital L)-->
+<!ENTITY Lang     CDATA "[Lang    ]" --left angle bracket, double-->
+<!ENTITY lbbrk    CDATA "[lbbrk   ]" --left broken bracket-->
+<!ENTITY loang    CDATA "[loang   ]" --left open angular bracket-->
+<!ENTITY lobrk    CDATA "[lobrk   ]" --left open bracket-->
+<!ENTITY lopar    CDATA "[lopar   ]" --left open parenthesis-->
+<!ENTITY lowast   CDATA "[lowast  ]" --low asterisk-->
+<!ENTITY nedot    CDATA "[nedot   ]" --not equal, dot-->
+<!ENTITY nhpar    CDATA "[nhpar   ]" --not, horizontal, parallel-->
+<!ENTITY ni       CDATA "[ni      ]" --/ni /owns R: contains-->
+<!ENTITY nis      CDATA "[nis     ]" --contains, vertical bar on horizontal stroke-->
+<!ENTITY nisd     CDATA "[nisd    ]" --contains, long horizontal stroke-->
+<!ENTITY Not      CDATA "[Not     ]" --not with two horizontal strokes-->
+<!ENTITY notindot CDATA "[notindot]" --negated set membership, dot above-->
+<!ENTITY notinE   CDATA "[notinE  ]" --negated set membership, two horizontal strokes-->
+<!ENTITY notinva  CDATA "[notinva ]" --negated set membership, variant-->
+<!ENTITY notinvb  CDATA "[notinvb ]" --negated set membership, variant-->
+<!ENTITY notinvc  CDATA "[notinvc ]" --negated set membership, variant-->
+<!ENTITY notni    CDATA "[notni   ]" --negated contains-->
+<!ENTITY notniva  CDATA "[notniva ]" --negated contains, variant-->
+<!ENTITY notnivb  CDATA "[notnivb ]" --contains, variant-->
+<!ENTITY notnivc  CDATA "[notnivc ]" --contains, variant-->
+<!ENTITY nparsl   CDATA "[nparsl  ]" --not parallel, slanted-->
+<!ENTITY npart    CDATA "[npart   ]" --not partial differential-->
+<!ENTITY npolint  CDATA "[npolint ]" --line integration, not including the pole-->
+<!ENTITY nvinfin  CDATA "[nvinfin ]" --not, vert, infinity-->
+<!ENTITY olcross  CDATA "[olcross ]" --circle, cross-->
+<!ENTITY Or       CDATA "[Or      ]" --dbl logical or-->
+<!ENTITY ord      CDATA "[ord     ]" --or, horizontal dash-->
+<!ENTITY order    CDATA "[order   ]" --order of (script small o)-->
+<!ENTITY oror     CDATA "[oror    ]" --two logical or-->
+<!ENTITY orslope  CDATA "[orslope ]" --sloping large or-->
+<!ENTITY orv      CDATA "[orv     ]" --or with middle stem-->
+<!ENTITY parsl    CDATA "[parsl   ]" --parallel, slanted-->
+<!ENTITY permil   CDATA "[permil  ]" --per thousand-->
+<!ENTITY pertenk  CDATA "[pertenk ]" --per 10 thousand-->
+<!ENTITY phmmat   CDATA "[phmmat  ]" --physics M-matrix (script capital M)-->
+<!ENTITY pointint CDATA "[pointint]" --integral around a point operator-->
+<!ENTITY profalar CDATA "[profalar]" --all-around profile-->
+<!ENTITY profline CDATA "[profline]" --profile of a line-->
+<!ENTITY profsurf CDATA "[profsurf]" --profile of a surface-->
+<!ENTITY qint     CDATA "[qint    ]" --/iiiint quadruple integral operator-->
+<!ENTITY qprime   CDATA "[qprime  ]" --quadruple prime-->
+<!ENTITY quatint  CDATA "[quatint ]" --quaternion integral operator-->
+<!ENTITY Rang     CDATA "[Rang    ]" --right angle bracket, double-->
+<!ENTITY rbbrk    CDATA "[rbbrk   ]" --right broken bracket-->
+<!ENTITY roang    CDATA "[roang   ]" --right open angular bracket-->
+<!ENTITY robrk    CDATA "[robrk   ]" --right open bracket-->
+<!ENTITY ropar    CDATA "[ropar   ]" --right open parenthesis-->
+<!ENTITY rppolint CDATA "[rppolint]" --line integration, rectangular path around pole-->
+<!ENTITY scpolint CDATA "[scpolint]" --line integration, semi-circular path around pole-->
+<!ENTITY simdot   CDATA "[simdot  ]" --similar, dot-->
+<!ENTITY smeparsl CDATA "[smeparsl]" --similar, parallel, slanted, equal-->
+<!ENTITY square   CDATA "[square  ]" --/square, square-->
+<!ENTITY squarf   CDATA "[squarf  ]" --/blacksquare, square, filled-->
+<!ENTITY strns    CDATA "[strns   ]" --straightness-->
+<!ENTITY tdot     CDATA "[tdot    ]" --three dots above-->
+<!ENTITY tint     CDATA "[tint    ]" --/iiint triple integral operator-->
+<!ENTITY topbot   CDATA "[topbot  ]" --top and bottom-->
+<!ENTITY topcir   CDATA "[topcir  ]" --top, circle below-->
+<!ENTITY tprime   CDATA "[tprime  ]" --triple prime-->
+<!ENTITY utdot    CDATA "[utdot   ]" --three dots, ascending-->
+<!ENTITY uwangle  CDATA "[uwangle ]" --large upward pointing angle-->
+<!ENTITY vangrt   CDATA "[vangrt  ]" --right angle, variant-->
+<!ENTITY veeeq    CDATA "[veeeq   ]" --logical or, equals-->
+<!ENTITY Verbar   CDATA "[Verbar  ]" --/Vert dbl vertical bar-->
+<!ENTITY wedgeq   CDATA "[wedgeq  ]" --/wedgeq R: corresponds to (wedge, equals)-->
+<!ENTITY xnis     CDATA "[xnis    ]" --large contains, vertical bar on horizontal stroke-->
+]]>
+

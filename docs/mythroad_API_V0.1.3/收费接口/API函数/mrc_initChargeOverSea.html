@@ -1,0 +1,31 @@
+<html>
+<head>初始化计费模块，申请各种资源。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_initChargeOverSea(<br>
+PAY_CTR_INFO_T *tPayCtrlInfo<br>
+);
+
+<h1>Parameters</h1>
+<b>tPayCtrlInfo</b><br>
+[OUT]tPayCtrlInfo 见<a href ="PAY_CTR_INFO_T.html">PAY_CTR_INFO_T</a>定义<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS	初始化成功<br>
+MR_FAILED	初始化失败
+
+<h1>Remarks</h1>
+必须首先调用。在多国语言版本中，资费说明和收费金额、操作说明和游戏中语言文字都保存在EXCEL表生成的资源文件中。<br>
+1、计费初始化时，取得计费控制信息；<br>
+2、根据计费控制信息，取得各个收费点的收费金额；<br>
+3、如果注册费为0，则不应该弹出注册提示；<br>
+4、如果道具收费为0，可以弹出道具信息，用户点击确定后调用短信发送函数，<br>
+短信发送函数将返回成功。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

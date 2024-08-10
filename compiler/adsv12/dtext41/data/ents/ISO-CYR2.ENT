@@ -1,0 +1,59 @@
+<!-- $Id: ISO-CYR2.ENT 1.1 1995/12/18 02:59:52 glf Exp $-->
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOcyr2 PUBLIC
+       "ISO 8879-1986//ENTITIES Non-Russian Cyrillic//EN">
+     %ISOcyr2;
+-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY djcy   CDATA "[djcy  ]"--=small dje, Serbian-->
+<!ENTITY DJcy   CDATA "[DJcy  ]"--=capital DJE, Serbian-->
+<!ENTITY gjcy   CDATA "[gjcy  ]"--=small gje, Macedonian-->
+<!ENTITY GJcy   CDATA "[GJcy  ]"--=capital GJE Macedonian-->
+<!ENTITY jukcy  CDATA "[jukcy ]"--=small je, Ukrainian-->
+<!ENTITY Jukcy  CDATA "[Jukcy ]"--=capital JE, Ukrainian-->
+<!ENTITY dscy   CDATA "[dscy  ]"--=small dse, Macedonian-->
+<!ENTITY DScy   CDATA "[DScy  ]"--=capital DSE, Macedonian-->
+<!ENTITY iukcy  CDATA "[iukcy ]"--=small i, Ukrainian-->
+<!ENTITY Iukcy  CDATA "[Iukcy ]"--=capital I, Ukrainian-->
+<!ENTITY yicy   CDATA "[yicy  ]"--=small yi, Ukrainian-->
+<!ENTITY YIcy   CDATA "[YIcy  ]"--=capital YI, Ukrainian-->
+<!ENTITY jsercy CDATA "[jsercy]"--=small je, Serbian-->
+<!ENTITY Jsercy CDATA "[Jsercy]"--=capital JE, Serbian-->
+<!ENTITY ljcy   CDATA "[ljcy  ]"--=small lje, Serbian-->
+<!ENTITY LJcy   CDATA "[LJcy  ]"--=capital LJE, Serbian-->
+<!ENTITY njcy   CDATA "[njcy  ]"--=small nje, Serbian-->
+<!ENTITY NJcy   CDATA "[NJcy  ]"--=capital NJE, Serbian-->
+<!ENTITY tshcy  CDATA "[tshcy ]"--=small tshe, Serbian-->
+<!ENTITY TSHcy  CDATA "[TSHcy ]"--=capital TSHE, Serbian-->
+<!ENTITY kjcy   CDATA "[kjcy  ]"--=small kje Macedonian-->
+<!ENTITY KJcy   CDATA "[KJcy  ]"--=capital KJE, Macedonian-->
+<!ENTITY ubrcy  CDATA "[ubrcy ]"--=small u, Byelorussian-->
+<!ENTITY Ubrcy  CDATA "[Ubrcy ]"--=capital U, Byelorussian-->
+<!ENTITY dzcy   CDATA "[dzcy  ]"--=small dze, Serbian-->
+<!ENTITY DZcy   CDATA "[DZcy  ]"--=capital dze, Serbian-->
+]]>
+

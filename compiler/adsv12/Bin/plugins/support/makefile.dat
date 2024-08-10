@@ -1,0 +1,105 @@
+[Makefile Converter Data File]
+
+[***Makefile Format Defintions***]
+
+MakeFile:Standard Unix MAKE
+LinkCommand:ld 
+LinkCommand:gcc -o
+LinkCommand:cc -o
+CompileCommand:gcc -c
+IncludeSwitch:-I
+IncludeSwitch:-i
+
+MakeFile:Microsoft Visual C++
+LinkCommand:link
+LinkCommand:link.exe
+CompileCommand:cl
+CompileCommand:cl.exe
+IncludeSwitch:/I
+
+MakeFile:Metrowerks Command Line
+LinkCommand:mwld
+LinkCommand:mwld.exe
+CompileCommand:mwcc
+CompileCommand:mwcc
+IncludeSwitch:/I
+
+
+[***Metrowerks Compiler / Linker Information***]
+[*AccessPaths are relative to CodeWarrior Install*]
+
+Linker:GCC Linker
+LinkerFullName:GCC Linker
+#LinkerFullName:GCC LinuxX86 Linker
+FileType:c
+FileType:cpp
+FileType:c++
+FileType:cc
+FileType:cp
+FileType:cxx
+FileType:m
+IntermediateFile:o
+IntermediateFile:obj
+IntermediateFile:h
+
+AccessPath:/usr/include/
+AccessPath:/usr/include/bits/
+#Library:
+#Library:
+
+Target:exe
+#DebugLibrary:
+#ReleaseLibrary:
+
+Target:dll
+#DebugLibrary:
+#ReleaseLibrary:
+
+Target:lib
+#DebugLibrary:
+#ReleaseLibrary:
+
+[***Metrowerks Compiler / Linker Information***]
+[*AccessPaths are relative to CodeWarrior Install*]
+Linker:Metrowerks x86
+LinkerFullName:Win32 x86 Linker
+FileType:c
+FileType:cpp
+FileType:c++
+FileType:cc
+FileType:cp
+FileType:cxx
+FileType:m
+FileType:def
+FileType:rc
+IntermediateFile:obj
+IntermediateFile:h
+AccessPath:\Win32-x86 Support
+AccessPath:\MSL
+Library:Advapi32.lib
+Library:Comctl32.lib
+Library:Comdlg32.lib
+Library:Gdi32.lib
+Library:Kernel32.lib
+Library:Ole32.lib
+Library:Oleaut32.lib
+Library:Oledlg.lib
+Library:Shell32.lib
+Library:User32.lib
+Library:Uuid.lib
+Library:Winspool.lib
+Library:Urlmon.lib
+Library:MFC42cw.lib
+Library:MWCrtl.lib
+Target:exe
+DebugLibrary:ANSICX86D.lib
+DebugLibrary:ANSICPPX86D.lib
+ReleaseLibrary:ANSICX86.lib
+ReleaseLibrary:ANSICPPX86.lib
+Target:dll
+DebugLibrary:ANSICX86D.lib
+DebugLibrary:ANSICPPX86D.lib
+ReleaseLibrary:ANSICX86.lib
+ReleaseLibrary:ANSICPPX86.lib
+Target:lib
+

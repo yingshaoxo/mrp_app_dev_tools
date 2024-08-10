@@ -1,0 +1,24 @@
+/*
+ * C++ header for C header float.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:34 $
+ * Revising $Author: cadeniyi $
+ */
+
+#ifndef __cfloat
+#define __cfloat
+
+  #define __FLOAT_NO_EXPORTS 1
+  #include <float.h>
+  #undef __FLOAT_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __float_h  // later inclusion of float.h must do using std::*
+  #endif
+
+
+#endif

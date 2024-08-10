@@ -1,0 +1,26 @@
+<html>
+<head>将16字节的MD5校验值转换为32字节的ASCII可见字符串。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 md5ToString(<br>
+uint8* in,<br>
+uint8* out<br>
+);
+
+<h1>Parameters</h1>
+<b>in</b><br> 
+[IN]MD5校验值;<br>
+<b>out</b><br>
+[OUT]若函数返回MR_SUCCESS，则通过out返回32个字节的MD5校验值;这32个字节的内存由调用者申请、释放。<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS	MD5获取成功;<br>
+MR_FAILED    	获取失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

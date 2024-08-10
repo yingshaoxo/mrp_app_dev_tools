@@ -1,0 +1,2 @@
+Resources=DynaText Resources 4.0
+Version=DynaText 4.0.0

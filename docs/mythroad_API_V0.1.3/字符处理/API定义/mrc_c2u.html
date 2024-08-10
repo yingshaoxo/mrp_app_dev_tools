@@ -1,0 +1,33 @@
+<html>
+
+<head>将gb字符串转换为Unicode字符串，并申请一片内存保存Unicode字符串，将Unicode字符串的指针返回。</head>
+
+<body>
+
+<h1>Syntax</h1>
+uint16* mrc_c2u(<br>
+&nbsp&nbsp char *cp, <br>
+&nbsp&nbsp int32 *err, <br>
+&nbsp&nbsp int32 *size <br>
+);
+
+<h1>Parameters</h1>
+<b>cp</b><br>
+&nbsp&nbsp [IN]输入的gb字符串 <br>
+<b>err</b><br>
+&nbsp&nbsp [OUT]填NULL；若err为非NULL，则在转换出错时err返回出错字符的索引 <br>
+<b>size</b><br>
+&nbsp&nbsp [OUT]输出的Unicode字符串长度 <br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp       NULL        转换出错<br>
+&nbsp&nbsp     	 其他        Unicode字符串指针
+
+<h1>Remarks</h1>
+&nbsp&nbsp 由于早期mythroad版本，应用使用该函数时需要附带编码转换表，使用该函数将使目标代码增大约16K。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

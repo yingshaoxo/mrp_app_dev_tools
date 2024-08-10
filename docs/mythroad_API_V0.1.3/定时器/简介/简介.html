@@ -1,0 +1,23 @@
+<html>
+<title>MyThroad Timer简介</title>
+<head></head>
+<body>
+&nbsp&nbsp 利用Timer周期性触发的特点，常用它来完成状态的捕获、屏幕刷新等工作。在Mythroad平台中通过给Timer设置回调函数，
+就可以在Timer触发时，自动调用其处理过程。<br><br>
+&nbsp&nbsp 在设置Timer时长时，要结合Timer回调函数里其对自身调用的位置，适当做调整，以给其它较低优先级线程运行的时间。比如：<br>
+&nbsp&nbsp void UpdateScreenCallback（int32 data）<br>
+&nbsp&nbsp ｛<br>
+&nbsp&nbsp&nbsp&nbsp   PaintPics();<br>
+&nbsp&nbsp&nbsp&nbsp   mrc_timerStart(GAME_LEVEL_TIMER, STONE_TIMER_INTERVAL, 1, AutoGenStoneLine,1);<br>
+&nbsp&nbsp  }<br>
+&nbsp&nbsp  即：回调后置时，Timer时应适当调小；反之<br>
+&nbsp&nbsp void UpdateScreenCallback（int32 data）<br>
+&nbsp&nbsp ｛<br>
+&nbsp&nbsp&nbsp&nbsp   mrc_timerStart(GAME_LEVEL_TIMER, STONE_TIMER_INTERVAL, 1, AutoGenStoneLine,1);<br>
+&nbsp&nbsp&nbsp&nbsp   PaintPics();<br>
+&nbsp&nbsp  }<br>
+&nbsp&nbsp  即：回调前置时，Timer时长应适当增大。
+
+
+</body>
+</html>

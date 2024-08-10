@@ -1,0 +1,32 @@
+<html>
+<head>  将压缩BCD编码的数字串解码出来。</head>
+
+<body>
+
+<h1>Syntax</h1>
+char *mrc_BCDDecode(<br>
+char *bcd,<br>
+int32 len,<br>
+char *output<br>
+);
+
+<h1>Parameters</h1>
+<b>bcd</b><br>
+[IN]压缩BCD编码的数字串；<br>
+<b>len</b><br>
+[IN]压缩BCD编码的数字串长度；<br>
+<b>output</b><br>
+[OUT]输出字符串,空间由调用者负责申请和释放，本函数不负责申请释放内存。
+
+<h1>Return Value</h1>
+成功:返回指针output；失败:返回NULL
+
+<h1>Remarks</h1>
+ 1、BCD编码解释<br>
+ 2、ASCII数据转BCD见<a href="mrc_BCDEncode.html">mrc_BCDEncode</a>定义。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

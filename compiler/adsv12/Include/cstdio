@@ -1,0 +1,23 @@
+/*
+ * C++ header for C header stdio.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:34 $
+ * Revising $Author: cadeniyi $
+ */
+
+#ifndef __cstdio
+#define __cstdio
+
+  #define __STDIO_NO_EXPORTS 1
+  #include <stdio.h>
+  #undef __STDIO_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __stdio_h  // later inclusion of stdio.h must do using std::*
+  #endif
+
+#endif

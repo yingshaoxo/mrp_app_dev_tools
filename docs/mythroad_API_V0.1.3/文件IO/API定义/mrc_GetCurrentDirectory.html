@@ -1,0 +1,28 @@
+<html>
+<head>获得当前目录路径，注意，返回的目录路径是GB编码的。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_GetCurrentDirectory(<br>
+  int32 nBufferLength,<br> 
+  char *lpBuffer<br>      
+);
+
+<h1>Parameters</h1>
+<b>nBufferLength</b><br>
+[IN]lpBuffer的大小
+<b>lpBuffer</b><br>
+[OUT]存放目录路径的缓存
+
+<h1>Return Value</h1>
+目录信息的字节数，不包括字符串结束符；若读取失败，则返回值为0。
+
+<h1>Remarks</h1>
+1、GB编码 解释<br>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+设置声音缓冲
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_soundSet(<br>
+&nbsp&nbsp uint16 i,<br>
+&nbsp&nbsp char * filename, <br>
+&nbsp&nbsp int32 type<br>
+);
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN] 声音缓存序号<br>
+<b>filename</b><br>
+&nbsp&nbsp [IN] 声音文件名<br>
+<b>type</b><br>
+&nbsp&nbsp [IN] 见<a href="MR_SOUND_TYPE.html">MR_SOUND_TYPE</a>枚举定义<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS     设置成功<br>
+&nbsp&nbsp      MR_FAILED      设置失败
+
+<h1>Remarks</h1>
+&nbsp&nbsp Mythroad中最多同时支持 5个声音缓冲， index = 0~4。需要注意的是虽然Mythroad中最多同时支持5个Sound文件，但Mythroad 中这五个文件并不能同时播放，当且仅当播放的
+声音类型不同并且宿主平台支持同时播放类型不同的声音时，可以同时播放不同的声音。 
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

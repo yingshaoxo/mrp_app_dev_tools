@@ -1,0 +1,19 @@
+;; ARMulator configuration file type 3
+;; - vfp.ami -
+;; Copyright (c) 2001 ARM Limited. All Rights Reserved.
+
+;; RCS $Revision: 1.1.2.3 $
+;; Checkin $Date: 2001/10/04 21:04:12 $
+;; Revising $Author: dsinclai $
+
+;The VFP addition to things common to all processors, other than peripherals.
+; See also default.ami.
+{ Peripheralsets
+  { Processors_Common_No_Peripherals
+    ;VFP, NO_FPU or whatever.
+    { FPU=$FPU
+    }
+  }
+}
+
+;; EOF vfp.ami

@@ -1,0 +1,23 @@
+<html>
+<head>用户消费记录</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef struct{<br>
+		char MD5[33];//用户IMEI+IMSI的MD5值，由mrc_UserInfoMD5函数生成。<br>
+		char Reserved[3];//保留<br>
+		int32 value;//用户当天消费金额，用于进行限额，每天最高40RMB<br>
+		mr_datetime lastPayDate;//用户最后消费的日期。用于进行限额。<br>
+		//以下为用户私有数据。<br>
+		int32 times;//用户已使用次数。<br>
+}USER_RECORD_T;
+
+<h1>Members</h1>
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

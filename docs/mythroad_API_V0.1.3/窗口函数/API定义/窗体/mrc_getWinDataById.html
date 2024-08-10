@@ -1,0 +1,26 @@
+<html>
+<head>获取指定窗体id的窗体数据</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_getWinDataById(<br>
+int32 id,<br>
+int32* data<br>
+);
+
+<h1>Parameters</h1>
+<b>id</b><br>
+[IN]窗体ID，由<a href="mrc_winNew.html">mrc_winNew</a>创建，如果指定窗体为焦点窗体，则可通过<a href="mrc_getActiveWinId.html">mrc_getActiveWinId</a>获取窗体ID<br>
+<b>data</b><br>
+[OUT]窗体数据
+
+<h1>Return Value</h1>
+MR_SUCCESS     成功<br>
+MR_FAILED      失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_win.h</i><br>
+</body>
+
+</html>

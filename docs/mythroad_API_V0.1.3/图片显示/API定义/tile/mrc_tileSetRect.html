@@ -1,0 +1,48 @@
+<html>
+
+<head>
+设置地砖i的可视范围。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_tileSetRect(<br>
+&nbsp&nbsp   uint16 i,<br>
+&nbsp&nbsp   int16 x1,<br>
+&nbsp&nbsp   int16 y1,<br>
+&nbsp&nbsp   int16 x2,<br>
+&nbsp&nbsp   int16 y2 <br>
+);
+
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN]图片缓冲序号(地砖号)<br>
+
+<b>x1</b><br>
+&nbsp&nbsp [IN]可视范围的左上X坐标<br>
+<b>y1</b><br>
+&nbsp&nbsp [IN]可视范围的左上Y坐标<br>
+
+<b>x2</b><br>
+&nbsp&nbsp [IN]可视范围的右下X坐标<br>
+<b>y2</b><br>
+&nbsp&nbsp [IN]可视范围的右下X坐标<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS     成功<br>
+&nbsp&nbsp      MR_FAILED      失败
+
+<h1>Remarks</h1>
+
+&nbsp&nbsp 地砖简介:地砖，背景和关卡设计的基石。图片序号与mrc_bitmapLoad中的图片序号对应，同时可以有3个地砖，图片序号0～2。
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

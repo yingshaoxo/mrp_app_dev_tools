@@ -1,0 +1,29 @@
+[information]
+projectname=mrp_browser_by_yingshaoxo.mpr
+filename=mrp_browser_by_yingshaoxo.mrp
+appname=mrp_browser_by_yingshaoxo
+appid=70001
+version=1
+visible=1
+cpu=3
+vendor=yingshaoxo
+output=mrp_browser_by_yingshaoxo.mrp
+description=a http1.1 broswer made by yingshaoxo 2024.8.8
+include=${MRPBUILDER_HOME}\..\include\,${MRPBUILDER_HOME}\..\include\plugin\
+config=mtk240
+plugin=app
+
+[config_mtk240]
+output=mrp_browser_by_yingshaoxo.mrp
+bmp_mode=normal
+plat=mtk
+
+[files_mtk240]
+file01 = game_mtk240.ext(name=game.ext)
+file03 = ${MRPBUILDER_HOME}\plugins\mainext\mainext_mtk_d.mrp
+
+[files_game_mtk240]
+file01 = main.c
+file04 = ${MRPBUILDER_HOME}\security\mrpverify_mtk_dbg.lib
+
+[files]

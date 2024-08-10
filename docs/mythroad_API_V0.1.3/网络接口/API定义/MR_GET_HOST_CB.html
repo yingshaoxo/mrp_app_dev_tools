@@ -1,0 +1,28 @@
+<html>
+
+<head>
+获取主机IP回调函数
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef int32 (*MR_GET_HOST_CB)(int32 ip);
+
+<h1>Parameters</h1>
+<b>ip</b><br>
+&nbsp&nbsp p: MR_FAILED       获取IP失败;&nbsp其他值      IP地址 
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS  成功<br>
+&nbsp&nbsp      MR_FAILED   失败
+
+<h1>Remarks</h1>
+&nbsp&nbsp 函数的返回值仅作为将来升级版本保留，目前mythroad不关心函数的返回值。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

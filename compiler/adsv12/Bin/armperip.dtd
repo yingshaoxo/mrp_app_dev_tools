@@ -1,0 +1,74 @@
+<!-- Copyright (c) ARM Limited 2000.  All Rights Reserved. -->
+<!-- A document definition for ARM peripheral description files -->
+<!-- Author: $Author: hbullman $ -->
+<!-- Revision: $Revision: 1.3.4.2 $ -->
+<!-- Date: $Date: 2001/08/07 16:27:57 $ -->
+
+<!ELEMENT armperip (cvs_info?,
+                    (displaytype | module | board | eice | processor)*)>
+
+<!ELEMENT cvs_info (author, revision, date)>
+<!ELEMENT author (#PCDATA)*>
+<!ELEMENT revision (#PCDATA)*>
+<!ELEMENT date (#PCDATA)*>
+<!ATTLIST revision
+          min CDATA #IMPLIED
+          max CDATA #IMPLIED>
+
+<!ELEMENT displaytype (name, requires, definition)>
+<!ELEMENT name (#PCDATA)*>
+<!ELEMENT requires (#PCDATA)*>
+<!ELEMENT definition (#PCDATA)*>
+
+<!ELEMENT module (type, register+)>
+<!ELEMENT type (#PCDATA)*>
+<!ELEMENT register
+   (name, bank?, description?,
+      (memword_with_base+ | cpreg+ | cpreg2+ | jtag+)?,
+    attrib?, operation?, access, width, display?, revision?, dwarf?)>
+
+<!ELEMENT description (#PCDATA)*>
+
+<!ELEMENT memory EMPTY>
+<!ATTLIST memory
+          width    CDATA  "32"          
+          base     CDATA  "0"
+          offset   CDATA  "0">
+
+<!ELEMENT cpreg EMPTY>
+<!ATTLIST cpreg
+          cp       CDATA  #REQUIRED
+          crn      CDATA  #REQUIRED
+          crm      CDATA  #REQUIRED
+          opcode_1 CDATA  "0"
+          opcode_2 CDATA  "0">
+
+<!ELEMENT cpreg2 EMPTY>
+<!ATTLIST cpreg2
+          cp       CDATA  #REQUIRED
+          crn      CDATA  #REQUIRED
+          crm      CDATA  #REQUIRED
+          opcode_1 CDATA  "0"
+          opcode_2 CDATA  "0">
+
+<!ELEMENT jtag EMPTY>
+<!ATTLIST jtag
+          reg      CDATA  #REQUIRED>
+
+<!ELEMENT revisions (#PCDATA)*>
+<!ATTLIST revisions
+          default CDATA "0">
+
+<!ELEMENT bank (#PCDATA)*>
+<!ELEMENT attrib (#PCDATA)*>
+<!ELEMENT access (#PCDATA)*>
+<!ELEMENT width (#PCDATA)*>
+<!ELEMENT operation (#PCDATA)*>
+<!ELEMENT display (#PCDATA)*>
+
+<!ELEMENT board (name, component+)>
+<!ELEMENT eice (name, component+)>
+<!ELEMENT component (name, type, base?)>
+<!ELEMENT base (#PCDATA)*>
+
+<!ELEMENT processor (name, revisions?, component*)>

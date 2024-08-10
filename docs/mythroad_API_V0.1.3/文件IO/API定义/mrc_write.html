@@ -1,0 +1,29 @@
+<html>
+<head>写文件。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_write(<br>
+&nbsp&nbsp int32 f,<br>
+&nbsp&nbsp void *p,<br>
+&nbsp&nbsp uint32 l<br>
+);
+
+<h1>Parameters</h1>
+<b>f</b><br>
+&nbsp&nbsp [IN]文件句柄,由<a href="mrc_open.html">mrc_open</a>创建<br>   
+<b>p</b><br>
+&nbsp&nbsp [IN]待写入数据存放地址<br>    
+<b>l</b><br>
+&nbsp&nbsp [IN]待写入数据长度<br>                               
+
+<h1>Return Value</h1>
+&nbsp&nbsp 	>0           	确切写入的字节数<br>
+&nbsp&nbsp      MR_FAILED     	失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

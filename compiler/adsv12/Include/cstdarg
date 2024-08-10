@@ -1,0 +1,23 @@
+/*
+ * C++ header for C header stdarg.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:34 $
+ * Revising $Author: cadeniyi $
+ */
+
+#ifndef __cstdarg
+#define __cstdarg
+
+  #define __STDARG_NO_EXPORTS 1
+  #include <stdarg.h>
+  #undef __STDARG_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __stdarg_h  // later inclusion of stdarg.h must do using std::*
+  #endif
+
+#endif

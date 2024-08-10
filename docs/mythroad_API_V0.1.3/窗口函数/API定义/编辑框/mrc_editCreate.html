@@ -1,0 +1,43 @@
+<html>
+
+<head>
+创建一个编辑框，并返回编辑框句柄。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_editCreate(<br>
+&nbsp&nbsp const char * title, <br>
+&nbsp&nbsp const char * text, <br>
+&nbsp&nbsp int32 type, <br>
+&nbsp&nbsp int32 max_size<br>
+);
+
+<h1>Parameters</h1>
+<b>title</b><br>
+&nbsp&nbsp [IN]文本框的标题，unicode编码，网络字节序<br>
+<b>text</b><br>
+&nbsp&nbsp [IN]文本框内容，unicode编码，网络字节序<br>
+<b>type</b><br>
+&nbsp&nbsp [IN]见<a href="EDIT_TEXT_TYPE.html">MR_EDIT_ANY</a>;<a href="EDIT_TEXT_TYPE.html">MR_EDIT_NUMERIC</a>;<a href="EDIT_TEXT_TYPE.html">MR_EDIT_PASSWORD</a>定义<br>
+<b>max_size</b><br>
+&nbsp&nbsp [IN]最多可以输入的字符（unicode）个数，这里每一个中文、字母、数字、符号都算一个字符
+
+<h1>Return Value</h1>
+&nbsp&nbsp      正整数   编辑框句柄<br>
+&nbsp&nbsp      MR_FAILED   失败
+
+
+<h1>Remarks</h1>
+&nbsp&nbsp 编辑框用来显示并提供用户编辑文字信息。text是编辑框显示的初始内容。当编辑框显示时，<br>
+如果用户选择了编辑框上的某个键，系统将构造Mythroad应用消息，通过mrc_event函数传送给<br>
+Mythroad应用，消息类型为MR_DIALOG_EVENT，参数为该按键的ID;"确定"键ID为：MR_DIALOG_KEY_OK；<br>
+"取消"键ID为：MR_DIALOG_KEY_CANCEL。
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

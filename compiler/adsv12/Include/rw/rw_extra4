@@ -1,0 +1,12 @@
+#ifndef __STD_RW_RW_RW_EXTRA4__
+#define __STD_RW_RW_RW_EXTRA4__
+
+  typedef basic_string<char, char_traits<char>, allocator<char> >
+  string;
+
+#ifndef _RWSTD_NO_WIDE_CHAR
+  typedef basic_string<wchar_t, char_traits<wchar_t>, allocator<wchar_t> >
+  wstring;
+#endif
+
+#endif // __STD_RW_RW_RW_EXTRA4__

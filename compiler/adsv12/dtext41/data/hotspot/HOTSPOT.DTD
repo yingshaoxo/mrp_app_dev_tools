@@ -1,0 +1,95 @@
+<!-- $Id: HOTSPOT.DTD 1.7 1996/08/23 13:01:52 mag Exp $ -->
+<!-- Version 3.2 -->
+<!-- DTD fragment for hotspots -->
+<!-- This DTD reflects the output of the current Hotspot Editor.
+The Hotspot Editor is currently in Beta release.  This DTD is subject
+to change. -->
+
+<!-- here are some entities useful in describing attribute values. -->
+<!ENTITY % f.points   "CDATA"             -- a list of points -->
+
+<!-- entity listing all types of region elements. -->
+<!-- initial support for rectangles only. -->
+<!ENTITY % f.region   "rect | polyline | ellipse" >
+
+<!-- entity listing possible contents of a region.  (for searching) -->
+<!-- a region could be given arbitrarily complex data to search on. 
+Typically, a region element would contain the text visible in the region. -->
+<!ENTITY % f.text     "#PCDATA" >
+
+
+
+<!-- the GRAPHIC element surrounds all the hotspot information 
+for a graphic.  Its ENTITY attribute refers to the graphic file itself. -->
+<!--      ELEMENTS    MIN  CONTENT (EXCEPTIONS)                      -->
+<!ELEMENT HotspotGraphic     - o  (%f.region)*         >
+
+<!--      ELEMENTS    NAME     VALUE       DEFAULT                   -->
+<!ATTLIST HotspotGraphic     entity   ENTITY      #IMPLIED
+                      filename CDATA       #REQUIRED
+                      EbtName  NAME        #FIXED "EBTgraphic"   >
+
+
+<!-- a REGION is a specification of an area on the graphic.
+ID is the region's identifier.  ENTITY identifies the graphic it is in. -->
+<!--      ELEMENTS    MIN  CONTENT (EXCEPTIONS)                      -->
+<!ELEMENT (%f.region) - o  (%f.text)         >
+
+<!-- The region elements have several elements in common, including
+points and numpoints, used to define their shape.  In addition, they
+have the ebtName attribute which will (eventually) allow publishers
+to use different element GIs -->
+<!--      ELEMENTS    NAME     VALUE       DEFAULT                   -->
+<!ATTLIST polyline    ebtName  NAME        #FIXED    "EBTpolyline"
+                      id       ID          #REQUIRED
+                      idref    IDREF       #IMPLIED
+                      TEI      CDATA       #IMPLIED
+                      book     CDATA       #IMPLIED
+                      coll     CDATA       #IMPLIED
+                      points   (%f.points) #REQUIRED
+                      numpoints CDATA      #REQUIRED>
+<!ATTLIST rect        ebtName  NAME        #FIXED    "EBTrect"
+                      id       ID          #REQUIRED
+                      idref    IDREF       #IMPLIED
+                      TEI      CDATA       #IMPLIED
+                      book     CDATA       #IMPLIED
+                      coll     CDATA       #IMPLIED
+                      points   (%f.points) #REQUIRED
+                      numpoints CDATA      #REQUIRED>
+<!ATTLIST ellipse     ebtName  NAME        #FIXED    "EBTellipse"     
+                      id       ID          #REQUIRED
+                      idref    IDREF       #IMPLIED
+                      TEI      CDATA       #IMPLIED
+                      book     CDATA       #IMPLIED
+                      coll     CDATA       #IMPLIED
+                      points   (%f.points) #REQUIRED
+                      numpoints CDATA      #REQUIRED>
+
+<!-- NOTES:
+The idref attribute is intended to be used as a pointer to a link end element.
+The TEI attribute is intended to be a TEI locator for a link end.  Either
+the TEI attribute or the idref attribute should be used, not both.
+The book and coll attributes are for specifiying a collection and book for
+cross book links.
+
+Coordinates are expressed in units relative to each axis of each graphic.
+Coordinates are real numbers between 0.0 and 1.0.  (Exponential notation is not
+supported.) Thus the point (0.5 0.5) is in the center (vertically and
+horizontally) of any graphic, no matter what its shape or size.  (0.0 0.0) is
+the upper left corner.  (1.0 1.0) is the lower right.
+
+Each point is expressed as two coordinates (horizontal followed by vertical), 
+separated by a space, and surrounded by parentheses.
+
+A list of points is a space-separated concatination of points.
+
+This DTD shows region elements which can contain only #PCDATA.  It could be
+modified so that regions contain any valid SGML.  I show this to indicate how
+we could store such information to enable searching within a graphic.
+-->
+
+
+
+
+
+

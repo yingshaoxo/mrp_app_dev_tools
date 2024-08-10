@@ -1,0 +1,33 @@
+<html>
+<head>刷新对话框</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_platDialogRefresh(<br>
+int32 text,<br>
+char * title,<br>
+char * texttext,<br>
+int32 type<br>
+);
+
+<h1>Parameters</h1>
+<b>text</b><br> 
+对话框句柄<br>
+<b>title</b><br>
+对话框的标题<br>
+<b>texttext</b><br>
+对话框的内容<br>
+<b>type</b><br>
+对话框类型  MR_DIALOG_OK：对话框有"确定"键；MR_DIALOG_OK_CANCEL：对话框有"确定"和"取消"键；MR_DIALOG_CANCEL：对话框有 "取消/返回"键。<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS  成功
+<br>
+MR_FAILED   失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_text.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+$if has-namespace$$\$
+namespace $namespace-name$ {
+
+$endif$$\$
+class $class-name$$if has-base-classes$: $foreach base-class ", "$$base-class-name$$endloop$$endif$
+{
+$if has-public-members$$\$
+public:
+$foreach public-method$$\$
+	$include MethodDecl.mtl$
+$endloop$
+$endif$$\$
+$if has-protected-members$$\$
+protected:
+$foreach protected-method$$\$
+	$include MethodDecl.mtl$
+$endloop$
+$endif$$\$
+$if has-private-members$$\$
+private:
+$foreach private-method$$\$
+	$include MethodDecl.mtl$
+$endloop$
+$endif$$\$
+};
+$if has-namespace$$\$
+
+}	// namespace $namespace-name$
+$endif$$\$

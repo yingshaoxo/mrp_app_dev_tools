@@ -1,0 +1,38 @@
+<html>
+
+<head>
+读取地砖值
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_tileGetTile(<br>
+&nbsp&nbsp   uint16 i,<br>
+&nbsp&nbsp   uint16 x,<br>
+&nbsp&nbsp   uint16 y<br>
+);
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN]图片缓冲序号(地砖号)，由<a href="mrc_bitmapNew.html">mrc_bitmapNew</a>创建<br>
+<b>x</b><br>
+&nbsp&nbsp [IN]地砖列<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]地砖行<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp      >=0               地砖值<br>
+&nbsp&nbsp      MR_FAILED         失败
+
+<h1>Remarks</h1>
+
+&nbsp&nbsp 地砖简介:地砖，背景和关卡设计的基石。图片序号与mrc_bitmapLoad中的图片序号对应，同时可以有3个地砖，图片序号0～2。
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

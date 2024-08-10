@@ -1,0 +1,141 @@
+/*
+ * C++ Library file typeinfo
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.12 $
+ * Checkin $Date: 2001/01/22 10:10:47 $
+ * Revising $Author: sdouglas $
+ */
+ 
+/*
+ * Combined headers for amazon and armedg compiler, this will have to
+ * be cleaned up one day, so we just need the armedg headers 
+ */
+/* Edison Design Group, 1995. */
+/*
+typeinfo.h -- Include file for type information (18.5.1)
+*/
+#ifndef _TYPEINFO
+#define _TYPEINFO
+
+
+#ifndef _EXCEPTION
+#include <exception>
+#endif /* _EXCEPTION */
+
+#ifdef __EDG__
+
+#ifdef __EDG_RUNTIME_USES_NAMESPACES
+namespace std {
+#endif /* ifdef __EDG_RUNTIME_USES_NAMESPACES */
+
+  /*
+  If bool is not supported, use a typedef for bool.
+  */
+  #ifdef _BOOL
+  typedef bool __bool;
+  #else /* ifndef _BOOL */
+  typedef int __bool;
+  #endif /* ifdef _BOOL */
+
+/* The following pragma is used so that the compiler knows that this definition
+   of type_info is the one that corresponds to the type returned by typeid. */
+#pragma define_type_info
+  class type_info {
+  public:
+    virtual ~type_info();
+    __bool operator==(const type_info&) const;
+    __bool operator!=(const type_info&) const;
+    __bool before(const type_info&) const;
+    const char* name() const;
+  private:
+    type_info& operator=(const type_info&);  // Not actually defined
+#if 0
+#else /* 0 */
+  protected:
+    // Protected instead of private to suppress the "no accessible
+    // constructor" warning
+#endif /* 0 */
+    type_info(const type_info&);  // Not actually defined
+  };
+
+  class bad_cast : public exception {
+  public:
+    bad_cast() throw();
+    bad_cast(const bad_cast&) throw();
+    bad_cast& operator=(const bad_cast&) throw();
+    virtual ~bad_cast() throw();
+    virtual const char* what() const throw();
+  };
+
+  class bad_typeid : public exception {
+  public:
+    bad_typeid() throw();
+    bad_typeid(const bad_typeid&) throw();
+    bad_typeid& operator=(const bad_typeid&) throw();
+    virtual ~bad_typeid() throw();
+    virtual const char* what() const throw();
+  };
+
+#ifdef __EDG_RUNTIME_USES_NAMESPACES
+}  /* namespace std */
+
+#ifdef __EDG_IMPLICIT_USING_STD
+/* Implicitly include a using directive for the STD namespace when this
+   preprocessing flag is TRUE. */
+using namespace std;
+#endif /* ifdef __EDG_IMPLICIT_USING_STD */
+
+#endif /* ifdef __EDG_RUNTIME_USES_NAMESPACES */
+
+#else /* not __EDG__ */
+
+// Partial implementation of type_info, sufficient to support
+// acceptance of the typeid syntax and providing an approximate,
+// incomplete implementation of the required functionality.
+// Based on January 1997 DWP, section 18.5.
+
+extern "C" int strcmp(const char *, const char *);
+
+class type_info {
+  public:
+        virtual ~type_info();
+        bool operator==(const type_info& rhs) const 
+                { return strcmp((const char *)this, (const char *)&rhs) == 0; }
+        bool operator!=(const type_info& rhs) const  
+                { return !(*this == rhs); }
+        bool before(const type_info& rhs) const
+                { return strcmp((const char *)this, (const char *)&rhs) < 0; }
+        const char *name() const 
+                { return (const char *)this; }
+  protected:
+        type_info(const type_info& rhs);
+  private:        
+        type_info& operator=(const type_info& rhs);
+};
+
+class bad_cast : public exception {
+public:
+      bad_cast() throw() { }
+      bad_cast(const bad_cast& __that) throw() : exception(__that) { }
+    bad_cast& operator=(const bad_cast& __that) throw()
+      { this->exception::operator=(__that); return *this; }
+    virtual ~bad_cast() throw() { }
+    virtual const char* what() const throw() { return 0 /*@@@*/; }
+};
+
+class bad_typeid : public exception {
+public:
+      bad_typeid() throw() { }
+      bad_typeid(const bad_typeid& __that) throw() : exception(__that) { }
+    bad_typeid& operator=(const bad_typeid& __that) throw()
+      { this->exception::operator=(__that); return *this; }
+    virtual ~bad_typeid() throw() { }
+    virtual const char* what() const throw() { return 0 /*@@@*/; }
+};
+
+#endif /* __EDG__ */
+
+#endif /* _TYPEINFO */

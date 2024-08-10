@@ -1,0 +1,13 @@
+; $Revision: 1.1 $
+;   $Author: dsinclai $
+;     $Date: 2000/07/31 12:58:22 $
+;
+; Copyright (c) ARM Limited 2000.  All Rights Reserved.
+;
+; sordi.def - We would like to export QuerySORDI through __declspec(dllexport),
+;             but unbelievably, this does not work under WindU :(
+;
+EXPORTS
+ QuerySORDI
+
+; EOF sordi.def

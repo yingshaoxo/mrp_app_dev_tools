@@ -1,0 +1,27 @@
+<html>
+<head>用户对付费操作的二次确认。</head>
+
+<body>
+
+<h1>Syntax</h1>
+void mrc_ConfirmSms(int32 isBuy);
+
+<h1>Parameters</h1>
+<b>isBuy</b><br>
+［IN］0:用户放弃二次确认；1:用户选择二次确认。
+
+<h1>Return Value</h1>
+MR_SUCCESS	设置成功。
+MR_FAILED	设置失败。
+
+<h1>Remarks</h1>
+在<a href="mrc_ChargeExConfirm.html">mrc_ChargeExConfirm</a>调用后，如果通道需要二次确认，在收到确认提醒短信后，回调函数cbQueConfirm将被调用，<br>
+然后应用将提示用户是否确认购买行为，应用均需要调用mrc_ConfirmSms函数，告知用户态度。<br>
+(1)、如果用户选择购买，则计费模块将很快就调用mrc_PayCB f；并在后台异步的完成二次确认以及后续其他短信的自动二次确认；<br>
+(2)、如果用户选择不购买，则计费模块将清空短信发送队列，回调函数mrc_PayCB f将不会被执行。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

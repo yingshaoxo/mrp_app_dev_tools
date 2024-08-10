@@ -1,0 +1,26 @@
+<html>
+<head>付费检测</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_checkChargeEx(int32 Option); 
+
+<h1>Parameters</h1>
+<b>Option</b><br>
+[IN]见<a href="PAY_CHECK_OPTION.html">PAY_CHECK_OPTION</a>
+
+<h1>Return Value</h1>
+MR_SUCCESS	条件匹配；<br>
+MR_FAILED	查找失败。
+
+<h1>Remarks</h1>
+mrc_checkChargeEx(CHECK_IS_REGISTER)==MR_SUCCESS，用户已注册应用；<br>
+mrc_checkChargeEx(CHECK_IS_FREE)==MR_SUCCESS，游戏在该运营商免费；<br>
+mrc_checkChargeEx(CHECK_IS_MONTHUSER)==MR_SUCCESS，用户是包月用户.<br>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

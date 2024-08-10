@@ -1,0 +1,38 @@
+<html>
+
+<head>
+ 从指定地址接收数据。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_recvfrom(<br>
+&nbsp&nbsp int32 s, <br>
+&nbsp&nbsp char *buf, <br>
+&nbsp&nbsp int len, <br>
+&nbsp&nbsp int32 *ip, <br>
+&nbsp&nbsp uint16 *port<br>
+);
+
+<h1>Parameters</h1>
+<b>s</b><br>
+&nbsp&nbsp [IN] 打开的socket句柄，由<a href="mrc_socket.html">mrc_socket</a>创建<br>
+<b>buf</b><br>
+&nbsp&nbsp [OUT] 要发送数据的缓冲区<br>
+<b>len</b><br>
+&nbsp&nbsp [IN] 缓存区的大小<br>
+<b>ip</b><br>
+&nbsp&nbsp [IN] 对端IP地址<br>
+<b>port</b><br>
+&nbsp&nbsp [IN] 对端端口号<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp        >=0的整数   实际接收的数据字节个数<br>
+&nbsp&nbsp        MR_FAILED   Socket已经被关闭或遇到了无法修复的错误。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

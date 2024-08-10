@@ -1,0 +1,24 @@
+<html>
+<head>付费回调函数</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef struct{<br>
+		uint32 Option;//是否生成签名文件，1:生成；0:不生成；<br>
+		uint16 Channel;//收费通道<br>
+		uint16 value;//收费金额<br>
+		int32 timeOut;//超时时间，若为0则不等待，立刻返回<br>
+		int32 data;//传给回调函数的参数。<br>
+		mrc_PayCB fcb;<br>
+}PAY_CALLBACK_t;
+
+<h1>Members</h1>
+<b>mrc_PayCB</b><br>
+见<a href="mrc_PayCB.html">mrc_PayCB</a>定义
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

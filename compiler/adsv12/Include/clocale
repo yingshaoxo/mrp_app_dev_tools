@@ -1,0 +1,24 @@
+/*
+ * C++ header for C header locale.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:34 $
+ * Revising $Author: cadeniyi $
+ */
+
+
+#ifndef __clocale
+#define __clocale
+
+  #define __LOCALE_NO_EXPORTS 1
+  #include <locale.h>
+  #undef __LOCALE_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __locale_h  // later inclusion of locale.h must do using std::*
+  #endif
+
+#endif

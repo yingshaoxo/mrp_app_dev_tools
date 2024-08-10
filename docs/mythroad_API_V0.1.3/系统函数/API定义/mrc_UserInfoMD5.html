@@ -1,0 +1,30 @@
+<html>
+<head>将用户信息的MD5值返回给应用。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_UserInfoMD5(<br>
+uint32 Option,<br>
+char *out<br>
+);
+
+<h1>Parameters</h1>
+<b>Option</b><br>
+［IN］Option:	0，用户手机IMEI的MD5值；1，用户SIM卡的IMSI号码的MD5值；3，用户SIM卡和IMEI的MD5值；<br>
+<b>out</b><br>
+［OUT］用户接受MD5输入的缓冲区，33个字节，缓冲区由用户负责申请和释放内存空间，以NULL结尾。<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS	计算MD5成功；<br>
+MR_FAILED	计算MD5失败。
+
+<h1>Remarks</h1>
+1、如果最终使用的通道不需要二次确认，则本函数的行为和mrc_ChargeExOversea一致；<br>
+2、如果最终使用的通道需要二次确认，则在收到运营商回复的第一条的回复请求后，调用回调函数cbQueConfirm。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

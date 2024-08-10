@@ -1,0 +1,5 @@
+$if data-member-is-static$static $endif$$\$
+$if data-member-is-const$const $endif$$\$
+$if data-member-is-volatile$volatile $endif$$\$
+$if data-member-is-mutable$mutable $endif$$\$
+$data-member-type$ $data-member-name$;$\$

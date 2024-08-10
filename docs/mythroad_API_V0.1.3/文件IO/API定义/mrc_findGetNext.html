@@ -1,0 +1,31 @@
+<html>
+
+<head>取得一个目录搜索的结果。将结果放置于buffer中。当目录中的结果都遍历过后，返回MR_FAILED。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_findGetNext(<br>
+&nbsp&nbsp int32 search_handle,<br>
+&nbsp&nbsp char* buffer,<br>
+&nbsp&nbsp uint32 len<br>
+);
+
+<h1>Parameters</h1>
+<b>search_handle</b><br>
+&nbsp&nbsp [IN]调用<a href="mrc_findStart.html">mr_c_findStart</a>时返回的查找句柄<br>
+<b>buffer</b><br>
+&nbsp&nbsp [OUT]缓冲区，用于存放查找成功时文件名或一级子目录名<br>
+<b>len</b><br>
+&nbsp&nbsp [IN]缓冲区大小<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS  搜索成功<br>
+&nbsp&nbsp      MR_FAILED   搜索结束或搜索失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<html>
+
+<head>
+建立TCP连接。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_connect(<br>
+&nbsp&nbsp int32 s, <br>
+&nbsp&nbsp int32 ip, <br>
+&nbsp&nbsp uint16 port, <br>
+&nbsp&nbsp int32 type <br>
+);
+
+<h1>Parameters</h1>
+<b>s</b><br>
+&nbsp&nbsp [IN] 打开的socket句柄，由<a href="mrc_socket.html">mrc_socket</a>创建<br>
+<b>ip</b><br>
+&nbsp&nbsp [IN] IP地址,如果一个主机的IP地址为218.18.95.203，则值为218<<24 + 18<<16 + 95<<8 + 203= 0xda125fcb<br> 
+<b>port</b><br>
+&nbsp&nbsp [IN] 端口号<br>
+<b>type</b><br>
+&nbsp&nbsp [IN] 工作模式，有<a href="SOCKET_WORK_TYPE.html">MR_SOCKET_BLOCK</a>&nbsp<a href="SOCKET_WORK_TYPE.html">MR_SOCKET_NONBLOCK</a><br> 
+
+<h1>Return Value</h1>
+&nbsp&nbsp      MR_SUCCESS  	成功<br>
+&nbsp&nbsp      MR_FAILED      	失败<br>
+&nbsp&nbsp      MR_WAITING   	使用异步方式进行连接，应用需要轮询该socket的状态以获知连接状况
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

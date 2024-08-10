@@ -1,0 +1,37 @@
+<config>
+ <dbset lang="EN">
+    <db type="ise">en/enise.dat</>
+    <db type="isecache">en/encache.dat</>
+    <db type="isenoise">en/ennoise.dat</>
+    <db type="ciet">en/enthes.dat</>
+    <db type="pt">en/samplept.dat</>
+  </dbset>
+ <dbset lang="FR">
+    <db type="ise">fr/frise.dat</>
+    <db type="isecache">fr/frcache.dat</>
+    <db type="isenoise">fr/frnoise.dat</>
+    <db type="ciet">fr/frthes.dat</>
+  </dbset>
+ <dbset lang="DE">
+    <db type="ise">de/deise.dat</>
+    <db type="isecache">de/decache.dat</>
+    <db type="isenoise">de/denoise.dat</>
+    <db type="ciet">de/dethes.dat</>
+  </dbset>
+ <dbset lang="ES">
+    <db type="ise">es/esise.dat</>
+    <db type="isecache">es/escache.dat</>
+    <db type="isenoise">es/esnoise.dat</>
+    <db type="ciet">es/esthes.dat</>
+  </dbset>
+ <dbset lang="IT">
+    <db type="ise">it/itise.dat</>
+    <db type="isecache">it/itcache.dat</>
+    <db type="isenoise">it/itnoise.dat</>
+    <db type="ciet">it/itthes.dat</>
+  </dbset>
+ <dbset lang="JA">
+    <db type="ise">ja/jaise.dat</>
+    <db type="isenoise">ja/janoise.dat</>
+  </dbset>
+</config>

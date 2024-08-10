@@ -1,0 +1,49 @@
+<html>
+<title>窗体处理示例</title>
+<head>窗体示例以游戏“退出”时的提示对话框处理为例</head>
+<body>
+<br><br>
+&nbsp&nbsp <b>1、创建容器窗体</b><br>
+&nbsp&nbsp &nbsp&nbsp mrc_winInit();<br>
+&nbsp&nbsp &nbsp&nbsp mrc_winNew(0,ExitGameWinEvent,ExitGameKeyEvent);<br>
+&nbsp&nbsp <b>2、ExitGameWinEvent的窗体事件WIN_EVENT_SHOW处理</b><br>
+&nbsp&nbsp &nbsp&nbsp case WIN_EVENT_SHOW:<br>
+&nbsp&nbsp &nbsp&nbsp 		{
+&nbsp&nbsp &nbsp&nbsp 			g_exit_game_dialog_win_id = mrc_dialogCreate(SGL_LoadString(TXT_CHOOSE),SGL_LoadString(TXT_EXIT_GAME), MR_DIALOG_OK_CANCEL);<br>
+&nbsp&nbsp &nbsp&nbsp 			if( MR_FAILED == g_exit_game_dialog_win_id )<br>
+&nbsp&nbsp &nbsp&nbsp 			{<br>
+&nbsp&nbsp &nbsp&nbsp 				mrc_exit();<br>
+&nbsp&nbsp &nbsp&nbsp 				return;<br>
+&nbsp&nbsp &nbsp&nbsp 			}<br>
+&nbsp&nbsp &nbsp&nbsp 			//调用本地UI,虚拟机被暂停<br>
+&nbsp&nbsp &nbsp&nbsp 			setVMStat(FALSE);<br>
+&nbsp&nbsp &nbsp&nbsp 			break;<br>
+&nbsp&nbsp &nbsp&nbsp 		}<br>
+&nbsp&nbsp <b>3、ExitGameKeyEvent的按键消息处理</b><br>
+&nbsp&nbsp &nbsp&nbsp 	 if ( type == MR_DIALOG_EVENT)<br>
+&nbsp&nbsp &nbsp&nbsp 	{<br>
+&nbsp&nbsp &nbsp&nbsp 		//点击返回，返回游戏主菜单<br>
+&nbsp&nbsp &nbsp&nbsp 		if( g_exit_game_dialog_win_id != -1 )<br>
+&nbsp&nbsp &nbsp&nbsp 		{<br>
+&nbsp&nbsp &nbsp&nbsp 			mrc_dialogRelease(g_exit_game_dialog_win_id);<br>
+&nbsp&nbsp &nbsp&nbsp 			g_exit_game_dialog_win_id = -1;<br>
+&nbsp&nbsp &nbsp&nbsp 
+&nbsp&nbsp &nbsp&nbsp 			//释放本地UI,虚拟机恢复<br>
+&nbsp&nbsp &nbsp&nbsp 			setVMStat(TRUE);<br>
+&nbsp&nbsp &nbsp&nbsp 		}<br>
+&nbsp&nbsp &nbsp&nbsp 	｝<br>
+&nbsp&nbsp <b>4、关闭容器窗体ExitGameWinEvent的窗体事件WIN_EVENT_EXIT处理</b><br>
+&nbsp&nbsp &nbsp&nbsp case WIN_EVENT_EXIT:<br>
+&nbsp&nbsp &nbsp&nbsp 			if( g_exit_game_dialog_win_id != -1 )<br>
+&nbsp&nbsp &nbsp&nbsp 			{
+&nbsp&nbsp &nbsp&nbsp 				mrc_dialogRelease(g_exit_game_dialog_win_id);<br>
+&nbsp&nbsp &nbsp&nbsp 				g_exit_game_dialog_win_id = -1;<br>
+&nbsp&nbsp &nbsp&nbsp 				//释放本地UI,虚拟机恢复<br>
+&nbsp&nbsp &nbsp&nbsp 				setVMStat(TRUE);<br>
+&nbsp&nbsp &nbsp&nbsp 			}<br>
+
+
+
+
+</body>
+<html>

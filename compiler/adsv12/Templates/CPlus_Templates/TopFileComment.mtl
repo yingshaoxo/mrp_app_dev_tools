@@ -1,0 +1,15 @@
+/* 
+	$filename$
+
+$if AppTitle$$\$
+	Title:			$AppTitle$
+$endif$$\$
+	Author:			$user$
+$if AppDescription$$\$
+	Description:	$AppDescription$
+$elseif class-name$$\$
+	Description:	<describe the $class-name$ class here>
+$else$$\$
+	Description:	
+$endif$$\$
+*/

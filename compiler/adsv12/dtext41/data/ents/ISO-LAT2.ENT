@@ -1,0 +1,153 @@
+<!-- $Id: ISO-LAT2.ENT 1.1 1995/12/18 03:01:27 glf Exp $-->
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOlat2 PUBLIC
+       "ISO 8879-1986//ENTITIES Added Latin 2//EN">
+     %ISOlat2;
+-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. For an example
+of how to define a special-character entity using the SDATA technique,
+examine the definition of the entity "plumn" in the iso-num.ent file.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY abreve CDATA "[abreve]"--=small a, breve-->
+<!ENTITY Abreve CDATA "[Abreve]"--=capital A, breve-->
+<!ENTITY amacr  CDATA "[amacr ]"--=small a, macron-->
+<!ENTITY Amacr  CDATA "[Amacr ]"--=capital A, macron-->
+<!ENTITY aogon  CDATA "[aogon ]"--=small a, ogonek-->
+<!ENTITY Aogon  CDATA "[Aogon ]"--=capital A, ogonek-->
+<!ENTITY cacute CDATA "[cacute]"--=small c, acute accent-->
+<!ENTITY Cacute CDATA "[Cacute]"--=capital C, acute accent-->
+<!ENTITY ccaron CDATA "[ccaron]"--=small c, caron-->
+<!ENTITY Ccaron CDATA "[Ccaron]"--=capital C, caron-->
+<!ENTITY ccirc  CDATA "[ccirc ]"--=small c, circumflex accent-->
+<!ENTITY Ccirc  CDATA "[Ccirc ]"--=capital C, circumflex accent-->
+<!ENTITY cdot   CDATA "[cdot  ]"--=small c, dot above-->
+<!ENTITY Cdot   CDATA "[Cdot  ]"--=capital C, dot above-->
+<!ENTITY dcaron CDATA "[dcaron]"--=small d, caron-->
+<!ENTITY Dcaron CDATA "[Dcaron]"--=capital D, caron-->
+<!ENTITY dstrok CDATA "[dstrok]"--=small d, stroke-->
+<!ENTITY Dstrok CDATA "[Dstrok]"--=capital D, stroke-->
+<!ENTITY ecaron CDATA "[ecaron]"--=small e, caron-->
+<!ENTITY Ecaron CDATA "[Ecaron]"--=capital E, caron-->
+<!ENTITY edot   CDATA "[edot  ]"--=small e, dot above-->
+<!ENTITY Edot   CDATA "[Edot  ]"--=capital E, dot above-->
+<!ENTITY emacr  CDATA "[emacr ]"--=small e, macron-->
+<!ENTITY Emacr  CDATA "[Emacr ]"--=capital E, macron-->
+<!ENTITY eogon  CDATA "[eogon ]"--=small e, ogonek-->
+<!ENTITY Eogon  CDATA "[Eogon ]"--=capital E, ogonek-->
+<!ENTITY gacute CDATA "[gacute]"--=small g, acute accent-->
+<!ENTITY gbreve CDATA "[gbreve]"--=small g, breve-->
+<!ENTITY Gbreve CDATA "[Gbreve]"--=capital G, breve-->
+<!ENTITY Gcedil CDATA "[Gcedil]"--=capital G, cedilla-->
+<!ENTITY gcirc  CDATA "[gcirc ]"--=small g, circumflex accent-->
+<!ENTITY Gcirc  CDATA "[Gcirc ]"--=capital G, circumflex accent-->
+<!ENTITY gdot   CDATA "[gdot  ]"--=small g, dot above-->
+<!ENTITY Gdot   CDATA "[Gdot  ]"--=capital G, dot above-->
+<!ENTITY hcirc  CDATA "[hcirc ]"--=small h, circumflex accent-->
+<!ENTITY Hcirc  CDATA "[Hcirc ]"--=capital H, circumflex accent-->
+<!ENTITY hstrok CDATA "[hstrok]"--=small h, stroke-->
+<!ENTITY Hstrok CDATA "[Hstrok]"--=capital H, stroke-->
+<!ENTITY Idot   CDATA "[Idot  ]"--=capital I, dot above-->
+<!ENTITY Imacr  CDATA "[Imacr ]"--=capital I, macron-->
+<!ENTITY imacr  CDATA "[imacr ]"--=small i, macron-->
+<!ENTITY ijlig  CDATA "[ijlig ]"--=small ij ligature-->
+<!ENTITY IJlig  CDATA "[IJlig ]"--=capital IJ ligature-->
+<!ENTITY inodot CDATA "[inodot]"--=small i without dot-->
+<!ENTITY iogon  CDATA "[iogon ]"--=small i, ogonek-->
+<!ENTITY Iogon  CDATA "[Iogon ]"--=capital I, ogonek-->
+<!ENTITY itilde CDATA "[itilde]"--=small i, tilde-->
+<!ENTITY Itilde CDATA "[Itilde]"--=capital I, tilde-->
+<!ENTITY jcirc  CDATA "[jcirc ]"--=small j, circumflex accent-->
+<!ENTITY Jcirc  CDATA "[Jcirc ]"--=capital J, circumflex accent-->
+<!ENTITY kcedil CDATA "[kcedil]"--=small k, cedilla-->
+<!ENTITY Kcedil CDATA "[Kcedil]"--=capital K, cedilla-->
+<!ENTITY kgreen CDATA "[kgreen]"--=small k, Greenlandic-->
+<!ENTITY lacute CDATA "[lacute]"--=small l, acute accent-->
+<!ENTITY Lacute CDATA "[Lacute]"--=capital L, acute accent-->
+<!ENTITY lcaron CDATA "[lcaron]"--=small l, caron-->
+<!ENTITY Lcaron CDATA "[Lcaron]"--=capital L, caron-->
+<!ENTITY lcedil CDATA "[lcedil]"--=small l, cedilla-->
+<!ENTITY Lcedil CDATA "[Lcedil]"--=capital L, cedilla-->
+<!ENTITY lmidot CDATA "[lmidot]"--=small l, middle dot-->
+<!ENTITY Lmidot CDATA "[Lmidot]"--=capital L, middle dot-->
+<!ENTITY lstrok CDATA "[lstrok]"--=small l, stroke-->
+<!ENTITY Lstrok CDATA "[Lstrok]"--=capital L, stroke-->
+<!ENTITY nacute CDATA "[nacute]"--=small n, acute accent-->
+<!ENTITY Nacute CDATA "[Nacute]"--=capital N, acute accent-->
+<!ENTITY eng    CDATA "[eng   ]"--=small eng, Lapp-->
+<!ENTITY ENG    CDATA "[ENG   ]"--=capital ENG, Lapp-->
+<!ENTITY napos  CDATA "[napos ]"--=small n, apostrophe-->
+<!ENTITY ncaron CDATA "[ncaron]"--=small n, caron-->
+<!ENTITY Ncaron CDATA "[Ncaron]"--=capital N, caron-->
+<!ENTITY ncedil CDATA "[ncedil]"--=small n, cedilla-->
+<!ENTITY Ncedil CDATA "[Ncedil]"--=capital N, cedilla-->
+<!ENTITY odblac CDATA "[odblac]"--=small o, double acute accent-->
+<!ENTITY Odblac CDATA "[Odblac]"--=capital O, double acute accent-->
+<!ENTITY Omacr  CDATA "[Omacr ]"--=capital O, macron-->
+<!ENTITY omacr  CDATA "[omacr ]"--=small o, macron-->
+<!ENTITY oelig  CDATA "[oelig ]"--=small oe ligature-->
+<!ENTITY OElig  CDATA "[OElig ]"--=capital OE ligature-->
+<!ENTITY racute CDATA "[racute]"--=small r, acute accent-->
+<!ENTITY Racute CDATA "[Racute]"--=capital R, acute accent-->
+<!ENTITY rcaron CDATA "[rcaron]"--=small r, caron-->
+<!ENTITY Rcaron CDATA "[Rcaron]"--=capital R, caron-->
+<!ENTITY rcedil CDATA "[rcedil]"--=small r, cedilla-->
+<!ENTITY Rcedil CDATA "[Rcedil]"--=capital R, cedilla-->
+<!ENTITY sacute CDATA "[sacute]"--=small s, acute accent-->
+<!ENTITY Sacute CDATA "[Sacute]"--=capital S, acute accent-->
+<!ENTITY scaron CDATA "[scaron]"--=small s, caron-->
+<!ENTITY Scaron CDATA "[Scaron]"--=capital S, caron-->
+<!ENTITY scedil CDATA "[scedil]"--=small s, cedilla-->
+<!ENTITY Scedil CDATA "[Scedil]"--=capital S, cedilla-->
+<!ENTITY scirc  CDATA "[scirc ]"--=small s, circumflex accent-->
+<!ENTITY Scirc  CDATA "[Scirc ]"--=capital S, circumflex accent-->
+<!ENTITY tcaron CDATA "[tcaron]"--=small t, caron-->
+<!ENTITY Tcaron CDATA "[Tcaron]"--=capital T, caron-->
+<!ENTITY tcedil CDATA "[tcedil]"--=small t, cedilla-->
+<!ENTITY Tcedil CDATA "[Tcedil]"--=capital T, cedilla-->
+<!ENTITY tstrok CDATA "[tstrok]"--=small t, stroke-->
+<!ENTITY Tstrok CDATA "[Tstrok]"--=capital T, stroke-->
+<!ENTITY ubreve CDATA "[ubreve]"--=small u, breve-->
+<!ENTITY Ubreve CDATA "[Ubreve]"--=capital U, breve-->
+<!ENTITY udblac CDATA "[udblac]"--=small u, double acute accent-->
+<!ENTITY Udblac CDATA "[Udblac]"--=capital U, double acute accent-->
+<!ENTITY umacr  CDATA "[umacr ]"--=small u, macron-->
+<!ENTITY Umacr  CDATA "[Umacr ]"--=capital U, macron-->
+<!ENTITY uogon  CDATA "[uogon ]"--=small u, ogonek-->
+<!ENTITY Uogon  CDATA "[Uogon ]"--=capital U, ogonek-->
+<!ENTITY uring  CDATA "[uring ]"--=small u, ring-->
+<!ENTITY Uring  CDATA "[Uring ]"--=capital U, ring-->
+<!ENTITY utilde CDATA "[utilde]"--=small u, tilde-->
+<!ENTITY Utilde CDATA "[Utilde]"--=capital U, tilde-->
+<!ENTITY wcirc  CDATA "[wcirc ]"--=small w, circumflex accent-->
+<!ENTITY Wcirc  CDATA "[Wcirc ]"--=capital W, circumflex accent-->
+<!ENTITY ycirc  CDATA "[ycirc ]"--=small y, circumflex accent-->
+<!ENTITY Ycirc  CDATA "[Ycirc ]"--=capital Y, circumflex accent-->
+<!ENTITY Yuml   CDATA "[Yuml  ]"--=capital Y, dieresis or umlaut mark-->
+<!ENTITY zacute CDATA "[zacute]"--=small z, acute accent-->
+<!ENTITY Zacute CDATA "[Zacute]"--=capital Z, acute accent-->
+<!ENTITY zcaron CDATA "[zcaron]"--=small z, caron-->
+<!ENTITY Zcaron CDATA "[Zcaron]"--=capital Z, caron-->
+<!ENTITY zdot   CDATA "[zdot  ]"--=small z, dot above-->
+<!ENTITY Zdot   CDATA "[Zdot  ]"--=capital Z, dot above-->
+]]>
+

@@ -1,0 +1,7 @@
+#
+# PACKAGE file for ARM Developer Suite 1.1
+# ----------------------------------------
+#
+
+PACKAGE ads armlmd 1.1 D19F04EEA48A COMPONENTS="armasm compiler \
+        armulate axd fromelf armlink codewarrior armsd"

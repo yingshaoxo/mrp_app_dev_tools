@@ -1,0 +1,52 @@
+1	unattached entity
+
+2	font family
+3	font weight
+4	font slant
+5	font size
+6	font video
+7	score
+8	character set
+9	language
+
+10	break before
+11	break after
+12	space before
+13	space after
+14	line spacing
+15	vertical offset
+16	column
+
+17	justification
+18	first indent
+19	left indent
+20	right indent
+21	width
+
+22	script
+23	script title
+24	icon type
+25	icon position
+26	inline
+27	hide
+28	hotness
+29	title tag
+
+30	foreground
+31	text before
+32	text after
+33	hrule
+34	vrule
+35	make
+36	set-var
+
+37	select
+
+101	Text
+102	Vert
+103	Horiz
+104	Hyper
+105	Special
+106	Select
+
+

@@ -1,0 +1,86 @@
+<!--
+Use this file if your stylesheet has entity declarations at the top.
+If not, please use "stysheet.dtd", and see the comment at its top.
+
+To use this, add the following line to the top of your stylesheet,
+before the first entity declaration:
+ 
+     <!DOCTYPE sheet PUBLIC "-//EBT//DTD DynaText Stylesheets//EN" [
+
+and, after the last entity declaration, add the line
+
+     ]>
+
+If using EBT tools, the public identifier will be resolved in the
+default.cat file.  If using another SGML validator, use the
+stysheet.cat file.
+
+If using an SGML parser that defaults to the reference concrete
+syntax, use the "stysheet.dcl" SGML declaration.
+-->
+
+<!ELEMENT sheet O O (group | style)*>
+<!ATTLIST sheet levels NUMBER 2
+                left-indents CDATA "margin-relative">
+
+<!ENTITY % tffm "font-family">
+<!ENTITY % tfwt "font-weight">
+<!ENTITY % tfsl "font-slant">
+<!ENTITY % tfsz "font-size">
+<!ENTITY % tfvd "font-video">
+<!ENTITY % tscr "score">
+<!ENTITY % tchs "character-set">
+<!ENTITY % tlng "language">
+<!ENTITY % textgrp "%tffm;? & %tfwt;? & %tfsl;? & %tfsz;? & %tfvd;? & %tscr;? & %tchs;? & %tlng;?">
+<!ENTITY % textmod "%tffm; | %tfwt; | %tfsl; | %tfsz; | %tfvd; | %tscr; | %tchs; | %tlng;">
+
+<!ENTITY % vbkb "break-before">
+<!ENTITY % vbka "break-after">
+<!ENTITY % vspb "space-before">
+<!ENTITY % vspa "space-after">
+<!ENTITY % vlsp "line-spacing">
+<!ENTITY % vvof "vertical-offset">
+<!ENTITY % vcol "column">
+<!ENTITY % vertgrp "%vbkb;? & %vbka;? & %vspb;? & %vspa;? & %vlsp;? & %vvof;? & %vcol;?">
+<!ENTITY % vertmod "%vbkb; | %vbka; | %vspb; | %vspa; | %vlsp; | %vvof; | %vcol;">
+
+<!ENTITY % hrju "justification">
+<!ENTITY % hrfi "first-indent">
+<!ENTITY % hrli "left-indent">
+<!ENTITY % hrri "right-indent">
+<!ENTITY % hrwi "width">
+<!ENTITY % horizgrp "%hrju;? & %hrfi;? & %hrli;? & %hrri;? & %hrwi;?">
+<!ENTITY % horizmod "%hrju; | %hrfi; | %hrli; | %hrri; | %hrwi;">
+
+<!ENTITY % hysc "script">
+<!ENTITY % hyst "script-title">
+<!ENTITY % hyit "icon-type">
+<!ENTITY % hyip "icon-position">
+<!ENTITY % hyin "inline">
+<!ENTITY % hyhi "hide">
+<!ENTITY % hyho "hotness">
+<!ENTITY % hytt "title-tag">
+<!ENTITY % hypergrp "%hysc;? & %hyst;? & %hyit;? & %hyip;? & %hyin;? & %hyhi;? & %hyho;? & %hytt;?">
+<!ENTITY % hypermod "%hysc; | %hyst; | %hyit; | %hyip; | %hyin; | %hyhi; | %hyho; | %hytt;">
+
+<!ENTITY % spfg "foreground">
+<!ENTITY % sptb "text-before">
+<!ENTITY % spta "text-after">
+<!ENTITY % sphr "hrule">
+<!ENTITY % spvr "vrule">
+<!ENTITY % spmk "make">
+<!ENTITY % specgrp "%spfg;? & %sptb;? & %spta;? & %sphr;? & %spvr;? & %spmk;?">
+<!ENTITY % specmod "%spfg; | %sptb; | %spta; | %sphr; | %spvr; | %spmk;">
+
+<!ENTITY % slsl "select">
+<!ENTITY % selctgrp "%slsl;?">
+<!ENTITY % selctmod "%slsl;">
+
+<!ENTITY % propsgrp "%textgrp; & %vertgrp; & %horizgrp; & %hypergrp; & %specgrp; & %selctgrp;">
+<!ENTITY % propsmod "%textmod; | %vertmod; | %horizmod; | %hypermod; | %specmod; | %selctmod;">
+
+<!ELEMENT (group|style) - - (%propsgrp;)>
+<!ATTLIST group name CDATA #REQUIRED>
+<!ATTLIST style name CDATA #REQUIRED group CDATA #IMPLIED>
+
+<!ELEMENT (%propsmod;) - - RCDATA>

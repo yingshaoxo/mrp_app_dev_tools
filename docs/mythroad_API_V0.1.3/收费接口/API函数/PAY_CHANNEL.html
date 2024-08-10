@@ -1,0 +1,50 @@
+<html>
+<head>付费通道定义</head>
+
+<body>
+
+<h1>Syntax</h1>
+ typedef enum{<br>
+	ZHANGSHANGLINGTONG_2RMB=0,	                       // 0表示2元掌上灵通的通道，移动1元，联通2元<br>
+	PAYMENT_TEST,					       // 1表示测试<br>
+	ZHIYUNSHIDAI_2RMB, 				       // 2 表示指云时代的通道，移动1元，联通2元<br>
+	ZHANGSHANGLINGTONG_2RMB_MMS,		               // 3表示掌上灵通的2块钱彩信通道，只有移动。从20080808开始用10662000300350的15省2元短信代替。<br>
+	ZHIYUNSHIDAI_1RMB,				       // 4指云时代1RMB联通通道。<br>
+	XINQINGHUDONG_1RMB,				       // 5心情互动1RMB联通通道。<br>
+	GUNSHIYIDONG_2RMB,				       // 6滚石移动2RMB，移动、联通均2元。<br>
+	CHUANGYIHEXIAN_2RMB,				       // 7创意和弦2RMB，移动、联通均2元。<br>
+	TOM_2RMB,					       // 8TOM通道，移动、联通均2元。<br>
+	TOM_TEST2RMB,									// 9TOM测试通道，移动、联通均2元。<br>
+	ZHIYUNSHIDAI_2RMB_JS,					// 10指云时代移动1元联通2元，限江苏省使用。其他省份不可用。<br>
+	ZHIYUNSHIDAI_2RMB_MMS,				// 11 指云时代彩信通道，移动联通均2元。<br>
+	ZHIYUNSHIDAI_1RMB_MT,				// 12指云时代移动多MO单MT，联通多MO多MT通道，移动联通均1元。<br>	
+	ZHANGSHANGLINGTONG_2RMB_318,//13掌上灵通2RMB。<br>
+	ZHIYUNSHIDAI_ZMCC10MT_UNICOM20,// 14指云时代移动1元，采用单MT下行屏蔽指令、联通2元<br>
+	BEIWEI_CMCC10_UNICOM20,			// 15北纬通道，移动1元，联通2元。	<br>
+	ZHANGSHANGLINGTONG_20,			//16 和0号通道完全一致，主要是为了和阅读产品兼容而 增加的通道。表示2元掌上灵通的通道，移动1元，联通2元<br>
+	PAY_CHN_ZY31,									//17 指云时代移动3元彩信通道，联通使用1元指令。<br>
+	PAY_CHN_XQ21,									//18 心情互动移动2元通道，联通使用1元指令。<br>
+	INDONESIA_2000RB,							//19印度尼西亚2000卢比通道。<br>
+	PAY_CHN_TMGAME22,						//20TOM彩信游戏通道彩信，移动联通均2元<br>
+	PAY_CHN_TMBOOK22,							//21TOM彩信电子书通道，移动联通均2元<br>
+	PAY_CHN_ZS22,									//22掌上灵通10662000300350通道，移动、联通均2元；<br>
+	PAY_CHN_CY12,									//23创艺和弦通道，移动1元，联通2元<br>
+	PAY_CHN_GS22_GUANGDONG,						//24滚石广东通道。移动2源，联通2源。<br>
+	PAY_CHN_ZX11,									//25移动长沙掌讯1元，联通指云1元<br>
+	PAY_CHN_ZX22,									//26移动长沙掌讯2元，联通指云2元<br>
+	PAY_CHN_ZYRTT22,								// 27指云时代彩信通道，移动联通均2元。<br>
+	PAY_CHN_ZSSIK22,								// 28掌上灵通短信通道，移动联通均2元。是318通道。<br>
+	PAY_CHN_CYAKJ22,								// 29创意和弦短信通道，移动联通均2元。<br>
+	PAY_CHN_ZYTGT22,								// 30指云时代短信通道，移动联通均2元。<br>
+	PAY_CHN_KZ12,								// 31短信通道，移动联通均1元。<br>
+	PAY_CHN_KZ22,								// 32短信通道，移动联通均2元。	<br>
+	PAY_CHN_ZSD12,								// 33短信通道，移动1元，联通2元。<br>
+	PAY_CHN_ZYSIGN21,								// 34短信通道，移动2元，联通1元。<br>
+	MAX_PAY_CHANNEL				
+}PAY_CHANNEL;
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

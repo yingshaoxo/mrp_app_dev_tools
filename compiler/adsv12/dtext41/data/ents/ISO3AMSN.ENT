@@ -1,0 +1,124 @@
+<!-- $Id: ISO3AMSN.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOAMSN  PUBLIC
+       "ISO 9573-13:1991//ENTITIES Added Math Symbols: Negated Relations //EN">
+     %ISOAMSN;
+-->
+
+<!ENTITY nsub     SDATA "font=symbol charset=fontspecific code=203" -- REALLY WRONG GLYPH-->
+<!ENTITY vnsub    SDATA "font=symbol charset=fontspecific code=203" --/nsubset N: not subset, var-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY gnap     CDATA "[gnap    ]" --/gnapprox N: greater, not approximate-->
+<!ENTITY gne      CDATA "[gne     ]" --/gneq N: greater, not equals-->
+<!ENTITY gnE      CDATA "[gnE     ]" --/gneqq N: greater, not dbl equals-->
+<!ENTITY gnsim    CDATA "[gnsim   ]" --/gnsim N: greater, not similar-->
+<!ENTITY gvnE     CDATA "[gvnE    ]" --/gvertneqq N: gt, vert, not dbl eq-->
+<!ENTITY lnap     CDATA "[lnap    ]" --/lnapprox N: less, not approximate-->
+<!ENTITY lne      CDATA "[lne     ]" --/lneq N: less, not equals-->
+<!ENTITY lnE      CDATA "[lnE     ]" --/lneqq N: less, not double equals-->
+<!ENTITY lnsim    CDATA "[lnsim   ]" --/lnsim N: less, not similar-->
+<!ENTITY lvnE     CDATA "[lvnE    ]" --/lvertneqq N: less, vert, not dbl eq-->
+<!ENTITY nap      CDATA "[nap     ]" --/napprox N: not approximate-->
+<!ENTITY napE     CDATA "[napE    ]" --not approximately equal or equal to-->
+<!ENTITY napid    CDATA "[napid   ]" --not approximately identical to-->
+<!ENTITY ncong    CDATA "[ncong   ]" --/ncong N: not congruent with-->
+<!ENTITY ncongdot CDATA "[ncongdot]" --not congruent, dot-->
+<!ENTITY nequiv   CDATA "[nequiv  ]" --/nequiv N: not identical with-->
+<!ENTITY nge      CDATA "[nge     ]" --/ngeq N: not greater-than-or-equal-->
+<!ENTITY ngE      CDATA "[ngE     ]" --/ngeqq N: not greater, dbl equals-->
+<!ENTITY nges     CDATA "[nges    ]" --/ngeqslant N: not gt-or-eq, slanted-->
+<!ENTITY nGg      CDATA "[nGg     ]" --not triple greater than-->
+<!ENTITY ngsim    CDATA "[ngsim   ]" --not greater, similar-->
+<!ENTITY ngt      CDATA "[ngt     ]" --/ngtr N: not greater-than-->
+<!ENTITY nGt      CDATA "[nGt     ]" --not, vert, much greater than-->
+<!ENTITY nGtv     CDATA "[nGtv    ]" --not much greater than, variant-->
+<!ENTITY nle      CDATA "[nle     ]" --/nleq N: not less-than-or-equal-->
+<!ENTITY nlE      CDATA "[nlE     ]" --/nleqq N: not less, dbl equals-->
+<!ENTITY nles     CDATA "[nles    ]" --/nleqslant N: not less-or-eq, slant-->
+<!ENTITY nLl      CDATA "[nLl     ]" --not triple less than-->
+<!ENTITY nlsim    CDATA "[nlsim   ]" --not less, similar-->
+<!ENTITY nlt      CDATA "[nlt     ]" --/nless N: not less-than-->
+<!ENTITY nLt      CDATA "[nLt     ]" --not, vert, much less than-->
+<!ENTITY nltri    CDATA "[nltri   ]" --/ntriangleleft N: not left triangle-->
+<!ENTITY nltrie   CDATA "[nltrie  ]" --/ntrianglelefteq N: not l tri, eq-->
+<!ENTITY nLtv     CDATA "[nLtv    ]" --not much less than, variant-->
+<!ENTITY nmid     CDATA "[nmid    ]" --/nmid-->
+<!ENTITY npar     CDATA "[npar    ]" --/nparallel N: not parallel-->
+<!ENTITY npr      CDATA "[npr     ]" --/nprec N: not precedes-->
+<!ENTITY nprcue   CDATA "[nprcue  ]" --not curly precedes, eq-->
+<!ENTITY npre     CDATA "[npre    ]" --/npreceq N: not precedes, equals-->
+<!ENTITY nrtri    CDATA "[nrtri   ]" --/ntriangleright N: not rt triangle-->
+<!ENTITY nrtrie   CDATA "[nrtrie  ]" --/ntrianglerighteq N: not r tri, eq-->
+<!ENTITY nsc      CDATA "[nsc     ]" --/nsucc N: not succeeds-->
+<!ENTITY nsccue   CDATA "[nsccue  ]" --not succeeds, curly eq-->
+<!ENTITY nsce     CDATA "[nsce    ]" --/nsucceq N: not succeeds, equals-->
+<!ENTITY nsim     CDATA "[nsim    ]" --/nsim N: not similar-->
+<!ENTITY nsime    CDATA "[nsime   ]" --/nsimeq N: not similar, equals-->
+<!ENTITY nsmid    CDATA "[nsmid   ]" --/nshortmid-->
+<!ENTITY nspar    CDATA "[nspar   ]" --/nshortparallel N: not short par-->
+<!ENTITY nsqsube  CDATA "[nsqsube ]" --not, square subset, equals-->
+<!ENTITY nsqsupe  CDATA "[nsqsupe ]" --not, square superset, equals-->
+<!ENTITY nsube    CDATA "[nsube   ]" --/nsubseteq N: not subset, equals-->
+<!ENTITY nsubE    CDATA "[nsubE   ]" --/nsubseteqq N: not subset, dbl eq-->
+<!ENTITY nsup     CDATA "[nsup    ]" --not superset-->
+<!ENTITY nsupe    CDATA "[nsupe   ]" --/nsupseteq N: not superset, equals-->
+<!ENTITY nsupE    CDATA "[nsupE   ]" --/nsupseteqq N: not superset, dbl eq-->
+<!ENTITY ntgl     CDATA "[ntgl    ]" --not greater, less-->
+<!ENTITY ntlg     CDATA "[ntlg    ]" --not less, greater-->
+<!ENTITY nvap     CDATA "[nvap    ]" --not, vert, approximate-->
+<!ENTITY nvdash   CDATA "[nvdash  ]" --/nvdash N: not vertical, dash-->
+<!ENTITY nvDash   CDATA "[nvDash  ]" --/nvDash N: not vertical, dbl dash-->
+<!ENTITY nVdash   CDATA "[nVdash  ]" --/nVdash N: not dbl vertical, dash-->
+<!ENTITY nVDash   CDATA "[nVDash  ]" --/nVDash N: not dbl vert, dbl dash-->
+<!ENTITY nvge     CDATA "[nvge    ]" --not, vert, greater-than-or-equal-->
+<!ENTITY nvgt     CDATA "[nvgt    ]" --not, vert, greater-than-->
+<!ENTITY nvle     CDATA "[nvle    ]" --not, vert, less-than-or-equal-->
+<!ENTITY nvlt     CDATA "[nvlt    ]" --not, vert, less-than-->
+<!ENTITY nvltrie  CDATA "[nvltrie ]" --not, vert, left triangle, equals-->
+<!ENTITY nvrtrie  CDATA "[nvrtrie ]" --not, vert, right triangle, equals-->
+<!ENTITY nvsim    CDATA "[nvsim   ]" --not, vert, similar-->
+<!ENTITY parsim   CDATA "[parsim  ]" --parallel, similar-->
+<!ENTITY prnap    CDATA "[prnap   ]" --/precnapprox N: precedes, not approx-->
+<!ENTITY prnE     CDATA "[prnE    ]" --/precneqq N: precedes, not dbl eq-->
+<!ENTITY prnsim   CDATA "[prnsim  ]" --/precnsim N: precedes, not similar-->
+<!ENTITY rnmid    CDATA "[rnmid   ]" --reverse /nmid-->
+<!ENTITY scnap    CDATA "[scnap   ]" --/succnapprox N: succeeds, not approx-->
+<!ENTITY scnE     CDATA "[scnE    ]" --/succneqq N: succeeds, not dbl eq-->
+<!ENTITY scnsim   CDATA "[scnsim  ]" --/succnsim N: succeeds, not similar-->
+<!ENTITY simne    CDATA "[simne   ]" --similar, not equals-->
+<!ENTITY solbar   CDATA "[solbar  ]" --solidus, bar through-->
+<!ENTITY subne    CDATA "[subne   ]" --/subsetneq N: subset, not equals-->
+<!ENTITY subnE    CDATA "[subnE   ]" --/subsetneqq N: subset, not dbl eq-->
+<!ENTITY supne    CDATA "[supne   ]" --/supsetneq N: superset, not equals-->
+<!ENTITY supnE    CDATA "[supnE   ]" --/supsetneqq N: superset, not dbl eq-->
+<!ENTITY vnsup    CDATA "[vnsup   ]" --/nsupset N: not superset, var-->
+<!ENTITY vsubne   CDATA "[vsubne  ]" --/varsubsetneq N: subset, not eq, var-->
+<!ENTITY vsubnE   CDATA "[vsubnE  ]" --/varsubsetneqq N: subset not dbl eq, var-->
+<!ENTITY vsupne   CDATA "[vsupne  ]" --/varsupsetneq N: superset, not eq, var-->
+<!ENTITY vsupnE   CDATA "[vsupnE  ]" --/varsupsetneqq N: super not dbl eq, var-->
+]]>
+

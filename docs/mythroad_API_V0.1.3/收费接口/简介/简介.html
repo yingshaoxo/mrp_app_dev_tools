@@ -1,0 +1,23 @@
+<html>
+<title>Mythroad付费处理示例</title>
+<head>Mythroad付费处理示例的一般流程如下：</head>
+<body>
+<br><br>
+&nbsp&nbsp <b>1、初始化收费模块</b><br>
+&nbsp&nbsp&nbsp&nbsp 	if (mrc_initChargeOverSea(&PayCtrlInfo) == MR_SUCCESS)<br>
+&nbsp&nbsp&nbsp&nbsp	{<br>
+&nbsp&nbsp&nbsp&nbsp		Mggq_a_Enter_Game();//启动游戏<br>
+&nbsp&nbsp&nbsp&nbsp	}<br><br>
+
+&nbsp&nbsp <b>2、设置收费信息，包括MCC、通道、金额、付费类型等</b><br><br>
+
+
+&nbsp&nbsp <b>3、发送付费信息</b><br>
+&nbsp&nbsp&nbsp&nbsp 调用<a href="../API函数/mrc_ChargeExOverSea.html">mrc_ChargeExOverSea</a>直接付费或调用<a href="../API函数/mrc_scoreConfirm.html">mrc_scoreConfirm</a>进行二次确认付费<br><br>
+
+
+
+
+
+</body>
+<html>

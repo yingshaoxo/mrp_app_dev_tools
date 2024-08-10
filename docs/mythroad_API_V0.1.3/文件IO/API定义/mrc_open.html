@@ -1,0 +1,36 @@
+<html>
+<head>打开指定名称文件。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_open(<br>
+&nbsp&nbsp const char* filename, <br>
+&nbsp&nbsp uint32 mode<br>
+);
+
+<h1>Parameters</h1>
+<b>filename</b><br>
+&nbsp&nbsp 文件名<br><br>
+
+<b>mode</b><br>
+&nbsp&nbsp 文件打开方式,mode取值有<b>MR_FILE_RDONLY</b>只读的方式打开文件;<br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b>MR_FILE_WRONLY</b>以只写的方式打开文件; <br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b>MR_FILE_WRONLY</b>以读写的方式打开文件;<br>                            
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b>MR_FILE_RDWR</b>以读写的方式打开文件<br>                 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b>MR_FILE_CREATE</b>如果文件不存在，创建该文件<br>        
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <b>MR_FILE_RECREATE</b>无论文件存不存在，都重新创建该文件<br>              
+                               
+
+<h1>Return Value</h1>
+&nbsp&nbsp	非 NULL	文件句柄<br>
+&nbsp&nbsp	NULL	失败
+
+<h1>Remarks</h1>
+如果文件不存在，根据<a href="FILE_MAC.html">mode</a>组合值中有<b>MR_FILE_CREATE</b>或<b>MR_FILE_RECREATE</b>则创建之。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

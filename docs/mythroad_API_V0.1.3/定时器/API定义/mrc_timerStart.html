@@ -1,0 +1,38 @@
+<html>
+
+<head>
+启动定时器
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_timerStart ( <br>
+&nbsp&nbsp int32 t, <br>
+&nbsp&nbsp int32 time,  <br>
+&nbsp&nbsp int32 data,  <br>
+&nbsp&nbsp mrc_timerCB f,  <br>
+&nbsp&nbsp int32 loop <br>
+);
+
+<h1>Parameters</h1>
+<b>t</b><br>
+&nbsp&nbsp [IN]定时器句柄，由<a href="mrc_timerCreate.html">mrc_timerCreate</a>创建 <br>
+<b>time</b><br>
+&nbsp&nbsp [IN]定时器时长，单位毫秒<br>
+<b>data</b><br>
+&nbsp&nbsp [IN]启动定时器时传入的data参数<br>
+<b>f</b><br>
+&nbsp&nbsp [IN]定时器回调函数，见<a href="mrc_timerCB.html">mrc_timerCB</a>定义<br>
+<b>loop</b><br>
+&nbsp&nbsp [IN]是否循环；0:不循环，1:循环
+
+<h1>Return Value</h1>
+&nbsp&nbsp 	MR_SUCCESS     成功<br>
+&nbsp&nbsp     	MR_FAILED      失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

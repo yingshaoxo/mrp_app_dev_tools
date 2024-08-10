@@ -1,0 +1,22 @@
+<html>
+<title>Mythroad声音处理接口</title>
+<head>Mythroad声音播放处理示例</head>
+<body>
+<br><br>
+&nbsp&nbsp	<b>1、添加语音数据</b><br>
+&nbsp&nbsp&nbsp&nbsp typedef struct {<br>
+&nbsp&nbsp&nbsp&nbsp	 int32 len;<br>
+&nbsp&nbsp&nbsp&nbsp	 uint8 type;<br>
+&nbsp&nbsp&nbsp&nbsp	 void* pData;<br>
+&nbsp&nbsp&nbsp&nbsp } T_SOUND_MAP;//声音说明结构本<br>  
+&nbsp&nbsp&nbsp&nbsp static T_SOUND_MAP sound_map[GAME_SOUND_MAX_ID];//声音缓存组<br>
+&nbsp&nbsp&nbsp&nbsp mrc_readFileFromMrpEx(NULL,name,(uint8**)&(sound_map[id].pData),(int32 *)&(sound_map[id].len),0);//从MRP资源包中装载声音数据<br><br>
+
+&nbsp&nbsp	<b>2、播放语音数据</b><br>
+&nbsp&nbsp&nbsp&nbsp mr_playSoundEx(sound_map[index].type, sound_map[index].pData, sound_map[index].len, loop);<br><br>
+
+&nbsp&nbsp	<b>3、停止播放语音数据</b><br>
+&nbsp&nbsp&nbsp&nbsp mr_stopSoundEx(sound_map[index].type);	<br>
+
+</body>
+<html>

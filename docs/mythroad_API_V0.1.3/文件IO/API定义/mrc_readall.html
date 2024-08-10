@@ -1,0 +1,28 @@
+<html>
+<head>读取文件的所有内容到申请的内存中。</head>
+
+<body>
+
+<h1>Syntax</h1>
+void* mrc_readAll(<br>
+&nbsp&nbsp const char* filename,<br>
+&nbsp&nbsp uint32 *len<br>
+);
+
+
+<h1>Parameters</h1>
+<b>filename</b><br>
+&nbsp&nbsp [IN]文件名称<br>   
+<b>len</b><br>
+&nbsp&nbsp [OUT]读取到内容的长度<br>                             
+
+<h1>Return Value</h1>
+&nbsp&nbsp	非NULL &nbsp&nbsp        指向读取到的内容的指针，该内存<b>需要调用者释放</b><br>
+&nbsp&nbsp      NULL   &nbsp&nbsp&nbsp&nbsp        失败
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<html>
+
+<head>
+获取编辑框内容，unicode编码。调用者若需在编辑框释放后仍然使用编辑框的内容，需要自行保存该内容。该函数需要在编辑框释放之前调用。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+const char* mrc_editGetText(<br>
+&nbsp&nbsp int32 edit<br>
+);
+
+
+<h1>Parameters</h1>
+<b>edit</b><br>
+&nbsp&nbsp[IN]编辑框句柄，由<a ref="mrc_editCreate.html">mrc_editCreate</a>定义
+
+<h1>Return Value</h1>
+&nbsp&nbsp       非NULL       编辑框的内容指针，unicode编码<br>
+&nbsp&nbsp       NULL         失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

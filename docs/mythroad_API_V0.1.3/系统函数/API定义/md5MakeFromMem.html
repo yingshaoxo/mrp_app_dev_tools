@@ -1,0 +1,36 @@
+<html>
+<head>将内存中的数据加入密钥后计算MD5。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 md5MakeFromMem(<br>
+char *key,<br>
+uint8* in,<br>
+int32 offset,<br>
+int32 len,<br>
+uint8* out<br>
+);
+
+<h1>Parameters</h1>
+<b>key</b><br> 
+[IN]密钥。若不加入密钥，置为NULL即可。若加入密钥，则将密钥和数据一起计算MD5;<br>
+<b>in</b><br> 
+[IN]数据区指针;<br>
+<b>offset</b><br> 
+[IN]从in+offset的地址偏移开始的len个字节的数据计算MD5;如果offset<0，返回失败。<br>
+<b>len</b><br> 
+[IN]需要计算的数据区总字节数，若该值小于0，返回失败。如果len=0，若key!=NULL，则将返回key的MD5，<br>
+否则len==0 && key==NULL，返回的MD5值依赖于MD5函数的具体实现。<br>
+<b>out</b><br> 
+[OUT]若函数返回MR_SUCCESS，则通过out返回16个字节的MD5校验值,这16个字节的内存由调用者申请、释放。
+
+<h1>Return Value</h1>
+MR_SUCCESS:	MD5获取成功。<br>
+MR_FAILED :	获取失败，此时out中的值是不确定的，不可作为MD5值使用。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

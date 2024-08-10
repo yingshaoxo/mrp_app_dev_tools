@@ -1,0 +1,23 @@
+<html>
+<head>File文件操作 常见宏</head>
+
+<body>
+
+<h1>Syntax</h1>
+
+<b>MR_IS_FILE</b>&nbsp&nbsp #define MR_IS_FILE     	1      	&nbsp&nbsp文件<br>
+<b>MR_IS_DIR</b>&nbsp&nbsp #define MR_IS_DIR      	2      	&nbsp&nbsp目录<br>
+<b>MR_IS_INVALID</b>&nbsp&nbsp #define MR_IS_INVALID 	8  	&nbsp&nbsp无效(非文件、非目录)<br><br>
+
+
+<b>MR_FILE_RDONLY</b>&nbsp&nbsp #define MR_FILE_RDONLY         	&nbsp&nbsp1以只读的方式打开文件<br>
+<b>MR_FILE_WRONLY</b>&nbsp&nbsp #define MR_FILE_WRONLY        	&nbsp&nbsp2以只写的方式打开文件<br>
+<b>MR_FILE_RDWR</b>&nbsp&nbsp #define MR_FILE_RDWR             	&nbsp&nbsp4以读写的方式打开文件<br>
+<b>MR_FILE_CREATE</b>&nbsp&nbsp #define MR_FILE_CREATE          &nbsp&nbsp8如果文件不存在，创建该文件<br>
+<b>MR_FILE_RECREATE</b>&nbsp&nbsp #define MR_FILE_RECREATE      &nbsp&nbsp16无论文件存不存在，都重新创建该文件<br><br>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

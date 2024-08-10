@@ -1,0 +1,85 @@
+<!-- $Id: ISO-BOX.ENT 1.1 1995/12/18 02:59:52 glf Exp $-->
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISObox PUBLIC
+       "ISO 8879-1986//ENTITIES Box and Line Drawing//EN">
+     %ISObox;
+-->
+<!-- All names are in the form: box1234, where:
+    box = constants that identify a box drawing entity.
+    1&2 = v, V, u, U, d, D, Ud, or uD, as follows:
+      v = vertical line for full height.
+      u = upper half of vertical line.
+      d = downward (lower) half of vertical line.
+    3&4 = h, H, l, L, r, R, Lr, or lR, as follows:
+      h = horizontal line for full width.
+      l = left half of horizontal line.
+      r = right half of horizontal line.
+    In all cases, an upper-case letter means a double or heavy line.
+-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY boxh   CDATA "[boxh  ]"--horizontal line -->
+<!ENTITY boxv   CDATA "[boxv  ]"--vertical line-->
+<!ENTITY boxur  CDATA "[boxur ]"--upper right quadrant-->
+<!ENTITY boxul  CDATA "[boxul ]"--upper left quadrant-->
+<!ENTITY boxdl  CDATA "[boxdl ]"--lower left quadrant-->
+<!ENTITY boxdr  CDATA "[boxdr ]"--lower right quadrant-->
+<!ENTITY boxvr  CDATA "[boxvr ]"--upper and lower right quadrants-->
+<!ENTITY boxhu  CDATA "[boxhu ]"--upper left and right quadrants-->
+<!ENTITY boxvl  CDATA "[boxvl ]"--upper and lower left quadrants-->
+<!ENTITY boxhd  CDATA "[boxhd ]"--lower left and right quadrants-->
+<!ENTITY boxvh  CDATA "[boxvh ]"--all four quadrants-->
+<!ENTITY boxvR  CDATA "[boxvR ]"--upper and lower right quadrants-->
+<!ENTITY boxhU  CDATA "[boxhU ]"--upper left and right quadrants-->
+<!ENTITY boxvL  CDATA "[boxvL ]"--upper and lower left quadrants-->
+<!ENTITY boxhD  CDATA "[boxhD ]"--lower left and right quadrants-->
+<!ENTITY boxvH  CDATA "[boxvH ]"--all four quadrants-->
+<!ENTITY boxH   CDATA "[boxH  ]"--horizontal line-->
+<!ENTITY boxV   CDATA "[boxV  ]"--vertical line-->
+<!ENTITY boxUR  CDATA "[boxUR ]"--upper right quadrant-->
+<!ENTITY boxUL  CDATA "[boxUL ]"--upper left quadrant-->
+<!ENTITY boxDL  CDATA "[boxDL ]"--lower left quadrant-->
+<!ENTITY boxDR  CDATA "[boxDR ]"--lower right quadrant-->
+<!ENTITY boxVR  CDATA "[boxVR ]"--upper and lower right quadrants-->
+<!ENTITY boxHU  CDATA "[boxHU ]"--upper left and right quadrants-->
+<!ENTITY boxVL  CDATA "[boxVL ]"--upper and lower left quadrants-->
+<!ENTITY boxHD  CDATA "[boxHD ]"--lower left and right quadrants-->
+<!ENTITY boxVH  CDATA "[boxVH ]"--all four quadrants-->
+<!ENTITY boxVr  CDATA "[boxVr ]"--upper and lower right quadrants-->
+<!ENTITY boxHu  CDATA "[boxHu ]"--upper left and right quadrants-->
+<!ENTITY boxVl  CDATA "[boxVl ]"--upper and lower left quadrants-->
+<!ENTITY boxHd  CDATA "[boxHd ]"--lower left and right quadrants-->
+<!ENTITY boxVh  CDATA "[boxVh ]"--all four quadrants-->
+<!ENTITY boxuR  CDATA "[boxuR ]"--upper right quadrant-->
+<!ENTITY boxUl  CDATA "[boxUl ]"--upper left quadrant-->
+<!ENTITY boxdL  CDATA "[boxdL ]"--lower left quadrant-->
+<!ENTITY boxDr  CDATA "[boxDr ]"--lower right quadrant-->
+<!ENTITY boxUr  CDATA "[boxUr ]"--upper right quadrant-->
+<!ENTITY boxuL  CDATA "[boxuL ]"--upper left quadrant-->
+<!ENTITY boxDl  CDATA "[boxDl ]"--lower left quadrant-->
+<!ENTITY boxdR  CDATA "[boxdR ]"--lower right quadrant-->
+]]>
+

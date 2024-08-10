@@ -1,0 +1,32 @@
+<html>
+<head>设置文件指针。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_seek(<br>
+&nbsp&nbsp int32 f,<br>
+&nbsp&nbsp int32 pos,<br>
+&nbsp&nbsp int method<br>
+);
+
+
+<h1>Parameters</h1>
+<b>f</b><br>
+&nbsp&nbsp [IN]文件名称<br>   
+<b>pos</b><br>
+&nbsp&nbsp [IN]文件指针位置<br>                             
+<b>method</b><br>
+&nbsp&nbsp [IN]查找方法<a href = "FILE_SEEK.html">MR_SEEK_SET;   MR_SEEK_CUR;    MR_SEEK_END</a>见定义
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp	非NULL &nbsp&nbsp        指向读取到的内容的指针，该内存<b>需要调用者释放</b><br>
+&nbsp&nbsp      NULL   &nbsp&nbsp&nbsp&nbsp        失败
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+;; ARMulator configuration file type 3
+;; - example1.ami -
+;; Copyright (c) 1996-2001 ARM Limited. All Rights Reserved.
+;
+;
+;; RCS $Revision: 1.9.2.4 $
+;; Checkin $Date: 2001/10/22 10:49:25 $
+;; Revising $Author: acollier $
+; 
+;;
+;; This is an example of a user-edited configuration file for ARMulator 1.2
+;;
+;
+;
+;
+;{Processors
+;
+;  {ARM10E_NoPageTab=ARM10E
+;    {Flatmem
+;      {Peripherals
+;        {Pagetables=No_Pagetables
+;        }
+;      }
+;    }
+;  }
+;
+;  {ARM1020E_NoPageTab=ARM1020E
+;    {Flatmem
+;      {Peripherals
+;        {Pagetables=No_Pagetables
+;        }
+;      }
+;    }
+;  }
+;
+;
+;  {TRACED_ARM10=ARM10200E
+;
+;    ;CPUSPEED=400MHz
+;
+;    ;Memory clock divisor.
+;    ;(The AHB runs this many times slower than the core.)
+;    MCCFG=4
+;
+;
+;    {Flatmem
+;      {Peripherals
+;        {Tracer=Default_Tracer
+;          ;; Output options - can be plaintext to file, binary to file or to RDI log
+;          ;; window. (Checked in the order RDILog, File, BinFile.)
+;          RDILog=False
+;          File=armul.trc
+;          BinFile=armul.trc
+;          ;; Tracer options - what to trace
+;          TraceInstructions=True
+;          TraceRegisters=False
+;          TraceMemory=True
+;          TraceEvents=False
+;          ;; Flags - disassemble instructions; start up with tracing enabled.
+;          Disassemble=True
+;          StartOn=True
+;        }
+;      }
+;    }
+;
+;  ;End TRACED_ARM10
+;  }
+;
+;
+;
+;  {TRACED_ARM9E=ARM9E
+;
+;    ;CPUSPEED=400MHz
+;
+;    Memory clock divisor.
+;    (The AHB runs this many times slower than the core.)
+;    MCCFG=4
+;
+;    {Flatmem
+;      {Peripherals
+;
+;        {Tracer=Default_Tracer
+;          ; Output options - can be plaintext to file, binary to file or to RDI log
+;          ; window. (Checked in the order RDILog, File, BinFile.)
+;          RDILog=False
+;          File=armul.trc
+;          BinFile=armul.trc
+;          ; Tracer options - what to trace
+;          TraceInstructions=True
+;          TraceRegisters=False
+;          TraceMemory=True
+;          TraceEvents=False
+;          ; Flags - disassemble instructions; start up with tracing enabled.
+;          Disassemble=True
+;          StartOn=True
+;        }
+;      }
+;    }
+;  ;End TRACED_ARM9E
+;  }
+;
+;
+;
+;  {TRACED_ARM7=ARM7TDMI
+;
+;    ;;CPUSPEED=400MHz
+;
+;    ;Memory clock divisor.
+;    ;(The AHB runs this many times slower than the core.)
+;    MCCFG=4
+;
+;    {Flatmem
+;      {Peripherals
+;
+;        {Tracer=Default_Tracer
+;          ;; Output options - can be plaintext to file, binary to file or to RDI log
+;          ; window. (Checked in the order RDILog, File, BinFile.)
+;          RDILog=False
+;          File=armul.trc
+;          BinFile=armul.trc
+;          ; Tracer options - what to trace
+;          TraceInstructions=True
+;          TraceRegisters=False
+;          TraceMemory=True
+;          TraceEvents=False
+;          ; Flags - disassemble instructions; start up with tracing enabled.
+;          Disassemble=True
+;          StartOn=True
+;        }
+;      }
+;    }
+;  ;End TRACED_ARM7
+;  }
+;
+;
+;  {PROFILED_ARM10=ARM10200E
+;    {Flatmem
+;      {Peripherals
+;
+;        {Profiler=Default_Profiler
+;        }
+;      }
+;    }
+;  }
+;
+;
+;  {PROFILED_ARM7=ARM720T
+;    {Flatmem
+;      {Peripherals
+;        {Profiler=Default_Profiler
+;        }
+;      }
+;    }
+;  }
+;
+;  {PROFILED_ARM9=ARM966E-S
+;    {Flatmem
+;      {Peripherals
+;        {Profiler=Default_Profiler
+;        }
+;      }
+;    }
+;  }
+;
+;
+;;End Processors
+;}
+;
+;; EOF example1.ami
+;

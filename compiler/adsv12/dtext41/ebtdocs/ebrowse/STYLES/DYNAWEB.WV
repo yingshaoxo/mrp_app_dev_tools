@@ -1,0 +1,1049 @@
+<!-- -->
+
+<!ENTITY	art.color	CDATA	"dark green"	>
+<!ENTITY	hottext.fontfam	CDATA	"lucida"	>
+<!ENTITY	hottext.foreground	CDATA	"red"	>
+<!ENTITY	hottext.slant	CDATA	"Roman"	>
+<!ENTITY	hottext.weight	CDATA	"Bold"	>
+<!ENTITY	std.font	CDATA	"New Century Schoolbook"	>
+<!ENTITY	std.font-size	CDATA	"14"	>
+<!ENTITY	std.leftindent	CDATA	"10"	>
+<!ENTITY	std.line-spacing	CDATA	"16"	>
+<!ENTITY	std.rightindent	CDATA	"12"	>
+<!ENTITY	subscript	CDATA	"-3"	>
+<!ENTITY	title.color	CDATA	"blue"	>
+<!ENTITY	title.font	CDATA	"lucida"	>
+<!ENTITY	verbatim.font	CDATA	"courier new"	>
+<!ENTITY	verbatim.font-size	CDATA	"10"	>
+<!ENTITY	verbatim.line-spacing	CDATA	"12"	>
+
+<sheet >
+
+
+
+<?INSTED COMMENT: GROUP address>
+
+<group name="address">
+	<font-slant>	Italics	</>
+	<break-before>	Line	</>
+	<text-before><address></>
+	<text-after>join('<','/address>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP b>
+
+<group name="b">
+	<font-weight>	Bold	</>
+	<text-before><b></>
+	<text-after>join('<','/b>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP blockquote>
+
+<group name="blockquote">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><blockquote></>
+	<text-after>join('<','/blockquote>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP br>
+
+<group name="br">
+	<break-before>	Line	</>
+	<text-before><br></>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP cite>
+
+<group name="cite">
+	<font-slant>	Italics	</>
+	<text-before><cite></>
+	<text-after>join('<','/cite>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP code>
+
+<group name="code">
+	<font-family>	courier	</>
+	<text-before><code></>
+	<text-after>join('<','/code>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP dd>
+
+<group name="dd">
+	<left-indent>	+=55	</>
+	<text-before><dd></>
+</group>
+
+<style name="DEFLIST,ITEM,P" group="dd">
+</style>
+
+
+
+<?INSTED COMMENT: GROUP dl>
+
+<group name="dl">
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><dl></>
+	<text-after>join('<','/dl>')</>
+</group>
+
+<style name="DEFLIST" group="dl">
+</style>
+
+<style name="GLOSSENTRY" group="dl">
+</style>
+
+<style name="TABLE.HIDDEN" group="dl">
+	<right-indent>	12	</>
+	<hide>	Children	</>
+	<space-after>	10	</>
+	<icon-position>	Right	</>
+	<break-before>	Line	</>
+	<script>	ebt-reveal stylesheet=dynaweb.wv hscroll=yes width=550 height=350	</>
+	<icon-type>	table	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP dt>
+
+<group name="dt">
+	<width>	50	</>
+	<break-before>	Line	</>
+	<text-before><dt></>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP em>
+
+<group name="em">
+	<font-slant>	Italics	</>
+	<text-before><em></>
+	<text-after>join('<','/em>')</>
+</group>
+
+
+<style name="EXTREF,I" group="em">
+	<font-slant>	Italics	</>
+	<script>	ebt-link root=xidmatch(ID, ATTR(RID,parent()))  book=attr(book,parent())  stylesheet=dynaweb.wv	</>
+</style>
+
+<style name="GENREFITEM,PROCEDURE,NUMLIST,ITEM,ARTPLACE,ARTCAP" group="em">
+	<break-after>	None	</>
+</style>
+
+<style name="ARTPLACE">
+	<text-after>	<br>	</>
+</style>
+
+<style name="I" group="em">
+	<font-slant>	Italics	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP emphs>
+
+<group name="emphs">
+	<font-slant>	Italic	</>
+</group>
+
+<style name="CMD">
+	<font-weight>	Bold	</>
+	<font-slant>	Roman	</>
+	<text-before>	<tt>	</>
+	<text-after>	join(<,/tt>	</>
+</style>
+
+<style name="FILE" group="emphs">
+	<font-slant>	Italic	</>
+</style>
+
+<style name="FUNC" group="emphs">
+	<font-slant>	Roman	</>
+	<script>	ebt-link root=xidmatch(id, attr(rid)) </>
+</style>
+
+<style name="INLINE" group="emphs">
+	<font-slant>	Roman	</>
+</style>
+
+<style name="PROP" group="emphs">
+	<script>	ebt-link root=xidmatch(id, attr(rid)) </>
+</style>
+
+<style name="RESV" group="emphs">
+	<font-slant>	Roman	</>
+	<script>	ebt-link root=xidmatch(id, attr(rid)) </>
+</style>
+
+<style name="SCRIPT" group="emphs">
+	<script>	ebt-link root=xidmatch(id, attr(rid)) </>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP equations>
+
+<group name="equations">
+	<hide>	Children	</>
+	<break-before>	None	</>
+	<break-after>	None	</>
+	<inline>	equation target=me()	</>
+</group>
+
+<style name="F" group="equations">
+</style>
+
+
+
+<?INSTED COMMENT: GROUP h1>
+
+<group name="h1">
+	<font-weight>	Bold	</>
+	<font-size>	24	</>
+	<line-spacing>	29	</>
+	<space-before>	24	</>
+	<break-before>	Line	</>
+	<text-before><h1></>
+	<text-after>join('<','/h1>')</>
+</group>
+
+<style name="TITLEPG,TITLE" group="h1">
+	<font-size>	27	</>
+	<line-spacing>	28	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP h2>
+
+<group name="h2">
+	<font-weight>	Bold	</>
+	<font-size>	18	</>
+	<line-spacing>	22	</>
+	<space-before>	18	</>
+	<break-before>	Line	</>
+	<text-before><h2></>
+	<text-after>join('<','/h2>')</>
+</group>
+
+<style name="CHAPTER,TITLE" group="h2">
+	<font-family>	Arial Black	</>
+	<font-size>	29	</>
+	<foreground>	dark green	</>
+	<left-indent>	if(eq(cnum(ancestor()),1),+=0,+=45)	</>
+	<line-spacing>	26	</>
+	<first-indent>	if(eq(cnum(ancestor()),1),0,-45)	</>
+	<space-before>	45	</>
+	<text-before><h2>if(eq(cnum(ancestor()),1),'',join(sub(cnum(parent()),1),'. '))</>
+</style>
+
+<style name="REFMAP,TITLE" group="h2">
+	<font-family>	Arial Black	</>
+	<font-weight>	Bold	</>
+	<font-size>	24	</>
+	<foreground>	dark green	</>
+	<line-spacing>	16	</>
+	<justification>	Right	</>
+	<space-before>	12	</>
+	<hrule>	After	</>
+	<break-before>	Line	</>
+</style>
+
+<style name="SUBTITLE" group="h2">
+	<font-family>	&title.font	</>
+	<font-size>	18	</>
+	<line-spacing>	20	</>
+	<justification>	Left	</>
+	<space-before>	18	</>
+	<break-before>	line	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP h3>
+
+<group name="h3">
+	<font-weight>	Bold	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><h3></>
+	<text-after>join('<','/h3>')</>
+</group>
+
+<style name="AUTHOR" group="h3">
+	<font-family>	&title.font	</>
+	<font-weight>	Medium	</>
+	<font-size>	18	</>
+	<line-spacing>	20	</>
+	<justification>	Left	</>
+	<space-before>	18	</>
+	<break-before>	line	</>
+</style>
+
+<style name="MAP,TITLE">
+	<font-size>	18	</>
+	<line-spacing>	20	</>
+	<space-before>	25	</>
+	<text-before>	<h3><font color="#008080">	</>
+	<text-after>	join(<,/font>) join(<,/h3>)	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP h4>
+
+<group name="h4">
+	<font-weight>	Bold	</>
+	<font-size>	12	</>
+	<line-spacing>	14	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><h4></>
+	<text-after>join('<','/h4>')</>
+</group>
+
+<style name="LABEL" group="h4">
+	<font-size>	14	</>
+	<line-spacing>	17	</>
+	<space-before>	12	</>
+</style>
+
+<style name="PROCEDURE,LABEL" group="h4">
+	<font-size>	14	</>
+	<foreground>	dark green	</>
+	<line-spacing>	17	</>
+	<space-before>	12	</>
+	<hrule>	After	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP h5>
+
+<group name="h5">
+	<font-weight>	Bold	</>
+	<font-size>	10	</>
+	<line-spacing>	12	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><h5></>
+	<text-after>join('<','/h5>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP h6>
+
+<group name="h6">
+	<font-weight>	Bold	</>
+	<font-size>	8	</>
+	<line-spacing>	10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><h6></>
+	<text-after>join('<','/h6>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP hr>
+
+
+<group name="hr">^M
+        <hrule> Before  </>^M
+        <text-before><hr></>^M
+</group>^M
+^M
+<style name="ART" group="hr">
+	<space-before>	12	</>
+	<break-before>	Line	</>
+	<script>	ebt-raster filename="attr(FILE).gif" title="attr(TITLE)"	</>
+	<inline>	raster filename="attr(FILE).gif"	</>
+	<text-before><p>Figure if(gt(cnum(ancestor(CHAPTER)),1),join(sub(cnum(ancestor(CHAPTER)),1),-gcnum():),gcnum():) attr(TITLE)join('<','/p>')</>
+</style>
+
+
+<style name="ARTCAP">
+	<hide>	All	</>
+</style>
+
+<?INSTED COMMENT: GROUP i>
+
+<group name="i">
+	<font-slant>	Italics	</>
+	<text-before><i></>
+	<text-after>join('<','/i>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP kbd>
+
+<group name="kbd">
+	<font-family>	courier	</>
+	<text-before><kbd></>
+	<text-after>join('<','/kbd>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP li>
+
+<group name="li">
+	<left-indent>	+=10	</>
+	<first-indent>	-10	</>
+	<break-before>	Line	</>
+	<text-before><li></>
+</group>
+
+<style name="LIST.ITEM" group="li">
+</style>
+
+
+
+<?INSTED COMMENT: GROUP menu>
+
+<group name="menu">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><menu></>
+	<text-after>join('<','/menu>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP ol>
+
+<group name="ol">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><ol></>
+	<text-after>join('<','/ol>')</>
+</group>
+
+<style name="NUMLIST" group="ol">
+</style>
+
+
+
+<?INSTED COMMENT: GROUP p>
+
+<group name="p">
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><p></>
+</group>
+
+<style name="EBTDOC,BODY,CHAPTER,REFMAP,GENREFITEM,BLOCK,SEGLIST,SEGLISTROW,SEGLISTITEM,P" group="p">
+	<left-indent>	00	</>
+	<space-before>	10	</>
+	<break-before>	line	</>
+</style>
+
+<style name="EBTDOC,COMMENT,P" group="p">
+	<hide>	All	</>
+	<space-before>	10	</>
+	<break-before>	line	</>
+</style>
+
+<style name="P" group="p">
+	<space-before>	0	</>
+	<space-after>	12	</>
+	<break-before>	line	</>
+</style>
+
+<style name="SEGLISTITEM,P" group="p">
+	<space-before>	10	</>
+	<break-before>	line	</>
+</style>
+
+<style name="SUBBLOCK,P" group="p">
+	<space-before>	if(gt(cnum(),1), 10,)	</>
+	<break-before>	if(gt(cnum(),1), Line, None)	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP pre>
+
+<group name="pre">
+	<font-family>	courier	</>
+	<justification>	Verbatim	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><pre></>
+	<text-after>join('<','/pre>')</>
+</group>
+
+<style name="VERBATIM" group="pre">
+	<font-family>	&verbatim.font	</>
+	<font-size>	&verbatim.font-size	</>
+	<line-spacing>	&verbatim.line-spacing	</>
+	<justification>	verbatim	</>
+	<space-before>	if(eq(tag(lsibling()),'VERBATIM'),2,8)	</>
+	<space-after>	if(eq(tag(rsibling()),'VERBATIM'),2,8)	</>
+	<break-before>	Line	</>
+	<break-after>	Line	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP samp>
+
+<group name="samp">
+	<font-family>	courier	</>
+	<text-before><samp></>
+	<text-after>join('<','/samp>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP strong>
+
+<group name="strong">
+	<font-weight>	Bold	</>
+	<text-before><strong></>
+	<text-after>join('<','/strong>')</>
+</group>
+
+<style name="B" group="strong">
+	<font-weight>	Bold	</>
+</style>
+
+<style name="BI" group="strong">
+	<font-weight>	Bold	</>
+	<font-slant>	Italic	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP title>
+
+<group name="title">
+	<font-family>	&title.font	</>
+	<font-weight>	Bold	</>
+	<foreground>	&title.color	</>
+	<justification>	Left	</>
+	<break-before>	line	</>
+</group>
+
+<style name="APPENDIX,TITLE" group="title">
+	<text-before><h2>Appendix format(cnum(parent()),LETTER):  </>
+	<text-after> endtag(h2)	</>
+</style>
+
+<style name="GENREFITEM,TITLE" group="title">
+	<font-family>	Arial	</>
+	<font-weight>	Bold	</>
+	<font-size>	18	</>
+	<line-spacing>	14	</>
+	<justification>	Left	</>
+	<space-before>	24	</>
+	<hrule>	None	</>
+	<break-before>	Line	</>
+</style>
+
+
+
+<?INSTED COMMENT: GROUP tt>
+
+<group name="tt">
+	<font-family>	courier	</>
+	<text-before><tt></>
+	<text-after>join('<','/tt>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP ul>
+
+<group name="ul">
+	<left-indent>	+=10	</>
+	<space-before>	14	</>
+	<break-before>	Line	</>
+	<text-before><ul></>
+	<text-after>join('<','/ul>')</>
+</group>
+
+
+
+<?INSTED COMMENT: GROUP var>
+
+<group name="var">
+	<font-slant>	Italics	</>
+	<text-before><var></>
+	<text-after>join('<','/var>')</>
+</group>
+
+
+
+<?INSTED COMMENT: UNGROUPED STYLES FOLLOW>
+
+<style name="#DEFAULT">
+	<font-family>	times	</>
+	<font-weight>	Medium	</>
+	<font-slant>	Roman	</>
+	<font-video>	Regular	</>
+	<font-size>	14	</>
+	<line-spacing>	17	</>
+</style>
+
+<style name="#ROOT">
+	<break-before>	Line	</>
+</style>
+
+<style name="#SDATA">
+	<character-set>	attr(charset)	</>
+	<text-before>	gamut(attr(name),    'bull bul trade mdash ndash',    '\067 \067 (tm) --  - '    ,join('&',attr(name),';'))</>	
+</style>
+
+<style name="#TAGS">
+	<font-family>	fixed	</>
+	<font-weight>	Medium	</>
+	<font-size>	12	</>
+	<score>	Under	</>
+</style>
+
+
+<style name="ABLOCK">
+	<hide>	All	</>
+</style>
+
+<style name="ABLOCK,TABLE">
+	<hide>	All	</>
+</style>
+
+<style name="APPENDIX">
+	<break-before>	Line	</>
+</style>
+
+<style name="ART,#TEXT-BEFORE">
+	<font-family>	&title.font	</>
+	<font-weight>	bold	</>
+	<font-size>	12	</>
+	<foreground>	&art.color	</>
+	<line-spacing>	14	</>
+	<justification>	left	</>
+	<space-before>	4	</>
+	<space-after>	12	</>
+</style>
+
+<style name="BLOCK">
+	<break-before>	Line	</>
+</style>
+
+<style name="CELLRULE">
+	<column>	True	</>
+	<hide>	All	</>
+</style>
+
+<style name="CHAPTER">
+	<break-before>	Line	</>
+</style>
+
+<style name="COPYRTPG">
+	<hide>	Children	</>
+	<icon-position>	Right	</>
+	<script>	ebt-reveal title="Copyright Notice" stylesheet="dynaweb.wv"	</>
+	<icon-type>	copyrt	</>
+</style>
+
+<style name="DATE">
+	<font-family>	&title.font	</>
+	<font-size>	18	</>
+	<line-spacing>	20	</>
+	<justification>	Left	</>
+	<space-before>	18	</>
+	<break-before>	line	</>
+</style>
+
+<style name="DEFTERM">
+	<font-weight>	Bold	</>
+	<line-spacing>	14	</>
+	<break-before>	Line	</>
+	<break-after>	Line	</>
+	<text-before> <dt><b> </>
+	<text-after> join(<,/b>)<br> </>
+</style>
+
+<style name="DOCLINK">
+	<font-slant>	Italics	</>
+	<foreground>	red	</>
+	<icon-position>	Right	</>
+	<break-before>	line	</>
+	<script>	ebt-link book="attr(DOC)" tname=ID tvalue="attr(RID)"	</>
+	<icon-type>	exlink	</>
+</style>
+
+<style name="DOS">
+	<break-before>	False	</>
+	<select>	if(eq(index(env(PATH),'/'),0),ME.SHOW,ME.HIDE)	</>
+</style>
+
+<style name="EBTDOC">
+	<font-family>	&std.font	</>
+	<font-size>	14	</>
+	<foreground>	black	</>
+	<left-indent>	10	</>
+	<right-indent>	&std.rightindent	</>
+	<line-spacing>	16	</>
+</style>
+
+<style name="EMPH">
+	<select>	EMPH.attr(type)	</>
+</style>
+
+<style name="EMPH.ATTR">
+	<font-slant>	Roman	</>
+</style>
+
+<style name="EMPH.BUTTON">
+	<font-slant>	Italics	</>
+</style>
+
+<style name="EMPH.CMD">
+	<font-weight>	Bold	</>
+	<font-slant>	Roman	</>
+</style>
+
+<style name="EMPH.FILE">
+	<font-slant>	Italic	</>
+</style>
+
+<style name="EMPH.FUNC">
+	<font-slant>	Roman	</>
+</style>
+
+<style name="EMPH.INPUT">
+	<font-family>	courier	</>
+</style>
+
+<style name="EMPH.MENU">
+	<font-slant>	Roman	</>
+</style>
+
+<style name="EMPH.OUTPUT">
+	<font-family>	courier	</>
+</style>
+
+<style name="EMPH.PROP">
+	<font-slant>	Italic	</>
+</style>
+
+<style name="EMPH.PVAL">
+	<font-slant>	Italic	</>
+</style>
+
+<style name="EMPH.RESV">
+	<font-slant>	Roman	</>
+</style>
+
+<style name="EXTREF">
+	<font-family>	new century schoolbook	</>
+	<font-weight>	Medium	</>
+	<font-slant>	&hottext.slant	</>
+	<foreground>	&hottext.foreground	</>
+	<score>	Under	</>
+	<script>	ebt-link root=xidmatch(ID, ATTR(RID)) book=attr(book)    stylesheet=dynaweb.wv
+	</>
+</style>
+
+<style name="FD" group="">
+	<font-size>	18	</>
+	<space-before>	10	</>
+	<space-after>	10	</>
+	<break-before>	line	</>
+	<break-after>	line	</>
+</style>
+
+<style name="ITEM,P">
+	<line-spacing>	16	</>
+	<space-after>	12	</>
+	<break-before>	Line	</>
+	<text-before>if(isfirst(),<LI>,)</>
+	<text-after><BR><BR></>
+</style>
+
+<style name="LIST">
+	<left-indent>	+=5	</>
+	<space-before>	4	</>
+	<break-before>	line	</>
+	<break-after>	line	</>
+	<text-before>if(eq(attr(type),'num'),<OL>,<UL>)</>
+	<text-after>if(eq(attr(type),"num"),join(<,/OL>),join(<,/UL>))</>
+</style>
+
+<style name="MAP">
+	<break-before>	Line	</>
+</style>
+
+<style name="MARKER">
+	<font-family>	if(isempty(attr(type)),symbol,)	</>
+	<font-weight>	Medium	</>
+	<hide>	All	</>
+	<break-before>	line	</>
+	<text-before>switch(attr(type,parent(LIST)),'triple', format(cnum(),word('LETTER decimal roman',countword(qtag(), x,'eq(var(x),'LIST')',',')))., 'num', cnum()., 'default', content())</>
+</style>
+
+<style name="ME.HIDE">
+	<hide>	All	</>
+</style>
+
+<style name="ME.SHOW">
+	<hide>	Off	</>
+</style>
+
+<style name="NAME">
+	<width>	100	</>
+	<column>	True	</>
+</style>
+
+<style name="NOTICE">
+	<font-family>	&title.font	</>
+	<font-size>	14	</>
+	<line-spacing>	16	</>
+	<space-before>	20	</>
+	<break-before>	line	</>
+</style>
+
+<style name="NUM">
+	<font-weight>	Bold	</>
+	<foreground>	dark green	</>
+</style>
+
+<style name="OWNER">
+	<font-family>	&title.font	</>
+	<font-size>	18	</>
+	<line-spacing>	20	</>
+	<justification>	Left	</>
+	<space-before>	18	</>
+	<break-before>	line	</>
+</style>
+
+<style name="PART">
+	<space-before>	60	</>
+</style>
+
+<style name="PROPERTY">
+	<break-before>	Line	</>
+</style>
+
+<style name="RM">
+	<font-weight>	Medium	</>
+	<font-slant>	Roman	</>
+</style>
+
+<style name="ROWRULE">
+	<hrule>	Before	</>
+</style>
+
+<style name="SECTION">
+	<space-before>	40	</>
+</style>
+
+<style name="SHOW">
+	<space-before>	12	</>
+	<icon-position>	Left	</>
+	<break-before>	line	</>
+	<script>	ebt-raster filename="attr(TYPE).tif" title="attr(Type) Icon"	</>
+	<icon-type>	attr(TYPE)	</>
+</style>
+
+<style name="SIDEBAR">
+	<hide>	Children	</>
+	<icon-position>	Right	</>
+	<script>	ebt-reveal title=" " stylesheet="dynaweb.wv"	</>
+	<icon-type>	footnote	</>
+</style>
+
+<style name="SIDEBAR,LABEL">
+	<hide>	Children	</>
+</style>
+
+<style name="SP.FN">
+	<hide>	Children	</>
+	<icon-position>	Right	</>
+	<script>	ebt-reveal title="Footnote" stylesheet="dynaweb.wv"	</>
+	<icon-type>	footnote	</>
+</style>
+
+<style name="SP.ICONSHOW">
+	<left-indent>	36	</>
+	<space-before>	12	</>
+	<icon-position>	Inline	</>
+	<break-before>	line	</>
+	<icon-type>	attr(TITLE)	</>
+</style>
+
+<style name="SP.SUB">
+	<vertical-offset>	&subscript	</>
+</style>
+
+<style name="SP.TEX">
+	<break-before>	Line	</>
+</style>
+
+<style name="SP.TEXEQN">
+	<break-before>	Line	</>
+</style>
+
+<style name="SPECIAL">
+	<font-family>	&title.font	</>
+	<select>	SP.toupper(attr(type))	</>
+</style>
+
+<style name="STYLE">
+	<space-before>	6	</>
+	<space-after>	6	</>
+	<break-before>	Line	</>
+	<text-before>if(attr(NAME), Property setting\(s\) for style attr(NAME):, Property setting:)</>
+</style>
+
+<style name="STYLE,#TEXT-BEFORE">
+	<font-weight>	Bold	</>
+</style>
+
+<style name="SUBBLOCK">
+	<break-before>	Line	</>
+</style>
+
+<style name="SUBBLOCK,LABEL">
+	<font-weight>	Bold	</>
+	<font-size>	12	</>
+	<foreground>	&title.color	</>
+	<justification>	Left	</>
+	<space-before>	8	</>
+	<break-before>	line	</>
+	<break-after>	Line	</>
+	<text-before> <p><strong><font color="#800000"> </>
+	<text-after> join(<,/font>) join(<,/strong>) </>
+</style>
+
+<style name="SYMBOL">
+	<font-family>	symbol	</>
+	<font-weight>	Medium	</>
+</style>
+
+<style name="TABLE">
+	<break-before>	Line	</>
+	<text-before><table border></>
+	<text-after>join('<','/table>')</>
+	<!-- The select property in comments doesn't work; all tables are iconized 
+	<select>	TABLE.gamut(attr(type,ancestor()),'proc2 other2','inline inline','HIDDEN')	</>  -->
+	<select>	TABLE.switch(attr(type,ancestor()),'proc2','inline','other2','inline',default,'inline')	</>
+</style>
+
+<style name="TABLE.INLINE">
+	<space-before>	20	</>
+	<space-after>	20	</>
+	<break-before>	Line	</>
+	<text-before> <table border> </>
+	<text-after> join(<,/table>)<br></>
+</style>
+
+<style name="TABLECELL">
+	<left-indent>	+=int(div(tableinfo(arbor,left-indent,5),3))	</>
+	<width>	int(sub(div(tableinfo(arbor,width,5),3),10))	</>
+	<column>	True	</>
+	<justification>	tableinfo(arbor,justification)	</>
+	<text-before><td></>
+</style>
+
+<style name="TABLECELL,LIST">
+	<space-before>	4	</>
+	<break-before>	line	</>
+</style>
+
+<style name="TABLECELL,P">
+	<left-indent>	if(eq(cnum(ancestor()),1), +=10, +=0)	</>
+	<break-before>	if(eq(cnum(),1), None, Line)	</>
+	<text-before>   if(isfirst(me),"",<br>)	</style>
+
+<style name="TABLEROW">
+	<font-weight>	if(gt(cnum(),1),Medium,Bold)	</>
+	<space-before>	4	</>
+	<space-after>	4	</>
+	<vrule>	Children	</>
+	<break-before>	Line	</>
+	<text-before><tr></>
+</style>
+
+<style name="TBLOCK">
+	<break-before>	Line	</>
+</style>
+
+<style name="TEX">
+	<font-family>	&std.font	</>
+	<font-size>	18	</>
+	<hide>	Children	</>
+	<space-before>	10	</>
+	<space-after>	10	</>
+	<break-before>	Line	</>
+	<break-after>	Line	</>
+	<inline>	equation target=me()	</>
+</style>
+
+<style name="TEXEQN">
+	<hide>	Children	</>
+	<icon-position>	Right	</>
+	<break-after>	Line	</>
+	<script>	ebt-reveal root=me() stylesheet=texeqn.rev	</>
+	<icon-type>	default	</>
+</style>
+
+<style name="TOCPG">
+	<hide>	All	</>
+</style>
+
+<style name="TOPIC">
+	<hide>	All	</>
+</style>
+
+<style name="UL">
+	<font-weight>	Bold	</>
+	<score>	None	</>
+</style>
+
+<style name="UNIX">
+	<select>	if(gt(index(env(PATH),'/'),0),ME.SHOW,ME.HIDE)	</>
+</style>
+
+<style name="VALUE">
+	<left-indent>	+=110	</>
+	<column>	True	</>
+</style>
+
+<style name="XREF">
+	<font-family>	new century schoolbook	</>
+	<font-weight>	Medium	</>
+	<font-slant>	&hottext.slant	</>
+	<foreground>	&hottext.foreground	</>
+	<score>	Under	</>
+	<script>	ebt-link root=xidmatch(ID, ATTR(RID)) stylesheet="dynaweb.wv"	</>
+</style>
+
+
+
+</sheet>

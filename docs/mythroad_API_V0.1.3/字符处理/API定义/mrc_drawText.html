@@ -1,0 +1,45 @@
+<html>
+
+<head>将指定文本绘制于屏幕指定位置。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_drawText(<br>
+&nbsp&nbsp char* pcText,<br>
+&nbsp&nbsp int16 x, <br>
+&nbsp&nbsp int16 y,<br>
+&nbsp&nbsp uint8 r, <br>
+&nbsp&nbsp uint8 g, <br>
+&nbsp&nbsp uint8 b, <br>
+&nbsp&nbsp int is_unicode, <br>
+&nbsp&nbsp uint16 font<br>
+);
+
+<h1>Parameters</h1>
+<b>pcTest</b><br>
+&nbsp&nbsp[IN]待显示的字符串<br>
+<b>x</b><br>
+&nbsp&nbsp[IN]待显示的字符左上角x <br>
+<b>y</b><br>
+&nbsp&nbsp[IN]待显示的字符左上角y <br>
+<b>r</b><br>
+&nbsp&nbsp[IN]字体颜色r,g,b，r取值范围：0~255<br>
+<b>g</b><br>
+&nbsp&nbsp[IN]字体颜色r,g,b，g取值范围：0~255<br>
+<b>b</b><br>
+&nbsp&nbsp[IN]字体颜色r,g,b，b取值范围：0~255<br>
+<b>is_unicode</b><br>
+&nbsp&nbsp[IN] 是否是unicode，TRUE(1)表示使用unicode编码，FALSE(0)表示使用GB2312编码<br>
+<b>font</b><br>
+&nbsp&nbsp[IN]字体的大小 见<a href="MR_FONT_TYPE.html">MR_FONT_TYPE</a>定义 <br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp MR_SUCCESS  		操作成功，字符为\00\00时也返回成功，但没有实质显示操作；<br>
+&nbsp&nbsp MR_FAILED      	操作失败，字符在字库中未找到会返回该值；
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

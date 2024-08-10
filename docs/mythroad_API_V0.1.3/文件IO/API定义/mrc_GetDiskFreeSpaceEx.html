@@ -1,0 +1,31 @@
+<html>
+<head>获得指定盘符的空间信息。</head>
+
+<body>
+
+<h1>Syntax</h1>
+uint64 mrc_GetDiskFreeSpaceEx(<br>
+  uint8 *lpDirectoryName,<br>   
+  uint64 *TotalBytes, <br>
+  uint64 *FreeBytes <br>
+  );
+
+<h1>Parameters</h1>
+<b>nBufferLength</b><br>
+[IN]lpDirectoryName，目标磁盘上的一个目录，若为NULL表示当前目录;<br>
+<b>lTotalBytes</b><br>
+[OUT]该磁盘总的字节数；<br>
+<b>lFreeBytes</b><br>
+[OUT]FreeBytes	该磁盘空闲字节数
+
+<h1>Return Value</h1>
+该盘符空闲字节数，当失败或空闲字节数为0时，返回0。
+
+<h1>Remarks</h1>
+目前限制当前目录必须为NULL，且必须是手机上的T卡。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

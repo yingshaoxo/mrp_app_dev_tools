@@ -1,0 +1,27 @@
+<html>
+
+<head>
+获取socket connect 状态（主要用于TCP的异步连接）
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_getSocketState(int32 s);
+
+<h1>Parameters</h1>
+<b>s</b><br>
+&nbsp&nbsp [IN] 打开的socket句柄，由<a href="mrc_socket.html">mrc_socket</a>创建<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp           	MR_SUCCESS ：  连接成功<br>
+&nbsp&nbsp      	MR_FAILED  ：  连接失败<br>
+&nbsp&nbsp      	MR_WAITING ：  连接中<br>
+&nbsp&nbsp      	MR_IGNORE  ：  不支持该功能<br>
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

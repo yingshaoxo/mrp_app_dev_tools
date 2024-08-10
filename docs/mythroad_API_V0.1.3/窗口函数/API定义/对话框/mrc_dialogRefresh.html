@@ -1,0 +1,38 @@
+<html>
+
+<head>
+刷新对话框的显示。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_dialogRefresh(<br>
+&nbsp&nbsp int32 dialog, <br>
+&nbsp&nbsp const char * title,<br>
+&nbsp&nbsp const char * text,<br>
+&nbsp&nbsp int32 type<br>);
+
+<h1>Parameters</h1>
+<b>dialog</b><br>
+&nbsp&nbsp [IN]对话框的句柄<br>
+<b>title</b><br>
+&nbsp&nbsp [IN]对话框的标题，unicode编码，网络字节序<br>
+<b>text</b><br>
+&nbsp&nbsp [IN]对话框内容，unicode编码，网络字节序<br>
+<b>type</b><br>
+&nbsp&nbsp [IN]若type为-1，表示type不变,见定义<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_OK</a>&nbsp<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_OK_CANCEL</a>&nbsp<a href="E_DIALOG_KEY_TYPE.html">MR_DIALOG_CANCEL</a>
+
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp            	MR_SUCCESS  成功<br>
+&nbsp&nbsp       	MR_FAILED   失败
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

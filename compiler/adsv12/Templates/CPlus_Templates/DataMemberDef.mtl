@@ -1,0 +1,3 @@
+$if data-member-is-const$const $endif$$\$
+$if data-member-is-volatile$volatile $endif$$\$
+$data-member-type$ $class-name$::$data-member-name$$if data-member-has-initializer$ = $data-member-initializer$$endif$;

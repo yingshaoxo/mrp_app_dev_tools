@@ -1,0 +1,34 @@
+<html>
+<title>MyThroad 窗体分类</title>
+<head></head>
+<body>
+Mythroad平台下常用的几种窗体形式如下：<br>
+<h3>菜单</h3>
+&nbsp&nbsp&nbsp&nbsp 使用菜单时，首先调用<a href="../API定义/菜单/mrc_menuCreate.html">mrc_menuCreate</a>创建一菜单容器，然后调用<a href="../API定义/菜单/mrc_menuSetItem.html">mrc_menuSetItem</a>来设置每一个菜单项，并通过
+<a href="../API定义/菜单/mrc_menuShow.html">mrc_menuShow</a> &nbsp <a href="../API定义/菜单/mrc_menuRefresh.html">mrc_menuRefresh</a>来完成显示处理，退出菜单时由<a href="../API定义/菜单/mrc_menuRelease.html">mrc_menuRelease</a>
+完成资源的释放；
+
+<h3>窗体</h3>
+&nbsp&nbsp&nbsp&nbsp 创建自定义窗体时，需注册两个窗口函数，一个是键盘事件回调函数<a href="../API定义/窗体/PtrKeyEvent.html">PtrKeyEvent</a>，另一个是窗体事件回调函数<a href="../API定义/窗体/PtrKeyEvent.html">PtrKeyEvent</a>。
+常用的调用次序是：<a href="../API定义/窗体/mrc_winInit.html">mrc_winInit</a> &nbsp  <a href="../API定义/窗体/mrc_winNew.html">mrc_winNew</a> &nbsp  <a href="../API定义/窗体/mrc_winClose.html">mrc_winClose</a><br>  
+
+<h3>对话框</h3>
+&nbsp&nbsp&nbsp&nbsp 对话框常做内容提示，通过按键反馈与用户进行交互，产生的按键消息为<b>MR_DIALOG_EVENT</b>，右软键键值为：<b>MR_DIALOG_KEY_CANCEL</b>，左软键键值为：<b>MR_DIALOG_KEY_OK</b>。
+<a href="../API定义/对话框/mrc_dialogCreate.html">mrc_dialogCreate</a>创建指定内容的对话框，由<a href="../API定义/对话框/mrc_dialogRefresh.html">mrc_dialogRefresh</a>
+刷新提示内容，最后退出时由<a href="../API定义/对话框/mrc_dialogRelease.html">mrc_dialogRelease</a>完成资源释放。
+
+<h3>文本框</h3>
+&nbsp&nbsp&nbsp&nbsp 文本框用来显示只读的文字信息。文本框和对话框并没有本质的区别，仅仅是显示方式上的不同，在使用上它们的主要区别是：对话框的内容一般较短，文本框的
+内容一般较长，对话框一般实现为弹出式的窗口，文本框一般实现为全屏式的窗口。也可能在手机上对话框和文本框使用了相同的方式实现。<br>
+&nbsp&nbsp&nbsp&nbsp <a href="../API定义/文本框/mrc_textCreate.html">mrc_textCreate</a>创建指定内容的文本框，由<a href="../API定义/文本框/mrc_textRefresh.html">mrc_textRefresh</a>
+刷新提示内容，最后退出时由<a href="../API定义/文本框/mrc_textRelease.html">mrc_textRelease</a>完成资源释放。
+
+<h3>编辑框</h3>
+&nbsp&nbsp&nbsp&nbsp 编辑框用来显示并提供用户编辑文字信息，为应用提供用户输入接口，"text"是编辑框显示的初始内容。
+它产生的按键消息为<b>MR_DIALOG_EVENT</b>，右软键键值为：<b>MR_DIALOG_KEY_CANCEL</b>，左软键键值为：<b>MR_DIALOG_KEY_OK</b>。<br>
+&nbsp&nbsp&nbsp&nbsp <a href="../API定义/编辑框/mrc_editCreate.html">mrc_editCreate</a>创建编辑框，
+由<a href="../API定义/编辑框/mrc_editGetText.html">mrc_editGetText</a>获取用户输入，
+最后退出时由<a href="../API定义/编辑框/mrc_editRelease.html">mrc_editRelease</a>完成资源释放。
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+<head>取得文件类型信息。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_fileState(<br>
+&nbsp&nbsp const char* filename<br>
+);
+
+<h1>Parameters</h1>
+<b>filename</b><br>
+&nbsp&nbsp 文件名称，需含路径。                                
+
+<h1>Return Value</h1>
+&nbsp&nbsp       MR_IS_FILE     &nbsp&nbsp	是文件<br>
+&nbsp&nbsp       MR_IS_DIR      &nbsp&nbsp	是目录<br>
+&nbsp&nbsp       MR_IS_INVALID  &nbsp&nbsp	文件不存在，或既不是文件也不是目录<br>
+&nbsp&nbsp       相关描述见<a href = "FILE_MAC.html">MR_IS_FILE MR_IS_DIR MR_IS_INVALID</a>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

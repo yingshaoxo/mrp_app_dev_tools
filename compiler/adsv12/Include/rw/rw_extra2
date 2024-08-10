@@ -1,0 +1,6 @@
+#ifndef __STD_RW_RW_RW_EXTRA2__
+#define __STD_RW_RW_RW_EXTRA2__
+
+_RWSTD_TEMPLATE class _RWSTDExport ctype<char>;
+
+#endif // __STD_RW_RW_RW_EXTRA2__

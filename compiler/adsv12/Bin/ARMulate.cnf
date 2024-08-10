@@ -1,0 +1,16 @@
+;; Default configuration of ARMulator when starting AXD initially
+;; Copyright (c) 1996-1998 ARM Limited. All Rights Reserved.
+
+;; RCS $Revision: 1.2 $
+;; Checkin $Date: 2000/10/05 18:28:44 $
+;; Revising $Author: dsinclai $
+
+PROCESSOR=ARM7TDMI
+CPUSPEED=0
+FPE=FALSE
+ENDIANNESS=L
+USEMAPFILE=FALSE
+MAPFILEPATH=
+TARGET_HW_ENDIAN=False
+
+;; EOF armulate.cnf

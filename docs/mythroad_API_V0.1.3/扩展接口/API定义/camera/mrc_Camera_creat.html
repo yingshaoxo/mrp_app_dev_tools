@@ -1,0 +1,46 @@
+<html>
+<head>创建摄像头预览界面</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_Camera_creat(<br>
+uint16 x,<br>
+uint16 y,<br>
+uint16 prevW,<br>
+uint16 prevH,<br>
+uint16 imgW,<br>
+uint16 imgH,<br>
+uint32 img_quality_type<br>
+);
+
+<h1>Parameters</h1>
+<b>x</b><br> 
+[IN]预览区域的x坐标<br>
+<b>y</b><br> 
+[IN]预览区域的y坐标<br>
+<b>prevW</b><br> 
+[IN]预览区域的宽度<br>
+<b>prevH</b><br> 
+[IN]预览区域的高度<br>
+<b>imgW</b><br> 
+[IN]拍下来的照片的宽度<br>
+<b>imgH</b><br> 
+[IN]拍下来的照片的高度<br>
+<b>img_quality_type</b><br> 
+[IN]照片质量类型，定义见枚举定义<a href="CAMERA_IMG_QUALITY_T.html">CAMERA_IMG_QUALITY_T</a>
+
+<h1>Return Value</h1>
+MR_SUCCESS  	成功<br>
+MR_FAILED   	失败<br>
+MR_IGNORE 	不支持该功能
+
+<h1>Remarks</h1>
+注意:prevW和prevH最大，分别为屏幕的宽和高，如果屏幕大小是240x320，那么它们的最大值分别为240和320;<br>
+imgW和imgH的最大值与摄像头的像素有关系，可以大于屏幕的宽和高。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_camera.h</i><br>
+</body>
+
+</html>

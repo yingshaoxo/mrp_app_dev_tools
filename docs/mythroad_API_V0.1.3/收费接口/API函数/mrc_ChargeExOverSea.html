@@ -1,0 +1,47 @@
+<html>
+<head>提供带回调函数的灵活扩展的海外版收费功能。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_ChargeExOverSea(<br>
+uint32 Option,<br>
+uint16 Channel,<br>
+uint16 value,<br>
+uint16 mcc,<br>
+uint16 ChargePoint,<br>
+int32 data,<br>
+mrc_PayCB f,<br>
+int32 timeOut<br>
+);
+
+<h1>Parameters</h1>
+<b>Option</b><br>
+值为0时，表示不写记录，用于购买道具等多次发送的场合；值为1时，表示要写记录，用于产品购买注册等场合。若检查到已付费的存盘记录，则本函数立刻返回成功.<br>
+<b>Channel</b><br>
+收费渠道，由斯凯定义、分配。示例可见<a href="PAY_CHANNEL.html">PAY_CHANNEL</a><br>
+<b>value</b><br>
+收费金额，单位为通道的计费单位。最大取值范围为10条该通道SP短信的对应值，例如，1.5的通道最大值为150。<br>
+<b>mcc</b><br>
+从Excel表中取得的MCC值，主要是用于校验，避免出错。<br>
+<b>ChargePoint</b><br>
+计费点编号。<br>
+<b>data</b><br>
+回调函数的参数<br>
+<b>f</b><br>
+回调函数，见<a href="mrc_PayCB.html">mrc_PayCB</a>定义。当f=NULL时，回调函数将被忽略，这时本函数行为和mrc_ChargeEx完全一致。<br>
+<b>timeOut</b><br>
+超时保护定时器等待的毫秒数。如果超时时间还是没有收到所有的状态报告，当超时时间到达时，回调函数必须被调用,在传给应用 的data数据中指明尚未收到的短信条数。<br>
+若该值为0，则所有短信提交协议栈成功后立刻返回，若该值为负数，则永久等待，直到收到足够的短信发送成功状态报告。
+<h1>Return Value</h1>
+MR_SUCCESS	第一条MO短信成功提交协议栈；后续短信将异步MO;<br>
+MR_FAILED	收费失败。
+
+<h1>Remarks</h1>
+在最后一条MO短信返回成功的状态报告后，回调函数将被执行。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

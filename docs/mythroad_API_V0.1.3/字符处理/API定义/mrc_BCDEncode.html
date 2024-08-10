@@ -1,0 +1,29 @@
+<html>
+<head>  对输入的ASCII数字串进行BCD压缩编码。</head>
+
+<body>
+
+<h1>Syntax</h1>
+char* mrc_BCDEncode(<br>
+char *in,<br>
+char *out<br>
+);
+
+<h1>Parameters</h1>
+<b>in</b><br>
+[IN]ASCII数字串;<br>
+<b>out</b><br>
+[OUT]BCD编码字符串。
+
+<h1>Return Value</h1>
+若输入参数*in和*out均不是NULL，则返回out的指针，否则返回NULL。
+
+<h1>Remarks</h1>
+ 1、BCD编码解释<br>
+ 2、输出字符串缓冲区，函数调用者负责创建该缓冲区，长度必须不少于mrc_strlen(in)/2+mrc_strlen(in)%2，此外，输出串无串结束标志。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

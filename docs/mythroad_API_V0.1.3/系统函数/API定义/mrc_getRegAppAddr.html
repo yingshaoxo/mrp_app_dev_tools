@@ -1,0 +1,22 @@
+<html>
+<head>获取固化应用、内存镜像应用的运行时加载地址。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_getRegAppAddr(<br>
+char *MrpName<br>
+);
+
+<h1>Parameters</h1>
+<b>MrpName</b><br> 
+[IN]应用名称，固化应用都是"*"开头的，RAM应用都是"$"开头的；应用名称可以通过<a href="mrc_getPackName.html">mrc_getPackName</a>获取。
+
+<h1>Return Value</h1>
+NULL	获取失败；非NULL为应用内存地址。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

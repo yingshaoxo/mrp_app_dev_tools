@@ -1,0 +1,44 @@
+<html>
+
+<head>
+将mrp中名为filename的图片，从(x, y)开始的宽高为w, h的区域，加载到序号为i的bmp缓冲中。max_w为名为filename的图片的图片宽度。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_bitmapLoad(<br>
+uint16 i, <br>
+&nbsp&nbsp char* filename, <br>
+&nbsp&nbsp int16 x, <br>
+&nbsp&nbsp int16 y, <br>
+&nbsp&nbsp uint16 w, <br>
+&nbsp&nbsp uint16 h, <br>
+&nbsp&nbsp uint16 max_w <br>
+);
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN]图片缓冲序号<br>
+<b>filename</b><br>
+&nbsp&nbsp [IN]文件名，当文件名为"*"时，释放该缓存<br>
+<b>x</b><br>
+&nbsp&nbsp [IN]源图片的起始位置X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]源图片的起始位置Y坐标<br>
+<b>w</b><br>
+&nbsp&nbsp [IN]欲加载图片的宽<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]欲加载图片的高<br>
+<b>max_w</b><br>
+&nbsp&nbsp [IN]欲加载图片的原始宽度<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp             MR_SUCCESS     成功<br>
+&nbsp&nbsp             MR_FAILED         失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

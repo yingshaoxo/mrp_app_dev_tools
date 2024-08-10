@@ -1,0 +1,3 @@
+$foreach header-include-file$$\$
+#include $include-file-name$
+$endloop$$\$

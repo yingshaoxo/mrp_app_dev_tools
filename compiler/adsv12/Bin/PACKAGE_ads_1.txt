@@ -1,0 +1,9 @@
+#
+# PACKAGE file for ARM Developer Suite 1.1
+# ----------------------------------------
+#
+
+PACKAGE ads armlmd 1.000 E13C2F686D73 COMPONENTS="armasm compiler \
+        bats armulate axd adwu fromelf armlink codewarrior armsd"
+
+

@@ -1,0 +1,39 @@
+<html>
+
+<head>将指定字符（仅支持unicode）绘制于屏幕指定区域，区域外的部分不显示；</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_drawChar(<br>
+&nbsp&nbsp uint8* chr,<br>
+&nbsp&nbsp int16 x,<br>
+&nbsp&nbsp int16 y,<br>
+&nbsp&nbsp mr_screenRectSt rect,<br>
+&nbsp&nbsp mr_colourSt colorst,<br>
+&nbsp&nbsp uint16 font<br>
+);
+
+<h1>Parameters</h1>
+<b>chr</b><br>
+&nbsp&nbsp[IN]待显示的字符unicode指针<br>
+<b>x</b><br>
+&nbsp&nbsp[IN]待显示的字符左上角x <br>
+<b>y</b><br>
+&nbsp&nbsp[IN]待显示的字符左上角y <br>
+<b>rect</b><br>
+&nbsp&nbsp[IN]显示的字符限制范围<br>
+<b>colorst</b><br>
+&nbsp&nbsp[IN] 字体顔色 见<a href="mr_colourSt.html">mr_colourSt</a>定义<br>
+<b>font</b><br>
+&nbsp&nbsp[IN]字体的大小 见<a href="MR_FONT_TYPE.html">MR_FONT_TYPE</a>定义 <br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp MR_SUCCESS  		操作成功，字符为\00\00时也返回成功，但没有实质显示操作；<br>
+&nbsp&nbsp MR_FAILED      	操作失败，字符在字库中未找到会返回该值；
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

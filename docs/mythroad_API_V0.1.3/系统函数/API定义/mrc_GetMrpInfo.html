@@ -1,0 +1,34 @@
+<html>
+<head>从当前MRP文件中读取头信息。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_GetMrpInfo(<br>
+char *MrpName,<br>
+E_MRP_INFOID CMD,<br>
+uint8 *RecBuf,<br>
+int32 BufLen<br>
+);
+
+<h1>Parameters</h1>
+<b>MrpName</b><br>
+[IN]MRP文件名称，含路径；<br>
+<b>lCMD</b><br>
+[IN]操作命令码，值见枚举定义<a href="E_MRP_INFOID.html">E_MRP_INFOID</a>；<br>
+<b>lRecBuf</b><br>
+[OUT]接收返回数据的缓冲区指针；<br>
+<b>BufLen</b><br>
+[OUT]接收返回数据的缓冲区字节数
+
+<h1>Return Value</h1>
+当操作不支持、操作失败等情况时，函数返回值小于等于0；若操作成功，函数返回值为RecBuf中实际填写的字节数。
+
+<h1>Remarks</h1>
+<b>void</b>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

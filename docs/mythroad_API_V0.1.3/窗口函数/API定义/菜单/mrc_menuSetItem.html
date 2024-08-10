@@ -1,0 +1,35 @@
+<html>
+
+<head>
+在菜单里设置一个菜单项，参数index是该菜单项的序号，当用户选中某个菜单项时，把index号通过mrc_event函数发送到应用中。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_menuSetItem(<br>
+&nbsp&nbsp int32 menu, <br> 
+&nbsp&nbsp const char *text,<br>
+&nbsp&nbsp int32 index,<br>
+);
+
+<h1>Parameters</h1>
+<b>menu</b><br>
+&nbsp&nbsp [IN]菜单的句柄，由<a href = "mrc_menuCreate.html">mrc_menuCreate</a>创建<br>。
+<b>text</b><br>
+&nbsp&nbsp [IN]菜单项的名字，使用unicode编码，网络字节序<br>
+<b>index</b><br>
+&nbsp&nbsp [IN]菜单项的index号<br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp        MR_SUCCESS  成功<br>
+&nbsp&nbsp        MR_FAILED   失败
+
+
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

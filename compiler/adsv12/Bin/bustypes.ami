@@ -1,0 +1,62 @@
+;; ARMulator configuration file type 3
+;; Copyright (c) 2001 ARM Limited. All Rights Reserved.
+
+;; RCS $Revision: 1.1.2.5 $
+;; Checkin $Date: 2001/10/19 14:47:16 $
+;; Revising $Author: ljameson $
+
+;Note that Core cycles and F cycles are generated elsewhere,
+;  and Total is also added automatically.
+;Format:
+;<LineNum>=<index><space><name>
+; where line-number may be used to order the entries in future,
+; and index is an index into ARMul_Cycles.ac_counts[] (see armul_mem.h).
+
+;Note: S,N,I,C is a more traditional order than N,S,I,C.
+;Note: Unless you are using Mapfile, merged IS-cycles will not be detected.
+
+
+
+{BUS_TYPES
+
+{UNCACHED_VN
+; Uncached Von-Neuman e.g. ARM7TDMI
+2=0 N_Cycles
+1=1 S_Cycles
+3=2 I_Cycles
+4=3 C_Cycles
+5=10 IS_Cycles
+}
+
+;E.g. ARM9TDMI
+{Uncached_Harvard
+1=1 ID_Cycles
+2=0 IBus_Cycles
+3=2 Idle_Cycles
+4=3 DBus_Cycles
+}
+
+; E.g. ARM710T.. ARM940T
+{ASB
+2=1 S_Cycles
+;     -- N should be zero!
+1=0 N_Cycles
+3=2 A_Cycles
+;     -- No C-cycles either.
+5=10 IS_Cycles
+}
+
+
+;E.g. ARM10
+{AHB
+2=0 NON-SEQ
+1=1 SEQ
+3=2 IDLE
+4=3 BUSY
+}
+
+;End of BUS_TYPES
+}
+
+;EOF bustypes.ami
+

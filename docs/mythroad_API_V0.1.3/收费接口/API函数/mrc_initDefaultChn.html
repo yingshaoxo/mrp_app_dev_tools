@@ -1,0 +1,35 @@
+<html>
+<head>配置SDK计费模块的默认主、副SP计费通道。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_initDefaultChn(<br>
+uint16 priChn,<br>
+uint16 slvChn<br>
+);
+
+<h1>Parameters</h1>
+<b>priChn</b><br>
+［IN］主通道ID。高字节为联通主通道ID，低字节为移动主通道ID；当高字节为0时，联通主通道ID和移动主通道ID相同。<br>
+<b>slvChn</b><br>
+［IN］副通道ID。高字节为联通副通道ID，低字节为移动副通道ID；当高字节为0时，联通副通道ID和移动副通道ID相同。
+
+
+<h1>Return Value</h1>
+MR_SUCCESS	设置成功。
+MR_FAILED	设置失败。
+
+<h1>Remarks</h1>
+在计费初始化之后，调用发送收费短信的接口之前，必须调用mrc_initDefaultChn。<br>
+SDK计费模块总是尝试优先使用主通道进行收费；如果通道单价高于收费金额，则尝试使用副通道进行收费；<br>
+目前暂时还不支持将主通道收费余额转给副通道收取的方式，日后将视情况支持。<br>
+在SDKv1.0.2.42以及之前的版本中，不支持副通道，主通道的移动联通也是相同地进行切换。<br>
+在SDKv1.0.2.43版本中，只有主通道支持通道切换，副通道不支持切换；<br>
+在SDKv1.0.3.0到SDKv1.0.3.15版本中，主副通道不支持移动、联通分开配置。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+ADS1.2-crack-readme.txt
+------------------------
+
+
+At end of install, when "ARM License Wizard" start, select
+"Install License", then use "Browse" in "License File To Be Installed" box,
+and point wizard to license.dat file in this directory.
+
+
+安装完成后，提示出现 "ARM License Wizard" 对话框，选择 "Install License"，
+
+然后在 "License File To Be Installed" 中使用 "Browse"，选择 CRACK 目录下的 license.dat 文件即可。
+
+
+
+www.mcu123.com
+www.armopen.com

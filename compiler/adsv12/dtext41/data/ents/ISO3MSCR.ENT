@@ -1,0 +1,86 @@
+<!-- $Id: ISO3MSCR.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOMSCR  PUBLIC
+       "ISO 9573-13:1991//ENTITIES Math Alphabets: Script //EN">
+     %ISOMSCR;
+-->
+
+<!ENTITY Ascr     SDATA "font=cmsy10 charset=fontspecific code=65   TeX='\???? ' descr='[Ascr]'" --/scr A, script letter A-->
+<!ENTITY Bscr     SDATA "font=cmsy10 charset=fontspecific code=66   TeX='\???? ' descr='[Bscr]'" --/scr B, script letter B-->
+<!ENTITY Cscr     SDATA "font=cmsy10 charset=fontspecific code=67   TeX='\???? ' descr='[Cscr]'" --/scr C, script letter C-->
+<!ENTITY Dscr     SDATA "font=cmsy10 charset=fontspecific code=68   TeX='\???? ' descr='[Dscr]'" --/scr D, script letter D-->
+<!ENTITY Escr     SDATA "font=cmsy10 charset=fontspecific code=69   TeX='\???? ' descr='[Escr]'" --/scr E, script letter E-->
+<!ENTITY Fscr     SDATA "font=cmsy10 charset=fontspecific code=70   TeX='\???? ' descr='[Fscr]'" --/scr F, script letter F-->
+<!ENTITY Gscr     SDATA "font=cmsy10 charset=fontspecific code=71   TeX='\???? ' descr='[Gscr]'" --/scr G, script letter G-->
+<!ENTITY Hscr     SDATA "font=cmsy10 charset=fontspecific code=72   TeX='\???? ' descr='[Hscr]'" --/scr H, script letter H-->
+<!ENTITY Iscr     SDATA "font=cmsy10 charset=fontspecific code=73   TeX='\???? ' descr='[Iscr]'" --/scr I, script letter I-->
+<!ENTITY Jscr     SDATA "font=cmsy10 charset=fontspecific code=74   TeX='\???? ' descr='[Jscr]'" --/scr J, script letter J-->
+<!ENTITY Kscr     SDATA "font=cmsy10 charset=fontspecific code=75   TeX='\???? ' descr='[Kscr]'" --/scr K, script letter K-->
+<!ENTITY Lscr     SDATA "font=cmsy10 charset=fontspecific code=76   TeX='\???? ' descr='[Lscr]'" --/scr L, script letter L-->
+<!ENTITY Mscr     SDATA "font=cmsy10 charset=fontspecific code=77   TeX='\???? ' descr='[Mscr]'" --/scr M, script letter M-->
+<!ENTITY Nscr     SDATA "font=cmsy10 charset=fontspecific code=78   TeX='\???? ' descr='[Nscr]'" --/scr N, script letter N-->
+<!ENTITY Oscr     SDATA "font=cmsy10 charset=fontspecific code=79   TeX='\???? ' descr='[Oscr]'" --/scr O, script letter O-->
+<!ENTITY Pscr     SDATA "font=cmsy10 charset=fontspecific code=80   TeX='\???? ' descr='[Pscr]'" --/scr P, script letter P-->
+<!ENTITY Qscr     SDATA "font=cmsy10 charset=fontspecific code=81   TeX='\???? ' descr='[Qscr]'" --/scr Q, script letter Q-->
+<!ENTITY Rscr     SDATA "font=cmsy10 charset=fontspecific code=82   TeX='\???? ' descr='[Rscr]'" --/scr R, script letter R-->
+<!ENTITY Sscr     SDATA "font=cmsy10 charset=fontspecific code=83   TeX='\???? ' descr='[Sscr]'" --/scr S, script letter S-->
+<!ENTITY Tscr     SDATA "font=cmsy10 charset=fontspecific code=84   TeX='\???? ' descr='[Tscr]'" --/scr T, script letter T-->
+<!ENTITY Uscr     SDATA "font=cmsy10 charset=fontspecific code=85   TeX='\???? ' descr='[Uscr]'" --/scr U, script letter U-->
+<!ENTITY Vscr     SDATA "font=cmsy10 charset=fontspecific code=86   TeX='\???? ' descr='[Vscr]'" --/scr V, script letter V-->
+<!ENTITY Wscr     SDATA "font=cmsy10 charset=fontspecific code=87   TeX='\???? ' descr='[Wscr]'" --/scr W, script letter W-->
+<!ENTITY Xscr     SDATA "font=cmsy10 charset=fontspecific code=88   TeX='\???? ' descr='[Xscr]'" --/scr X, script letter X-->
+<!ENTITY Yscr     SDATA "font=cmsy10 charset=fontspecific code=89   TeX='\???? ' descr='[Yscr]'" --/scr Y, script letter Y-->
+<!ENTITY Zscr     SDATA "font=cmsy10 charset=fontspecific code=90   TeX='\???? ' descr='[Zscr]'" --/scr Z, script letter Z-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY ascr     CDATA "[ascr    ]" --/scr a, script letter a-->
+<!ENTITY bscr     CDATA "[bscr    ]" --/scr b, script letter b-->
+<!ENTITY cscr     CDATA "[cscr    ]" --/scr c, script letter c-->
+<!ENTITY dscr     CDATA "[dscr    ]" --/scr d, script letter d-->
+<!ENTITY escr     CDATA "[escr    ]" --/scr e, script letter e-->
+<!ENTITY fscr     CDATA "[fscr    ]" --/scr f, script letter f-->
+<!ENTITY gscr     CDATA "[gscr    ]" --/scr g, script letter g-->
+<!ENTITY hscr     CDATA "[hscr    ]" --/scr h, script letter h-->
+<!ENTITY iscr     CDATA "[iscr    ]" --/scr i, script letter i-->
+<!ENTITY jscr     CDATA "[jscr    ]" --/scr j, script letter j-->
+<!ENTITY kscr     CDATA "[kscr    ]" --/scr k, script letter k-->
+<!ENTITY lscr     CDATA "[lscr    ]" --/scr l, script letter l-->
+<!ENTITY mscr     CDATA "[mscr    ]" --/scr m, script letter m-->
+<!ENTITY nscr     CDATA "[nscr    ]" --/scr n, script letter n-->
+<!ENTITY oscr     CDATA "[oscr    ]" --/scr o, script letter o-->
+<!ENTITY pscr     CDATA "[pscr    ]" --/scr p, script letter p-->
+<!ENTITY qscr     CDATA "[qscr    ]" --/scr q, script letter q-->
+<!ENTITY rscr     CDATA "[rscr    ]" --/scr r, script letter r-->
+<!ENTITY sscr     CDATA "[sscr    ]" --/scr s, script letter s-->
+<!ENTITY tscr     CDATA "[tscr    ]" --/scr t, script letter t-->
+<!ENTITY uscr     CDATA "[uscr    ]" --/scr u, script letter u-->
+<!ENTITY vscr     CDATA "[vscr    ]" --/scr v, script letter v-->
+<!ENTITY wscr     CDATA "[wscr    ]" --/scr w, script letter w-->
+<!ENTITY xscr     CDATA "[xscr    ]" --/scr x, script letter x-->
+<!ENTITY yscr     CDATA "[yscr    ]" --/scr y, script letter y-->
+<!ENTITY zscr     CDATA "[zscr    ]" --/scr z, script letter z-->
+]]>
+

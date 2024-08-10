@@ -1,0 +1,85 @@
+<!-- $Id: ISO3MFRK.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOMFRK  PUBLIC
+       "ISO 9573-13:1991//ENTITIES Math Alphabets: Fraktur //EN">
+     %ISOMFRK;
+-->
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY afr      CDATA "[afr     ]" --/frak a, lower case a-->
+<!ENTITY Afr      CDATA "[Afr     ]" --/frak A, upper case a-->
+<!ENTITY bfr      CDATA "[bfr     ]" --/frak b, lower case b-->
+<!ENTITY Bfr      CDATA "[Bfr     ]" --/frak B, upper case b-->
+<!ENTITY cfr      CDATA "[cfr     ]" --/frak c, lower case c-->
+<!ENTITY Cfr      CDATA "[Cfr     ]" --/frak C, upper case c-->
+<!ENTITY dfr      CDATA "[dfr     ]" --/frak d, lower case d-->
+<!ENTITY Dfr      CDATA "[Dfr     ]" --/frak D, upper case d-->
+<!ENTITY efr      CDATA "[efr     ]" --/frak e, lower case e-->
+<!ENTITY Efr      CDATA "[Efr     ]" --/frak E, upper case e-->
+<!ENTITY ffr      CDATA "[ffr     ]" --/frak f, lower case f-->
+<!ENTITY Ffr      CDATA "[Ffr     ]" --/frak F, upper case f-->
+<!ENTITY gfr      CDATA "[gfr     ]" --/frak g, lower case g-->
+<!ENTITY Gfr      CDATA "[Gfr     ]" --/frak G, upper case g-->
+<!ENTITY hfr      CDATA "[hfr     ]" --/frak h, lower case h-->
+<!ENTITY Hfr      CDATA "[Hfr     ]" --/frak H, upper case h-->
+<!ENTITY ifr      CDATA "[ifr     ]" --/frak i, lower case i-->
+<!ENTITY Ifr      CDATA "[Ifr     ]" --/frak I, upper case i-->
+<!ENTITY jfr      CDATA "[jfr     ]" --/frak j, lower case j-->
+<!ENTITY Jfr      CDATA "[Jfr     ]" --/frak J, upper case j-->
+<!ENTITY kfr      CDATA "[kfr     ]" --/frak k, lower case k-->
+<!ENTITY Kfr      CDATA "[Kfr     ]" --/frak K, upper case k-->
+<!ENTITY lfr      CDATA "[lfr     ]" --/frak l, lower case l-->
+<!ENTITY Lfr      CDATA "[Lfr     ]" --/frak L, upper case l-->
+<!ENTITY mfr      CDATA "[mfr     ]" --/frak m, lower case m-->
+<!ENTITY Mfr      CDATA "[Mfr     ]" --/frak M, upper case m-->
+<!ENTITY nfr      CDATA "[nfr     ]" --/frak n, lower case n-->
+<!ENTITY Nfr      CDATA "[Nfr     ]" --/frak N, upper case n-->
+<!ENTITY ofr      CDATA "[ofr     ]" --/frak o, lower case o-->
+<!ENTITY Ofr      CDATA "[Ofr     ]" --/frak O, upper case o-->
+<!ENTITY pfr      CDATA "[pfr     ]" --/frak p, lower case p-->
+<!ENTITY Pfr      CDATA "[Pfr     ]" --/frak P, upper case p-->
+<!ENTITY qfr      CDATA "[qfr     ]" --/frak q, lower case q-->
+<!ENTITY Qfr      CDATA "[Qfr     ]" --/frak Q, upper case q-->
+<!ENTITY rfr      CDATA "[rfr     ]" --/frak r, lower case r-->
+<!ENTITY Rfr      CDATA "[Rfr     ]" --/frak R, upper case r-->
+<!ENTITY sfr      CDATA "[sfr     ]" --/frak s, lower case s-->
+<!ENTITY Sfr      CDATA "[Sfr     ]" --/frak S, upper case s-->
+<!ENTITY tfr      CDATA "[tfr     ]" --/frak t, lower case t-->
+<!ENTITY Tfr      CDATA "[Tfr     ]" --/frak T, upper case t-->
+<!ENTITY ufr      CDATA "[ufr     ]" --/frak u, lower case u-->
+<!ENTITY Ufr      CDATA "[Ufr     ]" --/frak U, upper case u-->
+<!ENTITY vfr      CDATA "[vfr     ]" --/frak v, lower case v-->
+<!ENTITY Vfr      CDATA "[Vfr     ]" --/frak V, upper case v-->
+<!ENTITY wfr      CDATA "[wfr     ]" --/frak w, lower case w-->
+<!ENTITY Wfr      CDATA "[Wfr     ]" --/frak W, upper case w-->
+<!ENTITY xfr      CDATA "[xfr     ]" --/frak x, lower case x-->
+<!ENTITY Xfr      CDATA "[Xfr     ]" --/frak X, upper case x-->
+<!ENTITY yfr      CDATA "[yfr     ]" --/frak y, lower case y-->
+<!ENTITY Yfr      CDATA "[Yfr     ]" --/frak Y, upper case y-->
+<!ENTITY zfr      CDATA "[zfr     ]" --/frak z, lower case z-->
+<!ENTITY Zfr      CDATA "[Zfr     ]" --/frak Z, upper case z-->
+]]>
+

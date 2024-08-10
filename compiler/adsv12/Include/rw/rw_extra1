@@ -1,0 +1,6 @@
+#ifndef __STD_RW_RW_RW_EXTRA1__
+#define __STD_RW_RW_RW_EXTRA1__
+
+class _RWSTDExport locale;
+
+#endif // __STD_RW_RW_RW_EXTRA1__

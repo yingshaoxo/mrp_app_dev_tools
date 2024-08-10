@@ -1,0 +1,26 @@
+<html>
+<head> 得到当前文件读写指针的位置。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_tell(<br>
+int32 aFileHandle<br>
+);
+
+<h1>Parameters</h1>
+<b>aFileHandle</b><br>
+[IN]文件句柄，（此处需要添加FileOpen类似的句柄创建链接）
+
+<h1>Return Value</h1>
+操作结果，当前文件读写指针。返回值小于0,表示操作有误
+
+<h1>Remarks</h1>
+ 1、此函数目前只能在模拟器上使用；在手机上使用将返回MR_FAILED(-1)；<br>
+ 2、目前仅提供32bit版本，当读取文件长度超过2GB将发生溢出。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_exb.h</i><br>
+</body>
+
+</html>

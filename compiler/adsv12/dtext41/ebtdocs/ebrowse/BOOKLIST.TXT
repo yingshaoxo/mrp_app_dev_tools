@@ -1,0 +1,8 @@
+<COLLECTION VALIDATION="off">
+<GROUP NAME="most">
+<INDEX TAG="title" UNDER="titles">
+<INDEX TAG="label" UNDER="titles">
+</GROUP>
+<BOOK NAME="reader" ALIAS="DynaText Reader Guide for Windows" VERSION="" EDITION="19980928" TYPE="Adi3xDocument" GROUP="most">
+</BOOK>
+</COLLECTION>

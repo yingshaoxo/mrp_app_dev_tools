@@ -1,0 +1,77 @@
+<html>
+
+<head>
+绘制精灵(增强)
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_spriteDraw(<br>
+&nbsp&nbsp   uint16 i,<br>
+&nbsp&nbsp   uint16 spriteindex,<br>
+&nbsp&nbsp   int16 x,<br>
+&nbsp&nbsp   int16 y,<br>
+&nbsp&nbsp   int16 A,<br>
+&nbsp&nbsp   int16 B,<br>
+&nbsp&nbsp   int16 C,<br>
+&nbsp&nbsp   int16 D<br>
+);
+
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN] 图片缓冲序号<br>
+
+<b>spriteindex</b><br>
+&nbsp&nbsp [IN] 精灵编号<br>
+
+<b>x</b><br>
+&nbsp&nbsp [IN] 屏幕X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN] 屏幕Y坐标<br>
+
+<b>A</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>B</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>C</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>D</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp             MR_SUCCESS     成功<br>
+&nbsp&nbsp             MR_FAILED         失败
+
+
+<h1>Remarks</h1>
+&nbsp&nbsp 精灵简介:精灵是游戏运动的主体，支持碰撞检测，同时可以加载10个序列，处理方便灵活。精灵序列图片左上角的象素是透明色。<br>
+
+&nbsp&nbsp A、B、C、D用于图像变化，用于该变化的变换矩阵为：<br>
+&nbsp&nbsp&nbsp&nbsp  x = A0*x0 + B0*y0	<br>
+&nbsp&nbsp&nbsp&nbsp  y = C0*x0 + D0*y0	<br>
+&nbsp&nbsp 这里为了表示小数，A, B, C, D均被乘以了256，即：<br>
+&nbsp&nbsp &nbsp&nbsp A = A0*256			<br>
+&nbsp&nbsp &nbsp&nbsp B = B0*256			<br>
+&nbsp&nbsp &nbsp&nbsp C = C0*256			<br>
+&nbsp&nbsp &nbsp&nbsp D = D0*256			<br>
+&nbsp&nbsp 根据变换公式，可以绘出不同效果的图像，比如：<br>
+&nbsp&nbsp &nbsp&nbsp <b>旋转图像：</b><br>
+&nbsp&nbsp &nbsp&nbsp A = 256 * cos（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp B = 256 * sin（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp C = 256 * -sin（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp D = 256 * cos（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp <b>放大、缩小图像：</b>	<br>
+&nbsp&nbsp &nbsp&nbsp A = 256 * 放大倍数	<br>
+&nbsp&nbsp &nbsp&nbsp B = 0			<br>
+&nbsp&nbsp &nbsp&nbsp C = 0			<br>
+&nbsp&nbsp &nbsp&nbsp D = 256 * 放大倍数	<br>
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

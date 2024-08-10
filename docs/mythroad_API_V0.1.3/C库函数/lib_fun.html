@@ -1,0 +1,91 @@
+<html>
+<head>Mythroad常用库函数
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+
+<b>mrc_malloc</b>&nbsp&nbsp #define malloc   	mrc_malloc   <br>
+<b>mrc_free </b>&nbsp&nbsp #define free     	mrc_free     <br>
+<b>memcpy</b>&nbsp&nbsp #define memcpy   	mrc_memcpy   <br>
+<b>memcmp</b>&nbsp&nbsp #define memcmp   	mrc_memcmp   <br>
+<b>memchr</b>&nbsp&nbsp #define memchr   	mrc_memchr   <br>
+<b>memset</b>&nbsp&nbsp #define memset   	mrc_memset   <br>
+<b>memmove</b>&nbsp&nbsp #define memmove  	mrc_memmove  <br><br>
+
+<b>strchr</b>&nbsp&nbsp #define strchr   	mrc_strchr   <br>
+<b>strcpy</b>&nbsp&nbsp #define strcpy   	mrc_strcpy   <br>
+<b>strncpy</b>&nbsp&nbsp #define strncpy  	mrc_strncpy  <br>
+<b>strcat</b>&nbsp&nbsp #define strcat   	mrc_strcat   <br>
+<b>strncat</b>&nbsp&nbsp #define strncat  	mrc_strncat  <br>
+<b>strcmp</b>&nbsp&nbsp #define strcmp   	mrc_strcmp   <br>
+<b>strncmp</b>&nbsp&nbsp #define strncmp  	mrc_strncmp  <br>
+<b>strcoll</b>&nbsp&nbsp #define strcoll  	mrc_strcoll  <br>
+<b>strlen</b>&nbsp&nbsp #define strlen   	mrc_strlen   <br>
+<b>strstr</b>&nbsp&nbsp #define strstr   	mrc_strstr   <br>
+<b>strtoul</b>&nbsp&nbsp #define strtoul  	mrc_strtoul  <br><br>
+
+<b>MR_ATOI</b>&nbsp&nbsp extern int (*MR_ATOI)(const char * nptr);<br>
+<b>sprintf</b>&nbsp&nbsp #define sprintf  mrc_sprintf  <br>     
+<b>MR_SPRINTF</b>&nbsp&nbsp extern int (*MR_SPRINTF)(char * s, const char * format, ...);<br>     
+<b>atoi</b>&nbsp&nbsp #define atoi     mrc_atoi     <br><br>
+
+
+<b>MR_MEMCHR</b>&nbsp&nbsp extern void *(*MR_MEMCHR)(const void * s, int c, int n);<br>
+<b>MR_MEMSET</b>&nbsp&nbsp extern void *(*MR_MEMSET)(void * s, int c, int n);<br>
+<b>MR_MEMCPY</b>&nbsp&nbsp extern void *(*MR_MEMCPY)(void * s1, const void * s2, int n);<br>
+<b>MR_MEMCMP</b>&nbsp&nbsp extern int (*MR_MEMCMP)(const void * s1, const void * s2, int n);<br>
+<b>MR_MEMMOVE</b>&nbsp&nbsp extern void *(*MR_MEMMOVE)(void * s1, const void * s2, int n);<br><br>
+
+<b>mrc_strchr</b>&nbsp&nbsp extern const char *mrc_strchr(const char *src,int c);<br>
+<b>mrc_wstrlen</b>&nbsp&nbsp extern int32 mrc_wstrlen(char * txt);<br>
+<b>MR_STRCPY</b>&nbsp&nbsp extern char *(*MR_STRCPY)(char * s1, const char * s2);<br>
+<b>MR_STRNCPY</b>&nbsp&nbsp extern char *(*MR_STRNCPY)(char * s1, const char * s2, int n);<br>
+<b>MR_STRCAT</b>&nbsp&nbsp extern char *(*MR_STRCAT)(char * s1, const char * s2);<br>
+<b>MR_STRNCAT</b>&nbsp&nbsp extern char *(*MR_STRNCAT)(char * s1, const char * s2, int n);<br>
+<b>MR_STRCMP</b>&nbsp&nbsp extern int (*MR_STRCMP)(const char * s1, const char * s2);<br>
+<b>MR_STRNCMP</b>&nbsp&nbsp extern int (*MR_STRNCMP)(const char * s1, const char * s2, int n);<br>
+<b>MR_STRCOLL</b>&nbsp&nbsp extern int (*MR_STRCOLL)(const char * s1, const char * s2);<br>
+<b>MR_STRLEN</b>&nbsp&nbsp extern int (*MR_STRLEN)(const char * s);<br>
+<b>MR_STRSTR</b>&nbsp&nbsp extern char *(*MR_STRSTR)(const char * s1, const char * s2);<br>
+<b>MR_STRTOUL</b>&nbsp&nbsp extern unsigned long int (*MR_STRTOUL)(const char * nptr, char ** endptr, int base);<br><br>
+
+<b>mrc_malloc</b>&nbsp&nbsp extern void* mrc_malloc(int size);<br>
+<b>mrc_free</b>&nbsp&nbsp extern void mrc_free(void *address);<br>
+<b>mrc_memcmp</b>&nbsp&nbsp #define mrc_memcmp(s1, s2, n)      		MR_MEMCMP(s1, s2, n)<br>
+<b>mrc_memcpy</b>&nbsp&nbsp #define mrc_memcpy(s1, s2, n)       	MR_MEMCPY(s1, s2, n)<br>
+<b>mrc_memmove</b>&nbsp&nbsp #define mrc_memmove(s1, s2, n)   		MR_MEMMOVE(s1, s2, n)<br>
+<b>mrc_memchr</b>&nbsp&nbsp #define mrc_memchr(s1, c, n)          	MR_MEMCHR(s1, c, n)<br>
+<b>mrc_memset</b>&nbsp&nbsp #define mrc_memset(s1, c, n)          	MR_MEMSET(s1, c, n)<br><br>
+
+<b>mrc_strcpy</b>&nbsp&nbsp #define mrc_strcpy(s1, s2)              	MR_STRCPY(s1, s2)<br>
+<b>mrc_strncpy</b>&nbsp&nbsp #define mrc_strncpy(s1, s2, n)       	MR_STRNCPY(s1, s2, n)<br>
+<b>mrc_strcat</b>&nbsp&nbsp #define mrc_strcat(s1, s2)               	MR_STRCAT(s1, s2)<br>
+<b>mrc_strncat</b>&nbsp&nbsp #define mrc_strncat(s1, s2, n)         	MR_STRNCAT(s1, s2, n)<br>
+<b>mrc_strcmp</b>&nbsp&nbsp #define mrc_strcmp(s1, s2)              	MR_STRCMP(s1, s2)<br>
+<b>mrc_strncmp</b>&nbsp&nbsp #define mrc_strncmp(s1, s2, n)         	MR_STRNCMP(s1, s2, n)<br>
+<b>mrc_strlen</b>&nbsp&nbsp #define mrc_strlen(s)                       MR_STRLEN(s)<br>
+<b>mrc_strstr</b>&nbsp&nbsp #define mrc_strstr(s1, s2)               	MR_STRSTR(s1, s2)<br>
+<b>mrc_strcoll</b>&nbsp&nbsp #define mrc_strcoll(s1, s2)                MR_STRCOLL(s1, s2)<br><br>
+
+
+<b>mrc_sprintf</b>&nbsp&nbsp #define mrc_sprintf                        MR_SPRINTF<br>
+<b>mrc_atoi</b>&nbsp&nbsp #define mrc_atoi(s1)                      	MR_ATOI(s1)<br>
+<b>mrc_strtoul</b>&nbsp&nbsp #define mrc_strtoul(s1, s2, n)         	MR_STRTOUL(s1, s2, n)<br><br>
+
+<b>MR_MALLOC</b>&nbsp&nbsp #define MR_MALLOC(size) 			mrc_malloc(size)<br>
+<b>MR_FREE</b>&nbsp&nbsp #define MR_FREE(p, size) m			rc_free(p)<br>
+
+
+<h1>Remarks</h1>
+一般不推荐在mythroad代码中使用C标准的库函数，一些C标准的库函数会导致mythroad代码的链接失败。<br>
+虽然使用C标准库函数是不推荐的，但在许多情况下使用C标准库函数的应用也是可以运行的，但使用未经<br>
+验证的C标准库函数，可能会由于不被手机支持而引发死机等问题。mythroad平台提供一些最为常用的C库函数，<br>
+请尽量使用这些函数。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+$include TopFileComment.mtl$
+$include HeaderFileTop.mtl$
+$include ClassDecl.mtl$
+$include HeaderFileBottom.mtl$

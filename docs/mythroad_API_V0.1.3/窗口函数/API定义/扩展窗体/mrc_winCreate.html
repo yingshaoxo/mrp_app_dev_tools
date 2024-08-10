@@ -1,0 +1,29 @@
+<html>
+
+<head>
+创建一个可扩展窗体，并返回可扩展窗体句柄。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_winCreate(void);
+
+<h1>Parameters</h1>
+<b>void</b><br>
+
+<h1>Return Value</h1>
+&nbsp&nbsp      正整数   可扩展窗体句柄<br>
+&nbsp&nbsp      MR_FAILED   失败
+
+<h1>Remarks</h1>
+&nbsp&nbsp可扩展窗体创建之后，用户的按键和触摸屏事件会被构造成Mythroad应用消息，通过mrc_event函数传送<br>
+给Mythroad应用，按键事件的消息类型为MR_KEY_PRESS、MR_KEY_RELEASE，触摸屏事件的消息类型为<br>
+MR_MOUSE_DOWN、MR_MOUSE_UP。因为在对话框、菜单等窗体状态下，应用仅能接收到菜单、对话框等事件，<br>
+当需要创建一个由应用自行绘制并处理按键事件的窗体时，就需要创建可扩展窗体。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

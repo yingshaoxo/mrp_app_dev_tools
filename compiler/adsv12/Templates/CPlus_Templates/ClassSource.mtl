@@ -1,0 +1,15 @@
+$if has-public-members$$\$
+$foreach public-method$$\$
+$include MethodDef.mtl$
+$endloop$
+$endif$$\$
+$if has-protected-members$$\$
+$foreach protected-method$$\$
+$include MethodDef.mtl$
+$endloop$
+$endif$$\$
+$if has-private-members$$\$
+$foreach private-method$$\$
+$include MethodDef.mtl$
+$endloop$
+$endif$$\$

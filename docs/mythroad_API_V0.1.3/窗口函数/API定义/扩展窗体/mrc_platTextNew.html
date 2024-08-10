@@ -1,0 +1,42 @@
+<html>
+<head>新建一个文本框</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_platTextNew(<br>
+	char* title,<br>
+	char* texttext,<br>
+	int32 type,<br>
+	int32 textdata,<br>
+	PtrHilight hOk,<br>
+	PtrHilight hCancel<br>
+);
+
+<h1>Parameters</h1>
+<b>title</b><br> 
+文本框的标题<br>
+<b>texttext</b><br>
+文本框的内容<br>
+<b>type</b><br>
+文本框类型   MR_DIALOG_OK：文本框有"确定"键; MR_DIALOG_OK_CANCEL：文本框有"确定"和"取消"键; MR_DIALOG_CANCEL：文本框有 "取消/返回"键。<br>
+<b>textdata</b><br>
+窗体数据 <br>
+<b>hOk</b><br>
+用户选择"确定"时的回调<br>
+<b>hCancel</b><br>
+用户选择"取消/返回"时的回调
+
+<h1>Return Value</h1>
+其他              窗体句柄
+<br>
+MR_FAILED         失败
+
+<h1>Remarks</h1>
+回调函数的介绍
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_text.h</i><br>
+</body>
+
+</html>

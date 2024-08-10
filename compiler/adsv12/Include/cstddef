@@ -1,0 +1,25 @@
+/*
+ * C++ header for C header stddef.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:34 $
+ * Revising $Author: cadeniyi $
+ */
+
+
+#ifndef __cstddef
+#define __cstddef
+
+  #define __STDDEF_NO_EXPORTS 1
+  #include <stddef.h>
+  #undef __STDDEF_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __stddef_h  // later inclusion of stddef.h must do using std::*
+  #endif
+
+#endif
+

@@ -1,0 +1,23 @@
+ /*
+ * C++ header for C header alloca.h
+ * Copyright (C) Advanced RISC Machines Limited, 1997. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.2.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:33 $
+ * Revising $Author: cadeniyi $
+ */
+
+#ifndef __calloca
+#define __calloca
+
+  #define __ALLOCA_NO_EXPORTS 1
+  #include <alloca.h>
+  #undef __ALLOCA_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __alloca_h  // later inclusion of alloca.h must do using std::*
+  #endif
+
+#endif

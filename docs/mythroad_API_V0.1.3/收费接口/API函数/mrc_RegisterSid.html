@@ -1,0 +1,25 @@
+<html>
+<head>给当前游戏、当前用户生成注册文件</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_RegisterSid(void); 
+
+<h1>Parameters</h1>
+<b>void</b><br>
+
+<h1>Return Value</h1>
+MR_SUCCESS	注册成功;<br>
+MR_FAILED	注册失败。
+
+<h1>Remarks</h1>
+(1)、若用户已注册，则不做任何操作；<br>
+(2)、若注册文件不存在，则新生成注册文件；<br>
+(3)、若注册文件已存在，则将用户的IMSI添加到注册文件中；<br>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

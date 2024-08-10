@@ -1,0 +1,91 @@
+<html>
+
+<head>
+用增强的方式将bmp图片绘制于指定图片中。将序号si 的bmp缓冲中的图片，从缓冲中的图片的(sx, sy)开始的宽高为w, h的区域，绘制到序号di 的从(dx,dy)开始的bmp缓冲中。与<a href="mrc_bitmapNew.html">mrc_bitmapNew配合使用</a>。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int mrc_bitmapDraw(<br>
+&nbsp&nbsp    uint16 di,<br>
+&nbsp&nbsp    int16 dx,<br>
+&nbsp&nbsp    int16 dy,<br>
+&nbsp&nbsp    uint16 si,<br>
+&nbsp&nbsp    int16 sx,<br>
+&nbsp&nbsp    int16 sy,<br>
+&nbsp&nbsp    uint16 w,<br>
+&nbsp&nbsp    uint16 h,<br>
+&nbsp&nbsp    int16 A,<br>
+&nbsp&nbsp    int16 B,<br>
+&nbsp&nbsp    int16 C,<br>
+&nbsp&nbsp    int16 D,<br>
+&nbsp&nbsp    uint16 rop<br>
+);
+
+<h1>Parameters</h1>
+<b>di</b><br>
+&nbsp&nbsp [IN]目标图片缓冲序号<br>
+
+<b>dx</b><br>
+&nbsp&nbsp [IN]目标的X坐标<br>
+<b>dy</b><br>
+&nbsp&nbsp [IN]目标的X坐标<br>
+
+<b>si</b><br>
+&nbsp&nbsp [IN]源图片缓冲序号<br>
+
+<b>sx</b><br>
+&nbsp&nbsp [IN]源的X坐标<br>
+<b>sy</b><br>
+&nbsp&nbsp [IN]源的Y坐标<br>
+
+<b>w</b><br>
+&nbsp&nbsp [IN]图片的宽<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]图片的高<br>
+
+<b>A</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>B</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>C</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+<b>D</b><br>
+&nbsp&nbsp [IN]见Remark部分<br>
+
+<b>Rop</b><br>
+&nbsp&nbsp [IN]有如下两种选择<a href="BM_ENUM.html">BM_COPY</a>, <a href="BM_ENUM.html">BM_TRANSPARENT</a><br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp             MR_SUCCESS     成功<br>
+&nbsp&nbsp             MR_FAILED         失败
+
+<h1>Remarks</h1>
+&nbsp&nbsp A、B、C、D用于图像变化，用于该变化的变换矩阵为：<br>
+&nbsp&nbsp&nbsp&nbsp  x = A0*x0 + B0*y0	<br>
+&nbsp&nbsp&nbsp&nbsp  y = C0*x0 + D0*y0	<br>
+&nbsp&nbsp 这里为了表示小数，A, B, C, D均被乘以了256，即：<br>
+&nbsp&nbsp &nbsp&nbsp A = A0*256			<br>
+&nbsp&nbsp &nbsp&nbsp B = B0*256			<br>
+&nbsp&nbsp &nbsp&nbsp C = C0*256			<br>
+&nbsp&nbsp &nbsp&nbsp D = D0*256			<br>
+&nbsp&nbsp 根据变换公式，可以绘出不同效果的图像，比如：<br>
+&nbsp&nbsp &nbsp&nbsp <b>旋转图像：</b><br>
+&nbsp&nbsp &nbsp&nbsp A = 256 * cos（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp B = 256 * sin（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp C = 256 * -sin（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp D = 256 * cos（角度）	<br>
+&nbsp&nbsp &nbsp&nbsp <b>放大、缩小图像：</b>	<br>
+&nbsp&nbsp &nbsp&nbsp A = 256 * 放大倍数	<br>
+&nbsp&nbsp &nbsp&nbsp B = 0			<br>
+&nbsp&nbsp &nbsp&nbsp C = 0			<br>
+&nbsp&nbsp &nbsp&nbsp D = 256 * 放大倍数	<br>
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

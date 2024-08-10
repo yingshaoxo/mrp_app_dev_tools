@@ -1,0 +1,94 @@
+<html>
+
+<head>
+应用事件函数该函数在应用运行期间，每当mythroad平台收到事件时被调用
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+extern int32 mrc_event(<br>
+&nbsp&nbsp int32 code,<br>
+&nbsp&nbsp int32 param0, <br>
+&nbsp&nbsp int32 param1<br>
+);
+
+<h1>Parameters</h1>
+<b>code</b><br>
+&nbsp&nbsp [IN]  code的可能取值如下:<br>
+&nbsp&nbsp &nbsp&nbsp enum {<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  	MR_KEY_PRESS,           	//按键按下事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  	MR_KEY_RELEASE,        		//按键释放事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp  	MR_MOUSE_DOWN,       		//触摸屏（鼠标）按下事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_MOUSE_UP,            	//触摸屏（鼠标）抬起/释放事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_MENU_SELECT,       		//菜单选中事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_MENU_RETURN,       		//菜单返回事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_DIALOG_EVENT,      		// 对话框/编辑框/文本框事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_EVENT01,                	//VM保留，请不要使用<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_EXIT_EVENT,           	//应用退出事件<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_EVENT02,                 	//VM保留，请不要使用<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp     	MR_LOCALUI_EVENT         	//本地化接口事件<br>
+&nbsp&nbsp &nbsp&nbsp};<br>
+&nbsp&nbsp &nbsp&nbspcode：<br>
+&nbsp&nbsp &nbsp&nbsp  移植层code取值范围为：0～999（已经使用的除外），其余保留给VM和应用。(0～999： 移植层使用（VM已经使用的除外）；1000～1999：VM使用；10000~99999:应用使用；
+其余均保留；）2007-11-20添加规范。<br><br>
+
+
+<b>param0</b><br>
+&nbsp&nbsp [IN]当code为MR_KEY_PRESS或MR_KEY_RELEASE时，param0的可能取值如下:<br>
+&nbsp&nbsp &nbsp&nbsp enum {<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_0,               //按键 0<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_1,               //按键 1<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_2,               //按键 2<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_3,               //按键 3<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_4,               //按键 4<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_5,               //按键 5<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_6,               //按键 6<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_7,               //按键 7<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_8,               //按键 8<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_9,               //按键 9<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_STAR,            //按键 *<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_POUND,           //按键 #<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_UP,              //按键 上<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_DOWN,            //按键 下<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_LEFT,            //按键 左<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_RIGHT,           //按键 右<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_POWER,           //按键 挂机键<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_SOFTLEFT,        //按键 左软键<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_SOFTRIGHT,       //按键 右软键<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_SEND,            //按键 接听键<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_SELECT,          //按键 确认/选择（若方向键中间有确认键，建议设为该键）<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_VOLUME_UP,          //按键 侧键上<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_VOLUME_DOWN,          //按键 侧键下<br>
+&nbsp&nbsp &nbsp&nbsp    &nbsp&nbsp MR_KEY_NONE             //按键 保留<br>
+&nbsp&nbsp &nbsp&nbsp };<br><br>
+
+&nbsp&nbsp 当code为MR_MOUSE_DOWN或MR_MOUSE_UP时，param0为屏幕的x坐标；<br><br>
+
+&nbsp&nbsp 当code为MR_MENU_SELECT时，param0为菜单index；<br><br>
+
+&nbsp&nbsp 当code为MR_DIALOG_EVENT时，param0的可能取值如下:<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp enum {<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp    MR_DIALOG_KEY_OK,         //对话框/文本框等的"确定"键被点击(选择)<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp    MR_DIALOG_KEY_CANCEL  //对话框/文本框等的"取消"("返回")键被点击(选择)<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp };<br><br>
+
+&nbsp&nbsp 当code为MR_LOCALUI_EVENT时，param0的可能取值如下:<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp enum {<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp    MR_LOCALUI_KEY_OK,       //本地控件的"确定"键被点击(选择)<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp    MR_LOCALUI_KEY_CANCEL//本地控件的"取消"("返回")键被点击(选择)<br>
+&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp };<br>
+
+<b>param1</b><br>
+&nbsp&nbsp [IN]当code为MR_MOUSE_DOWN或MR_MOUSE_UP时，param1为屏幕的y坐标；<br>
+
+
+
+<h1>Return Value</h1>
+ &nbsp&nbsp    	MR_SUCCESS     成功<br>
+ &nbsp&nbsp	MR_FAILED      失败
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

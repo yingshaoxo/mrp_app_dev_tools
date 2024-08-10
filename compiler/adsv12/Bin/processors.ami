@@ -1,0 +1,50 @@
+;; ARMulator configuration file type 3
+;; - processors.ami -
+;; Copyright (c) 1996-2001 ARM Limited. All Rights Reserved.
+
+;; RCS $Revision: 1.1.2.15 $
+;; Checkin $Date: 2001/11/08 13:51:08 $
+;; Revising $Author: ljameson $
+
+;This file provides short (versionless) aliases for the
+; proper versionned processor-names.
+;Beware - some TRM's imply that a versionless name means rev0,
+; but we don't assume that here, because someone has already
+; defined that the versionless name should refer to the highest
+; version number available.
+;
+;Suggested policy: Short aliasses don't include the "-S", except
+;(1) for historical reasons, and
+;(2) Where the "-S" makes a difference.
+
+{PROCESSORS
+
+{ARM9TDMI=ARM9TDMI-REV2
+}
+
+{ARM9E-S=ARM9E-S-REV1
+}
+
+{ARM946E-S=ARM946E-S-REV1
+}
+
+{ARM966E-S=ARM966E-S-REV2
+}
+
+{ARM9EJ-S=ARM9EJ-S-REV1
+}
+
+
+{ARM9E=ARM9E-S
+}
+
+{ARM9EJ=ARM9EJ-S-REV1
+}
+
+
+
+}
+;End of Processors
+
+;EOF processors.ami
+

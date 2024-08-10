@@ -1,0 +1,87 @@
+<!-- $Id: ISO3AMSO.ENT 1.1 1995/12/18 02:43:18 glf Exp $-->
+<!-- (C) International Organization for Standardization 1991
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+<!-- Character entity set. Typical invocation:
+     <!ENTITY % ISOAMSO  PUBLIC
+       "ISO 9573-13:1991//ENTITIES Added Math Symbols: Ordinary //EN">
+     %ISOAMSO;
+-->
+
+<!ENTITY ang      SDATA "font=symbol charset=fontspecific code=208">
+<!ENTITY empty    SDATA "font=cmsy10 charset=fontspecific code=59   TeX='\???? ' descr='[empty]'" --/emptyset - zero, slash-->
+<!ENTITY emptyv   SDATA "font=symbol charset=fontspecific code=198">
+<!ENTITY image    SDATA "font=symbol charset=fontspecific code=193">
+<!ENTITY imath    SDATA "font=cmmi10 charset=fontspecific code=123  TeX='\???? ' descr='[imath]'" --/imath - small i, no dot-->
+<!ENTITY jmath    SDATA "font=cmmi10 charset=fontspecific code=124  TeX='\???? ' descr='[jmath]'" --/jmath - small j, no dot-->
+<!ENTITY real     SDATA "font=symbol charset=fontspecific code=194">
+<!ENTITY weierp   SDATA "font=symbol charset=fontspecific code=195">
+
+<!-- The following characters could not be defined using commonly available
+fonts. Therefore, EBT is using placeholders for these characters. To include
+the placeholders in your document, make sure that the marked section below has
+the keyword "INCLUDE".
+
+To ignore the placeholders, use the keyword "IGNORE". If you are ignoring this
+marked section and your SGML document references any of the entities declared
+below, you will get (non-fatal) mkbook errors, and the entity references will
+not be replaced.
+
+Finally, you may choose to define the entities below yourself, using a special
+font that will be available to readers of your DynaText books. Use the same
+SDATA entity declaration model as is used above, substituting the appropriate
+names and decimal numbers for font, charset, code, and descr. In that case, you
+should INCLUDE the marked section.
+
+See Chapter 7 of Publisher Guide, Volume 1 for more information. -->
+
+<![ INCLUDE [
+<!ENTITY ange     CDATA "[ange    ]" --angle, equal-->
+<!ENTITY angmsd   CDATA "[angmsd  ]" --/measuredangle - angle-measured-->
+<!ENTITY angmsdaa CDATA "[angmsdaa]" --angle-measured, arrow, up, right-->
+<!ENTITY angmsdab CDATA "[angmsdab]" --angle-measured, arrow, up, left-->
+<!ENTITY angmsdac CDATA "[angmsdac]" --angle-measured, arrow, down, right-->
+<!ENTITY angmsdad CDATA "[angmsdad]" --angle-measured, arrow, down, left-->
+<!ENTITY angmsdae CDATA "[angmsdae]" --angle-measured, arrow, right, up-->
+<!ENTITY angmsdaf CDATA "[angmsdaf]" --angle-measured, arrow, left, up-->
+<!ENTITY angmsdag CDATA "[angmsdag]" --angle-measured, arrow, right, down-->
+<!ENTITY angmsdah CDATA "[angmsdah]" --angle-measured, arrow, left, down-->
+<!ENTITY angrtvb  CDATA "[angrtvb ]" --right angle-measured-->
+<!ENTITY angrtvbd CDATA "[angrtvbd]" --right angle-measured, dot-->
+<!ENTITY bbrk     CDATA "[bbrk    ]" --bottom square bracket-->
+<!ENTITY bbrktbrk CDATA "[bbrktbrk]" --bottom above top square bracket-->
+<!ENTITY bemptyv  CDATA "[bemptyv ]" --reversed circle, slash-->
+
+<!ENTITY beth     CDATA "[beth    ]" --/beth - beth, Hebrew-->
+<!ENTITY boxbox   CDATA "[boxbox  ]" --two joined squares-->
+<!ENTITY bprime   CDATA "[bprime  ]" --/backprime - reverse prime-->
+<!ENTITY bsemi    CDATA "[bsemi   ]" --reverse semi-colon-->
+<!ENTITY cemptyv  CDATA "[cemptyv ]" --circle, slash, small circle above-->
+<!ENTITY cirE     CDATA "[cirE    ]" --circle, two horizontal stroked to the right-->
+<!ENTITY cirscir  CDATA "[cirscir ]" --circle, small circle to the right-->
+<!ENTITY comp     CDATA "[comp    ]" --/complement - complement sign-->
+<!ENTITY daleth   CDATA "[daleth  ]" --/daleth - daleth, Hebrew-->
+<!ENTITY demptyv  CDATA "[demptyv ]" --circle, slash, bar above-->
+<!ENTITY ell      CDATA "[ell     ]" --/ell - cursive small l-->
+<!ENTITY gimel    CDATA "[gimel   ]" --/gimel - gimel, Hebrew-->
+<!ENTITY iiota    CDATA "[iiota   ]" --inverted iota-->
+<!ENTITY laemptyv CDATA "[laemptyv]" --circle, slash, left arrow above-->
+<!ENTITY lltri    CDATA "[lltri   ]" --lower left triangle-->
+<!ENTITY lrtri    CDATA "[lrtri   ]" --lower right triangle-->
+<!ENTITY mho      CDATA "[mho     ]" --/mho - conductance-->
+<!ENTITY nang     CDATA "[nang    ]" --not, vert, angle-->
+<!ENTITY nexist   CDATA "[nexist  ]" --/nexists - negated exists-->
+<!ENTITY oS       CDATA "[oS      ]" --/circledS - capital S in circle-->
+<!ENTITY plank    CDATA "[plank   ]" --/hbar - Planck's over 2pi-->
+<!ENTITY plankv   CDATA "[plankv  ]" --/hslash - variant Planck's over 2pi-->
+<!ENTITY raemptyv CDATA "[raemptyv]" --circle, slash, right arrow above-->
+<!ENTITY range    CDATA "[range   ]" --reverse angle, equal-->
+<!ENTITY tbrk     CDATA "[tbrk    ]" --top square bracket-->
+<!ENTITY trpezium CDATA "[trpezium]" --trapezium-->
+<!ENTITY ultri    CDATA "[ultri   ]" --upper left triangle-->
+<!ENTITY urtri    CDATA "[urtri   ]" --upper right triangle-->
+<!ENTITY vzigzag  CDATA "[vzigzag ]" --vertical zig-zag line-->
+]]>
+

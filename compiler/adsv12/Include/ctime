@@ -1,0 +1,23 @@
+/*
+ * C++ header for C header time.h
+ * Copyright 1997 ARM Limited. All rights reserved.
+ */
+
+/*
+ * RCS $Revision: 1.3.2.1 $
+ * Checkin $Date: 2001/02/22 16:23:35 $
+ * Revising $Author: cadeniyi $
+ */
+
+#ifndef __ctime
+#define __ctime
+
+  #define __TIME_NO_EXPORTS 1
+  #include <time.h>
+  #undef __TIME_NO_EXPORTS
+
+  #ifdef __EDG_RUNTIME_USES_NAMESPACES
+    #undef __time_h  // later inclusion of time.h must do using std::*
+  #endif
+
+#endif

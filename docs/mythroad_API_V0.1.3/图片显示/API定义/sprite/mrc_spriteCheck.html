@@ -1,0 +1,49 @@
+<html>
+
+<head>
+ 判断碰撞的画精灵函数，返回值是画精灵时精灵所在位置 非r,g,b的象素点数目。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_spriteCheck(<br>
+&nbsp&nbsp uint16 i, 	<br>
+&nbsp&nbsp uint16 spriteindex, <br>
+&nbsp&nbsp int16 x, 	<br>
+&nbsp&nbsp int16 y,	<br>
+&nbsp&nbsp uint8 r, 	<br>
+&nbsp&nbsp uint8 g, 	<br>
+&nbsp&nbsp uint8 b	<br>
+);
+
+<h1>Parameters</h1>
+<b>di</b><br>
+&nbsp&nbsp [IN]目标图片缓冲序号<br>
+
+<b>spriteindex</b><br>
+&nbsp&nbsp [IN]精灵编号<br>
+
+<b>x</b><br>
+&nbsp&nbsp [IN]屏幕X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]屏幕X坐标<br>
+
+<b>r</b><br>
+&nbsp&nbsp [IN]RGB R值<br>
+<b>g</b><br>
+&nbsp&nbsp [IN]RGB G值<br>
+<b>b</b><br>
+&nbsp&nbsp [IN]RGB B值<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp     >=0               非r,g,b的象素点数目<br>
+&nbsp&nbsp     MR_FAILED         失败
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

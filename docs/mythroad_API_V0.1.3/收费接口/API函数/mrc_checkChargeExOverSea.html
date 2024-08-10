@@ -1,0 +1,24 @@
+<html>
+<head>付费类型检测</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_checkChargeExOverSea(int32 Option); 
+
+<h1>Parameters</h1>
+<b>Option</b><br>
+[IN]见<a href ="PAY_CHECK_OPTION.html">PAY_CHECK_OPTION</a>定义<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS	条件匹配；<br>
+MR_FAILED	查找失败。
+
+<h1>Remarks</h1>
+mrc_checkChargeExOverSea(CHECK_IS_REGISTER)==MR_SUCCESS，用户已注册应用；目前只支持CHECK_IS_REGISTER属性。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

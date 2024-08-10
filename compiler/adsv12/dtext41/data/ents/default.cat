@@ -1,0 +1,68 @@
+-- Here is a default catalog. Note that each public ID is listed
+   twice once with 8879-1986 and once with 8879:1986. Both forms
+   are used in practice so we allow them also. 
+--
+
+PUBLIC "ISO 8879-1986//ENTITIES Added Latin 1//EN" "iso-lat1.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN" "iso-lat1.ent"
+PUBLIC "ISO 8879-1986//ENTITIES Added Latin 1//EN//HTML" "iso-lat1.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Publishing//EN" "iso-pub.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Publishing//EN" "iso-pub.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Numeric and Special Graphic//EN" "iso-num.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN" "iso-num.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Greek Letters//EN" "iso-grk1.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Greek Letters//EN" "iso-grk1.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Greek Symbols//EN" "iso-grk3.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Greek Symbols//EN" "iso-grk3.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES General Technical//EN" "iso-tech.ent"
+PUBLIC "ISO 8879:1986//ENTITIES General Technical//EN" "iso-tech.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Diacritical Marks//EN" "iso-dia.ent"
+PUBLIC "ISO 8879:1986//ENTITIES Diacritical Marks//EN" "iso-dia.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Box and Line Drawing//EN" "iso-box.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Added Latin 2//EN" "iso-lat2.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Russian Cyrillic//EN" "iso-cyr1.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Non-Russian Cyrillic//EN" "iso-cyr2.ent"
+
+PUBLIC "ISO 8879-1986//ENTITIES Monotoniko Greek//EN" "iso-grk2.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Arrow Relations //EN" "iso3amsa.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Binary Operators //EN" "iso3amsb.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Delimiters //EN" "iso3amsc.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Negated Relations //EN" "iso3amsn.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Ordinary //EN" "iso3amso.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Added Math Symbols: Relations //EN" "iso3amsr.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Greek Symbols //EN" "iso3grk3.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Alternative Greek Symbols //EN" "iso3grk4.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Math Alphabets: Fraktur //EN" "iso3mfrk.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Math Alphabets: Open Face //EN" "iso3mopf.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES Math Alphabets: Script //EN" "iso3mscr.ent"
+
+PUBLIC "ISO 9573-13:1991//ENTITIES General Technical //EN" "iso3tech.ent"
+
+PUBLIC "-//EBT//DTD DynaText Stylesheets//EN" "stysheet.ent"
+
+PUBLIC "-//EBT//DTD Fragment DynaTag Publication//EN" "dtagpub.ent"
+
+PUBLIC "-//EBT//ENTITIES Rainbow 2.5 for final SGML generation//EN" "pubchars.ent"
+
+PUBLIC "-//EBT//ENTITIES Rainbow 2.6 for final SGML generation//EN" "pubchars.ent"

@@ -1,0 +1,22 @@
+<html>
+<head>存储记录</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef struct{<br>
+		char MD5[33];//整个存盘记录的MD5。<br>
+		int32 ver;//存盘记录版本；<br>
+		int32 recNum;//用户记录的个数。<br>
+		int32 CurRec;//当前用户是recNum中的的几个用户。<br>
+		USER_RECORD_T *UserData;//recNum个用户记录。<br>
+}SAVE_RECORD_T;
+
+<h1>Members</h1>
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

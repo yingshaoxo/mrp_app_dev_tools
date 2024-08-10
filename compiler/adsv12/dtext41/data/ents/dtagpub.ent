@@ -1,0 +1,66 @@
+<!-- ************************************************************** -->
+<!-- ENTITIES FOR COMMON ATTRIBUTE DECLS -->
+
+<!ENTITY % boolean "NUMBER"  -- 1 means yes, 0 means no -->
+
+
+
+<!-- dtag-err should be an inclusion exception on the root elem -->
+<!ELEMENT dtag-err - - ANY >
+<!ATTLIST dtag-err rbeid CDATA #IMPLIED
+		 wp-addr CDATA #IMPLIED >
+<!ELEMENT dtag-msg - - (#PCDATA) >
+
+
+
+<!-- ************************************************************** -->
+<!-- QUASI-CALS TABLE -->
+
+<!ELEMENT tgroup   - - (colspec*,spanspec*,thead?,tfoot?,tbody?)>
+<!ATTLIST tgroup       cols NUMBER #REQUIRED>
+
+<!ELEMENT colspec  - O EMPTY>
+<!ATTLIST colspec      colnum NUMBER #IMPLIED
+                       colname NMTOKEN #IMPLIED
+                       align (left|right|center) #IMPLIED
+                       colsep %boolean; #IMPLIED
+                       rowsep %boolean; #IMPLIED
+                       colwidth CDATA #IMPLIED>
+<!ELEMENT spanspec - O EMPTY>
+<!ATTLIST spanspec     namest NMTOKEN #REQUIRED
+                       nameend NMTOKEN #REQUIRED
+                       spanname NMTOKEN #REQUIRED
+                       colsep %boolean; #IMPLIED
+                       rowsep %boolean; #IMPLIED
+                       align (left|right|center) #IMPLIED>
+<!ELEMENT (thead|tfoot|tbody)
+                       - - (row*)>
+<!ELEMENT row      - - ANY>
+<!ATTLIST row          rowsep %boolean; #IMPLIED >
+<!ELEMENT entry    - - ANY >
+<!ATTLIST entry        colname NMTOKEN #IMPLIED
+                       spanname NMTOKEN #IMPLIED
+                       colsep %boolean; #IMPLIED
+                       rowsep %boolean; #IMPLIED
+							  morerows NUMBER	'0'
+							  valign (top|middle|bottom) 'top'
+                       align (left|right|center) #IMPLIED>
+
+
+<!-- KLUDGY WRAPPER TO FACILITATE MARKER-STYLE INDENTATION -->
+
+<!ELEMENT rbw-marker   - O ANY>
+<!ELEMENT rbw-parabody - O ANY>
+
+
+
+<!-- ************************************************************** -->
+<!-- PUBLIC ENTITY SETS -->
+
+<!ENTITY % rbwents  PUBLIC
+   "-//EBT//ENTITIES Rainbow 2.6 for final SGML generation//EN"
+   "pubchars.ent">   %rbwents;
+
+
+<!ENTITY rbwtab " ">
+<!ENTITY dtagtab " ">

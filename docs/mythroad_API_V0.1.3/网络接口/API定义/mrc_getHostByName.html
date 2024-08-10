@@ -1,0 +1,32 @@
+<html>
+
+<head>
+通过主机名获得该主机的IP地址值，如果一个主机的IP地址为218.18.95.203，则值为218<<24 + 18<<16 + 95<<8 + 203= 0xda125fcb。
+若获取主机IP使用异步模式，使用回调函数通知引擎获取IP的结果。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_getHostByName(<br>
+&nbsp&nbsp const char *name,<br>
+&nbsp&nbsp MR_GET_HOST_CB cb<br>
+);
+
+<h1>Parameters</h1>
+<b>name</b><br>
+&nbsp&nbsp p: MR_FAILED       获取IP失败;&nbsp其他值      IP地址 <br>
+<b>cb</b><br>
+&nbsp&nbsp 回调函数，见<a href = "MR_GET_HOST_CB.html">MR_GET_HOST_CB</a>定义
+
+<h1>Return Value</h1>
+&nbsp&nbsp     MR_FAILED   （立即感知的）失败，不再调用cb<br>
+&nbsp&nbsp     MR_WAITING  使用回调函数通知引擎获取IP的结果<br>
+&nbsp&nbsp     其他值   同步模式，立即返回的IP地址，不再调用cb
+
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

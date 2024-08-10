@@ -1,0 +1,10 @@
+文件夹介绍：
+	adsv12：armcc编译器
+	lua：mrp的mr编译实例
+	skysdk20：斯凯sdk
+	skysdk24：斯凯sdk
+	sprite：精灵编辑器
+	vmrp：mrp模拟器
+	风的影子：编译例子
+path.bat：
+	配置临时编译环境脚本

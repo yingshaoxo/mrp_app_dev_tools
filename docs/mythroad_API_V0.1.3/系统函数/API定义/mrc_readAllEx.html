@@ -1,0 +1,30 @@
+<html>
+<head>读取mrp中一个文件的指定长度内容到指定空间。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_readAllEx(char* filename, char* buf, int32 *len)
+<h1>Parameters</h1>
+char *filename             文件名
+<br>
+char *buf                  读取的文件的保存空间
+<br>
+int  *len                  期望读取长度
+<br>
+
+<h1>Return Value</h1>
+MR_SUCCESS  成功
+<br>
+MR_FAILED   失败
+
+<h1>Remarks</h1>
+读取文件filename的len长度的内容到buf指向的地址上，若
+文件长度小于len，仅读取文件长度的内容，len被赋值
+为实际读取的长度。
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_aux.h</i><br>
+</body>
+
+</html>

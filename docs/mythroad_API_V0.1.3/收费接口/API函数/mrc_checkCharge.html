@@ -1,0 +1,24 @@
+<html>
+<head>付费检测</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_checkCharge(void)
+
+<h1>Parameters</h1>
+<b>void</b><br>
+
+<h1>Return Value</h1>
+MR_SUCCESS:找到成功发送了计费短信的合法签名文件；<br>
+MR_FAILED:没有找到指定的签名文件或者签名文件不是本手机的。
+
+<h1>Remarks</h1>
+检查应用所在目录的appname子目录有无成功发送计费短信的签名文件，若有，则返回成功，否则返回失败。<br>
+扩展定义见<a href="mrc_checkChargeEx.html">mrc_checkChargeEx</a>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_payment.h</i><br>
+</body>
+
+</html>

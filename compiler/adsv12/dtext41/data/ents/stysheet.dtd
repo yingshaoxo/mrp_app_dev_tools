@@ -1,0 +1,14 @@
+<!DOCTYPE sheet PUBLIC "-//EBT//DTD DynaText Stylesheets//EN" [
+<!--
+Use this DTD for validating EBT stylesheets with no entity
+declarations.  If using EBT tools, the public identifier will be
+resolved in the default.cat file.  If using another SGML validator,
+use the stysheet.cat file.
+
+If there are any entity declarations in the stylesheet, use the file
+"stysheet.ent"; see the comment at its top for further instructions.
+
+If using an SGML parser that defaults to the reference concrete
+syntax, use the "stysheet.dcl" SGML declaration.
+-->
+]>

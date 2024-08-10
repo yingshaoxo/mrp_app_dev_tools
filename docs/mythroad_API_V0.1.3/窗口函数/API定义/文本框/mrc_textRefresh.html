@@ -1,0 +1,33 @@
+<html>
+
+<head>
+刷新文本框显示。
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_textRefresh(<br>
+&nbsp&nbsp int32 handle, <br>
+&nbsp&nbsp const char * title, <br>
+&nbsp&nbsp const char * text<br>
+);
+
+<h1>Parameters</h1>
+<b>handle</b><br>
+&nbsp&nbsp [IN]文本框句柄，由<a href="mrc_textCreate.html">mrc_textCreate</a>创建<br>
+<b>title</b><br>
+&nbsp&nbsp [IN]文本框的标题，unicode编码，网络字节序<br>
+<b>text</b><br>
+&nbsp&nbsp [IN]文本框内容，unicode编码，网络字节序<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp            		MR_SUCCESS  成功<br>
+&nbsp&nbsp 			MR_FAILED   失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+#
+# Pluggable Language System (PLS) Mapping File
+#
+# $Id: pls.map 1.40 1998/07/08 22:45:03 ryh Exp $
+#
+# Copyright (c) 1990-1998, Inso Corporation
+# All Rights Reserved.
+#
+
+#
+# Format changed for Tigris
+#
+
+#
+# This file is used to map operating system dependent locale names to a
+# native language identifier and encoding name.  This is needed because
+# there is no standard set of locale names in use by all operating systems.
+#
+
+#
+# This file performs three different mappings:
+#
+#    operating system locale names to language identifiers and encoding names
+#
+#    language identifiers to Pluggable Language Module (PLM) filenames
+#
+#    encoding names to Encoding Conversion Module (ECM) filenames
+#
+# A PLM contains language processing routines and an ECM contains routines that
+# convert both to the given encoding from Unicode and vice versa.
+#
+
+#
+# Locale mappings.
+#
+
+#
+# Each locale name includes a comment identifying the operating system from
+# which the name originates.
+#
+
+#
+# Operating System     Language   Encoding      Platform    Comments
+#        Locale          ID       Name          ID
+#
+locale   default         en       iso8859-1     ,,         # All
+locale   C               en       iso8859-1     ,,         # All
+locale   POSIX           en       iso8859-1     ,,         # generic
+
+# English
+locale   En_GB           en       codepage-850  AIX        # AIX (U.K.)
+locale   En_JP           en       shift-jis     AIX        # AIX (Japan)
+locale   En_US           en       codepage-850  AIX        # AIX (USA)
+locale   en_GB           en       iso8859-1     AIX        # AIX (U.K.)
+locale   en_JP           en       japanese-euc  AIX        # AIX (Japan)
+locale   en_US           en       iso8859-1     ,,         # generic
+locale   en_AU           en       iso8859-1     SunOS      # SunOS
+locale   en_CA           en       iso8859-1     SunOS      # SunOS
+locale   en_UK           en       iso8859-1     SunOS      # SunOS
+locale   en_IE           en       iso8859-1     SunOS      # SunOS
+locale   en_NZ           en       iso8859-1     SunOS      # SunOS
+locale   eng             en       iso8859-1     Win        # Windows
+locale   enu             en       iso8859-1     Win        # Windows
+locale   en_US.iso88591  en       iso8859-1     HP-UX      # HP-UX 10.0
+locale   en_GB.iso88591  en       iso8859-1     HP-UX      # HP-UX 10.0
+locale   en_US.roman8    en       roman-8       HP-UX      # HP-UX 10.0
+locale   en_GB.roman8    en       roman-8       HP-UX      # HP-UX 10.0
+locale   en              en       iso8859-1     ,,         # generic
+locale   EN              en       iso8859-1     ,,         # generic
+
+# French
+locale   Fr_BE           fr       codepage-850  AIX        # AIX (Belgium)
+locale   Fr_CA           fr       codepage-850  AIX        # AIX (Canada)
+locale   Fr_CH           fr       codepage-850  AIX        # AIX (Switzerland)
+locale   Fr_FR           fr       codepage-850  AIX        # AIX (France)
+locale   fr              fr       iso8859-1     ,,         # generic
+locale   FR              fr       iso8859-1     ,,         # generic
+locale   fr_BE           fr       iso8859-1     SunOS      # SunOS
+locale   fr_BE           fr       iso8859-1     AIX        # AIX (Belgium)
+locale   fr_CA           fr       iso8859-1     SunOS      # SunOS
+locale   fr_CA           fr       iso8859-1     AIX        # AIX (Canada)
+locale   fr_CH           fr       iso8859-1     SunOS      # SunOS
+locale   fr_CH           fr       iso8859-1     AIX        # AIX (Switzerland)
+locale   fr_FR           fr       iso8859-1     AIX        # AIX (France)
+locale   fra             fr       iso8859-1     Win        # Windows (France)
+locale   frc             fr       iso8859-1     Win        # Windows (Canada)
+locale   fr_FR.iso88591  fr       iso8859-1     HP-UX      # HP-UX 10.0
+locale   fr_CA.iso88591  fr       iso8859-1     HP-UX      # HP-UX 10.0
+locale   fr_FR.roman8    fr       roman-8       HP-UX      # HP-UX 10.0
+locale   fr_CA.roman8    fr       roman-8       HP-UX      # HP-UX 10.0
+
+# Italian
+locale   It_IT           it       codepage-850  AIX        # AIX (Italy)
+locale   it              it       iso8859-1     ,,         # generic
+locale   IT              it       iso8859-1     ,,         # generic
+locale   it_IT           it       iso8859-1     AIX        # AIX (Italy)
+locale   ita             it       iso8859-1     Win        # Windows
+locale   it_IT.iso88591  it       iso8859-1     HP-UX      # HP-UX 10.0
+locale   it_IT.roman8    it       roman-8       HP-UX      # HP-UX 10.0
+
+# German
+locale   De_CH           de       codepage-850  AIX        # AIX (Switzerland)
+locale   De_DE           de       codepage-850  AIX        # AIX (Germany)
+locale   de              de       iso8859-1     ,,         # generic
+locale   DE              de       iso8859-1     ,,         # generic
+locale   de_CH           de       iso8859-1     SunOS      # SunOS
+locale   de_CH           de       iso8859-1     AIX        # AIX (Switzerland)
+locale   de_DE           de       iso8859-1     AIX        # AIX (Germany)
+locale   deu             de       iso8859-1     Win        # Windows
+locale   de_DE.iso88591  de       iso8859-1     HP-UX      # HP-UX 10.0
+locale   de_DE.roman8    de       roman-8       HP-UX      # HP-UX 10.0
+
+# Spanish
+locale   Es_ES           es       codepage-850  AIX        # AIX (Spain)
+locale   es              es       iso8859-1     ,,         # generic
+locale   ES              es       iso8859-1     ,,         # generic
+locale   es_AR           es       iso8859-1     SunOS      # SunOS
+locale   es_BO           es       iso8859-1     SunOS      # SunOS
+locale   es_CL           es       iso8859-1     SunOS      # SunOS
+locale   es_CO           es       iso8859-1     SunOS      # SunOS
+locale   es_CR           es       iso8859-1     SunOS      # SunOS
+locale   es_EC           es       iso8859-1     SunOS      # SunOS
+locale   es_GT           es       iso8859-1     SunOS      # SunOS
+locale   es_MX           es       iso8859-1     SunOS      # SunOS
+locale   es_NI           es       iso8859-1     SunOS      # SunOS
+locale   es_PA           es       iso8859-1     SunOS      # SunOS
+locale   es_PE           es       iso8859-1     SunOS      # SunOS
+locale   es_PY           es       iso8859-1     SunOS      # SunOS
+locale   es_SV           es       iso8859-1     SunOS      # SunOS
+locale   es_UY           es       iso8859-1     SunOS      # SunOS
+locale   es_VE           es       iso8859-1     SunOS      # SunOS
+locale   es_ES           es       iso8859-1     AIX        # AIX (Spain)
+locale   esp             es       iso8859-1     Win        # Windows (classic)
+locale   esn             es       iso8859-1     Win        # Windows (modern)
+locale   es_ES.iso88591  es       iso8859-1     HP-UX      # HP-UX 10.0
+locale   es_ES.roman8    es       roman-8       HP-UX      # HP-UX 10.0
+
+# Japanese
+locale   Ja_JP           ja       shift-jis     AIX        # AIX
+locale   ja              ja       japanese-euc  SunOS      # SunOS
+locale   ja_JP.PCK       ja       shift-jis     SunOS      # SunOS
+locale   ja              ja       japanese-euc  UnixWare,2.0  # UnixWare 2.0
+locale   ja_JP           ja       japanese-euc  AIX        # AIX
+locale   ja_JP.EUC       ja       japanese-euc  irix,,mips # IRIX
+locale   ja_JP.EUC       ja       japanese-euc  UnixWare,2.0  # UnixWare 2.0
+locale   japanese        ja       shift-jis     Win        # Windows
+locale   japanese        ja       shift-jis     HP-UX,9    # HP-UX
+locale   jpn             ja       shift-jis     Win        # Windows
+locale   ja_JP.SJIS      ja       shift-jis     HP-UX      # HP-UX 10.0
+locale   ja_JP.eucJP     ja       japanese-euc  HP-UX      # HP-UX 10.0
+
+locale   utf           default    utf8          ,,         # Future
+locale   UNIVERSAL     default    utf8          AIX        # AIX 4.1
+
+#
+# Language to PLM mappings.
+#
+
+#
+#         Language
+#         Identifier    PLM    Description
+#
+language  default        C     Default(English) # Default Language
+language  C              C     Default         # Any space-delimited based 
+language  en             C     English         # English
+language  fr             C     French          # French
+language  it             C     Italian         # Italian
+language  de             C     German          # German
+language  es             C     Spanish         # Spanish
+# language  ja             jad   Japanese_dictionary_based    # Japanese
+language  ja             ja    Japanese_non_dictionary_based  # Japanese
+
+#
+# Encoding to ECM mappings.
+#
+
+#
+#         Encoding        ECM        Encoding
+#         Name      
+#
+encoding  default         C          # ISO 8859-1
+encoding  iso8859-1       C          # ISO 8859-1
+encoding  codepage-850    cp850      # Codepage 850
+encoding  roman-8         roman8     # HP Roman8
+encoding  japanese-euc    ja_euc     # Japanese EUC
+encoding  euc-jp          ja_euc     # Japanese EUC (internet)
+encoding  shift-jis       ja_sjis    # Shift-JIS
+encoding  shiftjis        ja_sjis    # Shift-JIS
+encoding  utf8            utf8       # UTF-8 (Multibyte Unicode)
+
+# Values from XML1.0 proposed recommendation TR/PR-xml-971208
+encoding  ISO-8859-1      C          # ISO 8859-1
+encoding  UTF-8           utf8       # UTF-8
+encoding  ISO-10646-UCS-2 ucs2       # UCS-2
+encoding  Shift_JIS       ja_sjis    # Shift-JIS (see JIX X-0208)
+encoding  EUC-JP          ja_euc     # Japanese EUC (see JIX X-0208)
+
+# not yet supported:
+# encoding  ISO-8859-2     C2        # ISO 8859-2
+# encoding  ISO-8859-x     Cx        # ISO 8859-x
+# encoding  ISO-8859-9     C9        # ISO 8859-9
+# encoding  ISO-2022-JP    ???       # ISO 2022-JP (see JIX X-0208)
+# encoding  UTF-16         utf16     # UTF-16 (Multibyte Unicode)
+# encoding  ISO-10646-UCS-4  ucs4    # UCS-4
+
+#
+# Character-set name to Windows font property mapping.
+#
+
+#
+#               Stylesheet           Windows
+#            <character-set>         charset
+#                property             value
+#                 value
+#
+character-set   iso8859-1               0
+character-set   iso8859                 0
+character-set   symbol                  2
+character-set   mac                     1
+character-set   shiftjis              128
+character-set   shift-jis             128
+character-set   oem                   255

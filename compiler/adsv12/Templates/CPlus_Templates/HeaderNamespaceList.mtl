@@ -1,0 +1,3 @@
+$foreach header-namespace-use$$\$
+using namespace $namespace-name$; 
+$endloop$$\$

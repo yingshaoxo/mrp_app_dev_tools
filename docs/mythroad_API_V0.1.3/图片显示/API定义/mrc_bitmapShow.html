@@ -1,0 +1,52 @@
+<html>
+
+<head>
+将序号为i的bmp缓冲中的图片，从缓冲中的图片的(sx, sy)开始的宽高为w, h的区域，绘制到(x, y)开始的屏幕缓冲中。与<a href="mrc_bitmapNew.html">mrc_bitmapNew配合使用</a>
+</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_bitmapShow(<br>
+&nbsp&nbsp uint16 i, <br>
+&nbsp&nbsp int16 x,<br> 
+&nbsp&nbsp int16 y,<br> 
+&nbsp&nbsp uint16 rop, <br>
+&nbsp&nbsp int16 sx, <br>
+&nbsp&nbsp int16 sy, <br>
+&nbsp&nbsp int16 w, <br>
+&nbsp&nbsp int16 h<br>
+);
+
+<h1>Parameters</h1>
+<b>i</b><br>
+&nbsp&nbsp [IN]图片缓冲序号<br>
+
+<b>x</b><br>
+&nbsp&nbsp [IN]源图片的起始位置X坐标<br>
+<b>y</b><br>
+&nbsp&nbsp [IN]源图片的起始位置Y坐标<br>
+
+<b>rop</b><br>
+&nbsp&nbsp [IN]取值为<a href="BM_ENUM.html">BM_OR</a>、<a href="BM_ENUM.html">BM_XOR</a>、<a href="BM_ENUM.html">BM_COPY</a>、<a href="BM_ENUM.html">BM_NOT</a>、<a href="BM_ENUM.html">BM_MERGENOT</a>、<a href="BM_ENUM.html">BM_ANDNOT</a>、<a href="BM_ENUM.html">BM_TRANSPARENT</a>、<a href="BM_ENUM.html">BM_AND</a>、<a href="BM_ENUM.html">BM_GRAY</a>、<a href="BM_ENUM.html">BM_REVERSE</a><br>
+
+<b>sx</b><br>
+&nbsp&nbsp [IN]源图片的起始位置X<br>
+<b>sy</b><br>
+&nbsp&nbsp [IN]源图片的起始位置Y<br>
+
+<b>w</b><br>
+&nbsp&nbsp [IN]欲加载图片的宽<br>
+<b>h</b><br>
+&nbsp&nbsp [IN]欲加载图片的高<br>
+
+
+<h1>Return Value</h1>
+&nbsp&nbsp             MR_SUCCESS     成功<br>
+&nbsp&nbsp             MR_FAILED         失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

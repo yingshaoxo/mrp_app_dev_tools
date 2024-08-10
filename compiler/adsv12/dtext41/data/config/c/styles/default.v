@@ -1,0 +1,31 @@
+<!-- Template for new main (*.v) Stylesheets
+-->
+
+<sheet>
+
+
+<style name="#DEFAULT">
+	<break-before>	Line	</>
+</style>
+
+<style name ="#ROOT">
+	<break-before>  Line		</>
+</style>
+
+<style name="#SDATA">
+	<font-family>	attr(font)	</>
+	<font-weight>	Medium	</>
+	<font-slant>	Roman	</>
+	<character-set>	attr(charset)	</>
+	<break-before>	None	</>
+	<text-before>char(attr(code))</>
+</style>
+
+<style name ="#TAGS">
+	<font-family>	 Courier	</>
+	<font-weight>   Bold		</>
+	<character-set> iso8859-1 </>
+</style>
+
+
+</sheet>

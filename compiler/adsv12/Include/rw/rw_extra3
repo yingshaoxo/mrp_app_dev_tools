@@ -1,0 +1,6 @@
+#ifndef __STD_RW_RW_RW_EXTRA3__
+#define __STD_RW_RW_RW_EXTRA3__
+
+class _RWSTDExport facet_imp;
+
+#endif // __STD_RW_RW_RW_EXTRA3__

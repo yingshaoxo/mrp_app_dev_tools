@@ -1,0 +1,29 @@
+<html>
+<head>读取文件的内容到指定的缓冲。</head>
+
+<body>
+
+<h1>Syntax</h1>
+int32 mrc_read(<br>
+&nbsp&nbsp int32 f,<br>
+&nbsp&nbsp void *p,<br>
+&nbsp&nbsp uint32 l<br>
+);
+
+<h1>Parameters</h1>
+<b>f</b><br>
+&nbsp&nbsp [IN]文件句柄,由<a href="mrc_open.html">mrc_open</a>创建<br>   
+<b>p</b><br>
+&nbsp&nbsp [OUT]文件缓存地址<br>    
+<b>l</b><br>
+&nbsp&nbsp [OUT]缓存长度<br>                               
+
+<h1>Return Value</h1>
+&nbsp&nbsp 	>0           	确切读出的字节数<br>
+&nbsp&nbsp      MR_FAILED     	失败
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_base.h</i><br>
+</body>
+
+</html>

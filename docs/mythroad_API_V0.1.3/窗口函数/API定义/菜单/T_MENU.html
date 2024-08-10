@@ -1,0 +1,28 @@
+<html>
+<head>T_MENU菜单结构体。</head>
+
+<body>
+
+<h1>Syntax</h1>
+typedef struct{<br>
+	int32 handle; <br> 
+	int32 itemNum;<br>
+	T_MENU_ITEM EscMenu[1];<br>
+	T_MENU_ITEM subMenu[1];<br>
+}T_MENU;
+
+<h1>Members</h1>
+<b>handle</b><br>
+菜单句柄，由<a href="mrc_platMenuNew.html">mrc_platMenuNew</a>创建<br>
+<b>itemNum</b><br>
+菜单项的个数<br>
+<b>EscMenu</b><br>
+<a href="T_MENU_ITEM.html">T_MENU_ITEM</a>结构体变量，用户不作任何选择，直接选择“返回”键时的回调函数的函数指针和参数指针。<br>
+<b>subMenu</b><br>
+<a href="T_MENU_ITEM.html">T_MENU_ITEM</a>其他菜单项的回调函数指针和参数指针菜单项的个数<br>
+
+<h1>Requirements</h1>
+<b>Header:</b><i>mrc_menu.h</i><br>
+</body>
+
+</html>

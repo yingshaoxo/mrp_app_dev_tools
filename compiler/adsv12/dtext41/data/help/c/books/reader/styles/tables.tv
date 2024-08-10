@@ -1,0 +1,163 @@
+<!--Start Entity Definitions
+    This file is tochead.win.  It should be concatenated 
+    with a tocbody.all file to create a toc.tv stylesheet
+    for the windows platform.
+
+ End Entity Definitions -->
+
+<!ENTITY	address.font	CDATA	"helvetica"	>
+<!ENTITY	art.color	CDATA	"dark green"	>
+<!ENTITY	booktitle.color	CDATA	"dark green"	>
+<!ENTITY	booktitle.font	CDATA	"arial"	>
+<!ENTITY	booktitle.font-size	CDATA	"18"	>
+<!ENTITY	booktitle.font-slant	CDATA	"roman"	>
+<!ENTITY	booktitle.font-weight	CDATA	"bold"	>
+<!ENTITY	booktitle.line-spacing	CDATA	"24"	>
+<!ENTITY	booktitle.slant	CDATA	"roman"	>
+<!ENTITY	booktitle.weight	CDATA	"bold"	>
+<!ENTITY	front.font	CDATA	"helvetica"	>
+<!ENTITY	hottext.fontfam	CDATA	"MS Sans Serif"	>
+<!ENTITY	hottext.foreground	CDATA	"dark green"	>
+<!ENTITY	hottext.slant	CDATA	"Roman"	>
+<!ENTITY	hottext.weight	CDATA	"Bold"	>
+<!ENTITY	hottext.score	CDATA	"under"	>
+<!ENTITY	level1.color	CDATA	"black"	>
+<!ENTITY	level1.font	CDATA	"arial"	>
+<!ENTITY	level1.font-size	CDATA	"18"	>
+<!ENTITY	level1.font-slant	CDATA	"roman"	>
+<!ENTITY	level1.font-weight	CDATA	"bold"	>
+<!ENTITY	level1.left-indent	CDATA	"22"	>
+<!ENTITY	level1.line-spacing	CDATA	"18"	>
+<!ENTITY	level1.space-before	CDATA	"6"	>
+<!ENTITY	level2.color	CDATA	"black"	>
+<!ENTITY	level2.font	CDATA	"arial"	>
+<!ENTITY	level2.font-size	CDATA	"16"	>
+<!ENTITY	level2.font-slant	CDATA	"roman"	>
+<!ENTITY	level2.font-weight	CDATA	"medium"	>
+<!ENTITY	level2.left-indent	CDATA	"30"	>
+<!ENTITY	level2.line-spacing	CDATA	"18"	>
+<!ENTITY	level2.space-after	CDATA	"4"	>
+<!ENTITY	level2.space-before	CDATA	"6"	>
+<!ENTITY	level3.color	CDATA	"black"	>
+<!ENTITY	level3.font	CDATA	"arial"	>
+<!ENTITY	level3.font-size	CDATA	"14"	>
+<!ENTITY	level3.font-slant	CDATA	"roman"	>
+<!ENTITY	level3.font-weight	CDATA	"medium"	>
+<!ENTITY	level3.left-indent	CDATA	"38"	>
+<!ENTITY	level3.line-spacing	CDATA	"16"	>
+<!ENTITY	level3.space-before	CDATA	"6"	>
+<!ENTITY	level4.color	CDATA	"black"	>
+<!ENTITY	level4.font	CDATA	"arial"	>
+<!ENTITY	level4.font-size	CDATA	"14"	>
+<!ENTITY	level4.font-slant	CDATA	"roman"	>
+<!ENTITY	level4.font-weight	CDATA	"Medium"	>
+<!ENTITY	level4.line-spacing	CDATA	"16"	>
+<!ENTITY	level4.space-before	CDATA	"6"	>
+<!ENTITY	level4.left-indent	CDATA	"46"	>
+<!ENTITY        level5.font             CDATA   "arial" >
+<!ENTITY        level5.font-size        CDATA   "14"    >
+<!ENTITY        level5.line-spacing     CDATA   "16"    >
+<!ENTITY        level5.space-before     CDATA   "6"     >
+<!ENTITY        level5.left-indent      CDATA   "54"    >
+<!ENTITY	revchgbw	CDATA	"if(attr(revision),under,)"	>
+<!ENTITY	revchgcol	CDATA	"if(attr(revision),blueviolet,)"	>
+<!ENTITY	std.font	CDATA	"arial"	>
+<!ENTITY	std.font-size	CDATA	"10"	>
+<!ENTITY	std.indent	CDATA	"10"	>
+<!ENTITY	std.leftindent	CDATA	"10"	>
+<!ENTITY	std.line-spacing	CDATA	"16"	>
+<!ENTITY	std.para.space-before	CDATA	"6"	>
+<!ENTITY	std.rightindent	CDATA	"12"	>
+<!ENTITY	subscript	CDATA	"-3"	>
+<!ENTITY        subtitle.font   CDATA   "lucida"  >
+<!ENTITY        subtitle.font-size   CDATA   "14"  >
+<!ENTITY        subtitle.line-spacing   CDATA   "16"  >
+<!ENTITY        subtitle.color   CDATA   "black"  >
+<!ENTITY        subtitle.leftindent   CDATA   "10"  >
+<!ENTITY        subtitle.indent   CDATA   "10"  >
+<!ENTITY	tag.color	CDATA	"purple"	>
+<!ENTITY	tbfont	CDATA	"arial"	>
+<!ENTITY	title.color	CDATA	"blue"	>
+<!ENTITY	title.font	CDATA	"arial"	>
+<!ENTITY	verbatim.font	CDATA	"courier new"	>
+<!ENTITY	verbatim.font-size	CDATA	"13"	>
+<!ENTITY	verbatim.line-spacing	CDATA	"12"	>
+<!ENTITY	verbatim.small-font-size	CDATA	"10"	>
+<!--End Entity Definitions  -->
+<sheet>
+
+
+
+<?INSTED COMMENT: UNGROUPED STYLES FOLLOW>
+
+<style name="#DEFAULT">
+	<break-before>	Line	</>
+</style>
+
+<style name="#SDATA">
+	<font-family>	attr(font)	</>
+	<font-weight>	Medium	</>
+	<font-slant>	Roman	</>
+	<character-set>	attr(charset)	</>
+	<break-before>	None	</>
+	<text-before>char(attr(code))</>
+</style>
+
+<style name="#TAGS">
+	<font-weight>	Bold	</>
+</style>
+
+<!-- Style"#toc-annot" is reserved, and defines the appearance of the
+     bookmarks, word frequencies, location markers, etc. in left margin.
+
+-->
+<style name="#TOC-ANNOT">
+	<font-family>	annotation	</>
+	<foreground>	red	</>
+	<line-spacing>	12	</>
+</style>
+
+<style name="BLOCK,TBLOCK">
+	<font-family>	&std.font	</>
+	<font-slant>	Italics	</>
+	<font-size>	14	</>
+	<left-indent>	50	</>
+	<line-spacing>	16	</>
+	<first-indent>	-20	</>
+	<space-before>	12	</>
+	<break-before>	True	</>
+	<title-tag>	CAPTION	</>
+</style>
+
+<style name="CAPTION">
+	<line-spacing>	11	</>
+	<space-before>	6	</>
+	<space-after>	6	</>
+</style>
+
+<style name="EMPH">
+	<break-before>	None	</>
+</style>
+
+<style name="TABLE">
+	<hide>	Text	</>
+</style>
+
+<!-- Title of Book, inside front matter 
+-->
+<style name="TITLEPG,TITLE">
+	<font-family>	&title.font	</>
+	<font-size>	18	</>
+	<foreground>	&title.color	</>
+	<left-indent>	10	</>
+	<line-spacing>	24	</>
+	<space-before>	4	</>
+	<space-after>	4	</>
+	<break-before>	True	</>
+	<title-tag>	#TEXT-BEFORE	</>
+	<text-before>  List of Tables  </>
+</style>
+
+
+
+</sheet>

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "mrc_base.h": "c",
+        "mrc_exb.h": "c"
+    }
+}
